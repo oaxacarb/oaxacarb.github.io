@@ -17,10 +17,12 @@ pageable: true
       %h6
         Escrito el
         %span= article.date.strftime('%e %B, %Y')
+      %br/
       /
         use article.summary(250) if you have Nokogiri available to show just
         the first 250 characters
-      = article.body
+      = article.summary(830)
+      = link_to 'Leer más...', article
       %hr/
   - if paginate
     - if next_page

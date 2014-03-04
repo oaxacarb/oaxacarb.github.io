@@ -20,7 +20,7 @@
           %h3
             = link_to current_article.title, current_article.url
           %h6= "Escrito el #{current_article.date.strftime("%B %a, %Y")}"
-          %br/
+          %hr/
           = yield
       = partial 'sidebar'
     / Footer
