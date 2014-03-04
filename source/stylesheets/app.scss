@@ -38,3 +38,72 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+$main-color: #CC342D;
+$opaque-primary: #85140F;
+$opaque-secondary: #CC352D;
+$light-primary: #E6665F;
+$gray: #585450;
+
+body{
+  border-top: 5px solid $main-color !important;
+  background: url(/images/agsquare.png);
+}
+
+.nav-bar{
+  .button{
+    @include button-style($gray);
+  }
+}
+
+a.logo{
+  margin-left: 10px;
+  display: inline-block;
+  background: url(/images/oaxacarb.png) no-repeat left;
+  padding: 10px 0 10px 110px;
+
+  h1{
+    margin-bottom: 0px;
+  }
+
+  span{
+    font-size: 14px;
+    color: $gray !important;
+  }
+}
+
+#main{
+  background-color: white;
+  border: 1px solid #eeeeee;
+  border-top: 0px;
+}
+
+#content{
+  background-color: white;
+  border: 1px solid #eeeeee;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+
+hr.ruby{
+  border-color: $main-color;
+}
+
+.panel{
+  box-shadow: 0 2px 2px rgba(0,0,0,0.5);
+}
+
+a{
+  color: $opaque-secondary;
+  &:hover{
+    color: $opaque-primary;
+  }
+}
+
+.side-nav li a:not(.button) {
+  display: block;
+  color: $opaque-secondary;
+  &:hover{
+    color: $light-primary;
+  }
+}

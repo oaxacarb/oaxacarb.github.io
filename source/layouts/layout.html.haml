@@ -10,22 +10,24 @@
         = javascript_include_tag  "app"
   %body{:class => page_classes}
     / Nav Bar
-    .row
+    #main.row
       .large-12.columns
         .nav-bar.right
           %ul.button-group
             %li
-              %a.button{:href => "#"} Posts
+              %a.button.small{:href => "#"} Posts
             %li
-              %a.button{:href => "#"} Acerca de
+              %a.button.small{:href => "#"} Eventos
             %li
-              %a.button{:href => "#"} Contacto
-        %h1
-          oaxaca.rb
-          %small La comunidad ruby de Oaxaca
-        %hr/
+              %a.button.small{:href => "#"} Acerca de
+            %li
+              %a.button.small{:href => "#"} Contacto
+        %a.logo
+          %h1 oaxaca.rb
+          %span La comunidad ruby de Oaxaca
+        %hr.ruby/
     / Main Page Content and Sidebar
-    .row
+    #content.row
       = yield
       = partial 'sidebar'
     / Footer
