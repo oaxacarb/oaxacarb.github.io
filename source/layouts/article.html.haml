@@ -15,7 +15,13 @@
       = partial 'header'
     / Main Page Content and Sidebar
     #content.row
-      = yield
+      .large-9.columns{:role => "content"}
+        %article
+          %h3
+            = link_to current_article.title, current_article.url
+          %h6= "Escrito el #{current_article.date.strftime("%B %a, %Y")}"
+          %br/
+          = yield
       = partial 'sidebar'
     / Footer
     %footer.row
