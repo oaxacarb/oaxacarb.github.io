@@ -1,19 +1,24 @@
 %aside.large-3.columns
-  %h5 Categories
+  %h5 Etiquetas
   %ul.side-nav
-    %li
-      %a{:href => "#"} News
-    %li
-      %a{:href => "#"} Code
-    %li
-      %a{:href => "#"} Design
-    %li
-      %a{:href => "#"} Fun
-    %li
-      %a{:href => "#"} Weasels
+    - blog.tags.each do |tag, articles|
+      %li= link_to "#{tag} (#{articles.size})", tag_path(tag)
+
+  %h5 Artículos Recientes
+  %ul.side-nav
+    - blog.articles[0...10].each do |article|
+      %li.article
+        = link_to article.title, article
+        %span= article.date.strftime('%B %e')
+  %h5 Por mes
+  %ul.side-nav
+    - blog.articles.group_by {|a| a.date.month }.each do |month, articles|
+      %li= link_to "#{Date::MONTHNAMES[month]} (#{articles.size})", blog_month_path(2014, month)
   .panel
-    %h5 Featured
-    %p Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.
-    %a{:href => "#"} Read More →
+    %h5 ¡Importante!
+    %p
+      ¿Te interesa acudir al próximo Coding Dojo? Descárgate la
+      = link_to 'máquina virtual', '#'
+      que utilizamos en las sesiones de trabajo.
 / End Sidebar
 

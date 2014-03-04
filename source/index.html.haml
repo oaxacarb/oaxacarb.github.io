@@ -1,5 +1,6 @@
 ---
 title: oaxaca.rb
+pageable: true
 ---
 
 / Main Blog Content
@@ -20,4 +21,23 @@ title: oaxaca.rb
     %p Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.
     %p Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.
   %hr/
+  - if paginate && num_pages > 1
+    %p
+      Page #{page_number} of #{num_pages}
+  - if prev_page
+    %p= link_to 'Previous page', prev_page
+  - page_articles.each_with_index do |article, i|
+    %article
+      %h3
+        = link_to article.title, article
+      %h6
+        Escrito por Juán Pérez el
+        %span= article.date.strftime('%e %B, %Y')
+      /
+        use article.summary(250) if you have Nokogiri available to show just
+        the first 250 characters
+      = article.body
+  - if paginate
+    - if next_page
+      %p= link_to 'Next page', next_page
 / End Main Content
