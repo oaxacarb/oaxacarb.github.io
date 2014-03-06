@@ -1,8 +1,11 @@
 %aside.large-3.columns
   %h5 Etiquetas
-  %ul.side-nav
+  %ul.inline-list
     - blog.tags.each do |tag, articles|
-      %li= link_to "#{tag} (#{articles.size})", tag_path(tag)
+      %li.tag
+        = link_to tag_path(tag) do
+          %span.label
+            ="#{tag} (#{articles.size})"
 
   %h5 Artículos Recientes
   %ul.side-nav
@@ -17,8 +20,8 @@
   .panel
     %h5 ¡Importante!
     %p
-      ¿Te interesa acudir al próximo Coding Dojo? Descárgate la
-      = link_to 'máquina virtual', '#'
-      que utilizamos en las sesiones de trabajo.
+      ¿Te interesa acudir al próximo Coding Dojo? Próximamente pondremos disponible la
+      %strong máquina virtual
+      con todo lo necesario para que puedas integrarte a las sesiones de trabajo.
 / End Sidebar
 
