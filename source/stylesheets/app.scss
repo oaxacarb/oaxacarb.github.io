@@ -1,6 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+// @import url(http://fonts.googleapis.com/css?family=PT+Mono);
 @import "settings";
 @import "compass";
 @import "foundation";
+@import "foundation-icons";
 
 // Or selectively include components
 // @import
@@ -65,6 +68,12 @@ a.logo{
 
   h1{
     margin-bottom: 0px;
+
+    span{
+      font-size: inherit;
+      color: #cc352d !important;
+      margin-left: -20px;    
+    }
   }
 
   span{
@@ -114,5 +123,19 @@ a{
 ul.side-nav{
   li.article{
     span { color: #555555; }
+  }
+}
+
+h1, h2, h3{
+  i[class^="fi-"]{
+    color: $main-color;
+  }
+}
+
+span.label{
+  background-color: #BF1B12;
+
+  &:hover{
+    background-color: $main-color;
   }
 }
