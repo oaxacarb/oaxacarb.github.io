@@ -107,3 +107,7 @@ activate :deploy do |deploy|
   deploy.branch = 'master'
   deploy.build_before = true
 end
+
+activate :disqus do |d|
+  d.shortname = "oaxacarb"
+end
