@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Inconsolata);
 // @import url(http://fonts.googleapis.com/css?family=PT+Mono);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 @import "settings";
 @import "compass";
 @import "foundation";
@@ -52,6 +53,7 @@ $gray: #585450;
 body{
   border-top: 5px solid $main-color !important;
   background: url(/images/agsquare.png);
+  color: #444444;
 }
 
 .nav-bar{
@@ -68,6 +70,7 @@ a.logo{
 
   h1{
     margin-bottom: 0px;
+    font-family: 'Inconsolata';
 
     span{
       font-size: inherit;
@@ -122,6 +125,7 @@ a{
 
 ul.side-nav{
   li.article{
+    a { display: initial; }
     span { color: #555555; }
   }
 }
