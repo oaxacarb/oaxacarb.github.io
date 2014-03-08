@@ -143,3 +143,14 @@ span.label{
     background-color: $main-color;
   }
 }
+
+h3 span{
+  color: $main-color;
+}
+
+ul.posts{
+  li{
+    padding: 5px 0;
+    list-style: none;
+  }
+}

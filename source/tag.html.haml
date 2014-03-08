@@ -1,0 +1,26 @@
+---
+title: tags
+pageable: true
+per_page: 12
+---
+.large-9.columns{:role => "content"}
+  %h3
+    Artículos etiquetados con
+    %span= tagname
+  %hr
+
+  - if paginate && num_pages > 1
+    %p= "Página #{ page_number } de #{ num_pages }"
+
+    - if prev_page
+      %p= link_to 'Página anterior', prev_page
+
+  %ul.posts
+    - page_articles.each_with_index do |article, i|
+      %li
+        = link_to article.title, article
+        %span= article.date.strftime('%b %e')
+
+  - if paginate
+    - if next_page
+      %p= link_to 'Next page', next_page
