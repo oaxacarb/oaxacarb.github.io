@@ -1,0 +1,43 @@
+---
+title: Contacto
+---
+
+.large-9.columns{ role: 'content' }
+  %h3
+    %i.fi-address-book.size-12
+    Contáctanos
+  %hr
+
+  %p
+    ¿Te interesa el lenguaje 
+    = link_to 'Ruby', 'https://www.ruby-lang.org/es/'
+    ? ¿Quieres compartir tu conocimiento? ¿Te gustaría aprender sobre metodologías de desarrollo de software? ¿Quieres saber qué significa el siguiente fragmento de código?
+
+  %pre
+    %code.language-html
+      .code-container
+        %span
+          3.times { puts 'hola' }
+
+  %p
+    Estás en el lugar indicado, contáctate con nosotros, únete a nuestra comunidad de usuarios ruby y asiste a nuestros eventos. Ponemos a tu disposición nuestras redes:
+
+  %center
+    %ul.inline-list
+      %li
+        = link_to 'https://github.com/orgs/oaxacarb', title: 'github', target: '_blank' do
+          %i.fi-social-github
+          oaxacarb
+        
+      %li
+        = link_to 'https://plus.google.com/107461695051836920312', title: 'google plus', target: '_blank' do
+          %i.fi-social-google-plus
+          Ruby Oaxaca
+      %li
+        = link_to 'https://twitter.com/oaxacarb', title: 'twitter', target: '_blank' do
+          %i.fi-social-twitter
+          oaxacarb
+      %li
+        = link_to 'https://www.facebook.com/groups/694657983920126/', title: 'facebook', target: '_blank' do
+          %i.fi-social-facebook
+          oaxacarb
