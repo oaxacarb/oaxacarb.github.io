@@ -111,3 +111,5 @@ end
 activate :disqus do |d|
   d.shortname = "oaxacarb"
 end
+
+activate :i18n, langs: [:es]

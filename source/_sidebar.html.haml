@@ -16,7 +16,7 @@
   %h5 Por mes
   %ul.side-nav
     - blog.articles.group_by {|a| a.date.month }.each do |month, articles|
-      %li= link_to "#{Date::MONTHNAMES[month]} (#{articles.size})", blog_month_path(2014, month)
+      %li= link_to "#{I18n.t(Date::MONTHNAMES[month])} (#{articles.size})", blog_month_path(2014, month)
   .panel
     %h5 ¡Importante!
     %p
