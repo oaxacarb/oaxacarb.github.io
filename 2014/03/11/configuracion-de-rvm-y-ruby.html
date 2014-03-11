@@ -6,13 +6,13 @@
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Arranca la comunidad ruby de Oaxaca - oaxaca.rb</title>
+    <title>Configuración del entorno de trabajo Ruby con RVM - oaxaca.rb</title>
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
     <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/app.js" type="text/javascript"></script>
   </head>
-  <body class='x2014 x2014_03 x2014_03_04 x2014_03_04_arranca-la-comunidad-ruby-de-oaxaca'>
+  <body class='x2014 x2014_03 x2014_03_11 x2014_03_11_configuracion-de-rvm-y-ruby'>
     <!-- Nav Bar -->
     <div class='row' id='main'>
       <div class='large-12 columns'>
@@ -47,37 +47,82 @@
       <div class='large-9 columns' role='content'>
         <article>
           <h3>
-            <a href="/2014/03/04/arranca-la-comunidad-ruby-de-oaxaca.html">Arranca la comunidad ruby de Oaxaca</a>
+            <a href="/2014/03/11/configuracion-de-rvm-y-ruby.html">Configuración del entorno de trabajo Ruby con RVM</a>
           </h3>
-          <h6>Escrito el Tue  4 March, 2014</h6>
+          <h6>Escrito el Tue 11 March, 2014</h6>
           <hr>
-          <div class="row">
-            <div class="large-6 columns">
-              <p>El día 26 de febrero de 2014 tuvo lugar el <strong>primer Coding Dojo de Oaxaca</strong>, marcando también el inicio de esta <strong>comunidad de programadores ruby de Oaxaca</strong>; durante el evento resaltaron los siguientes puntos:</p>
+          <p>Muchas veces, al trabajar con un lenguaje interpretado (como ruby o python) es necesario instalar varias librerías, pero siempre queda el miedo de romper algo con tanta instalación; es deseable poder tener múltiples configuraciones independientes, incluso por proyecto. Para eso tenemos <a href="https://rvm.io/">RVM</a>.</p>
           
-              <ul>
-                <li>Hubo gran variedad de personas, desde estudiantes de nivel licenciatura, desarrolladores en empresas privadas y desarrolladores en dependencias gubernamentales.</li>
-                <li>Se practicó Pair Programming, TDD. (Utilizando Ruby y <a href="http://rspec.info/">RSpec</a>).</li>
-                <li>Se despertó mucho interés, tanto que los participantes solicitaron que se hiciera el evento cada 15 días.</li>
-                <li>Se practicó con una kata sencilla (<a href="http://en.wikipedia.org/wiki/Fizz_buzz">FizzBuzz</a>), que para ser la primera vez de muchos de los participantes, fue excelente.</li>
-                <li>Sirvió como presentación para la comunidad Ruby de Oaxaca. (<a href="http://twitter.com/oaxacarb">@oaxacarb</a> en twitter).</li>
-                <li>Y por supuesto, nos divertimos mucho.</li>
-              </ul>
-            </div>
-            <div class="large-6 columns">
-              <p><img alt="Coding Dojo" src="/images/dojo.jpg" /></p>
-            </div>
-          </div>
+          <p>En palabras del autor, <strong>Ruby Version Manager</strong> (RVM) se puede describir de la siguiente manera:</p>
           
-          <p>En la retrospectiva del evento saltaron a la vista algunos puntos que mejoraremos en los siguientes eventos:</p>
+          <blockquote>
+            <p>Una herramienta que permite fácilmente instalar, gestionar y trabajar con múltiples entornos ruby, desde versiones del intérprete hasta sets de gemas.</p>
+          </blockquote>
           
-          <ul>
-            <li>La instalación de la máquina virtual llevó mucho tiempo. Será un requisito para la siguiente ocasión.</li>
-            <li>Se dividirá en 2 grupos, avanzados y principiantes, para permitir que los que tengan un mejor nivel puedan hacer katas más avanzadas.</li>
-            <li>Buscaremos hacer otros eventos como reuniones informales para abordar temas de interés de muchos participantes, como TDD con Rails y cuestiones de ese tipo.</li>
-          </ul>
+          <h3 id="instalacin-de-rvm">Instalación de RVM</h3>
           
-          <p>Les compartimos la liga a algunas fotos tomadas durante el evento <a href="https://plus.google.com/107461695051836920312/posts/d1qbu2THi37">aqui</a>.</p>
+          <p>Para instalar RVM en nuestro sistema <strong>Linux</strong>, hay que seguir los siguientes pasos:</p>
+          
+          <p>Descargamos e instalamos RVM</p>
+          
+          <p><code>\curl -sSL https://get.rvm.io | bash</code></p>
+          
+          <p>Al final de la instalación, veremos un mensaje que nos pide copiar cierto contenido a nuestro archivo <code>.bash_profile</code> (archivo oculto ubicado en nuestro directorio home), seguimos la recomendación para obtener un archivo parecido a lo siguiente:</p>
+          
+          <p><code>. $HOME/.bashrc</code></p>
+          
+          <p><code>[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; source "$HOME/.rvm/scripts/rvm"</code></p>
+          
+          <p><code>source ~/.profile</code></p>
+          
+          <p>Luego, cargamos la nueva configuración de bash en nuestra sesión actual (o reiniciamos nuestra consola, lo que gusten)</p>
+          
+          <p><code>source ~/.bash_profile</code></p>
+          
+          <p>Listo, ya tenemos RVM instalado, lo podemos comprobar con el comando <code>rvm -v</code>, lo que nos debe de mostrar la versión de RVM instalada en nuestro sistema.</p>
+          
+          <h3 id="instalacin-de-ruby">Instalación de Ruby</h3>
+          
+          <p>Ya que tenemos instalado RVM, instalar Ruby es tan fácil como correr un comando, indicándole la versión deseada (recomendamos la <em>2.1.0</em>)</p>
+          
+          <pre><code>rvm install ruby-2.1.0
+          </code></pre>
+          
+          <p>Nos sentamos unos momentos a esperar a que termine la instalación…</p>
+          
+          <h3 id="configuracin-de-rvm-por-proyecto">Configuración de RVM por proyecto</h3>
+          
+          <p>RVM es lo suficientemente "inteligente" como para identificar las versiones que requerimos dentro de un proyecto, agrupando las librerias requeridas en <strong>gemsets</strong>, para ésto, requerimos tener un par de archivos dentro de nuestro directorio de trabajo: <code>.ruby-version</code> y <code>.ruby-gemset</code> (ambos archivos ocultos).</p>
+          
+          <p>Para crear y configurar un nuevo directorio de proyecto, creamos los dos archivos mencionados anteriormente denotando la versión de ruby y el nombre del gemset deseado:</p>
+          
+          <p><code>mkdir proyecto &amp;&amp; cd proyecto</code></p>
+          
+          <p><code>echo '2.1.0' &gt; .ruby-version</code></p>
+          
+          <p><code>echo 'proyecto' &gt; .ruby-gemset</code></p>
+          
+          <p>Esto creará un gemset llamado <em>proyecto</em> que utiliza la versión <em>2.1.0</em> de ruby, denotado como <strong>ruby-2.1.0@proyecto</strong>, ahora, cada que entremos al directorio <code>proyecto</code>, RVM cargará automáticamente la configuración deseada, y todas las librerías (gemas) que instalemos en dicho proyecto quedarán aisladas en el mismo.</p>
+          
+          <p>Si aún estamos dentro de nuestra carpeta <em>proyecto</em>, ejecutamos el comando <code>cd .</code> (punto):</p>
+          
+          <p><code>=&gt; ruby-2.1.0 - #gemset created ruby-2.1.0@proyecto</code></p>
+          
+          <p><code>=&gt; ruby-2.1.0 - #generating proyecto wrappers.......</code></p>
+          
+          <p>Por último, comprobamos que todo se encuentre en orden, verificamos la versión de ruby en uso con el comando:</p>
+          
+          <p><code>rvm list</code></p>
+          
+          <p><code>=* ruby-2.1.0 [ x86_64 ]</code></p>
+          
+          <p>Y el gemset cargado actualmente:</p>
+          
+          <p><code>rvm gemset list</code></p>
+          
+          <p><code>=&gt; proyecto</code></p>
+          
+          <p>Listo, ruby 2.1.0 instalado y gemset creado, estamos listos para trabajar.</p>
           <div id="disqus_thread"></div>
                       <script type="text/javascript">
                       //<![CDATA[
