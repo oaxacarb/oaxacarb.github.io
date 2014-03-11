@@ -16,7 +16,7 @@ pageable: true
         = link_to article.title, article
       %h6
         Escrito el
-        %span= article.date.strftime('%e %B, %Y')
+        %span= article.date.strftime('%a %e %B, %Y')
       %br/
       /
         use article.summary(250) if you have Nokogiri available to show just
