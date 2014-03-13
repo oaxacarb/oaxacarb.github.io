@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/</id>
+  <link href="http://blog.url.com/"/>
+  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <updated>2014-03-13T04:45:00Z</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>Coding Dojo - Marzo 2014</title>
+    <link rel="alternate" href="http://blog.url.com/2014/03/13/coding-dojo-marzo-2014.html"/>
+    <id>http://blog.url.com/2014/03/13/coding-dojo-marzo-2014.html</id>
+    <published>2014-03-13T04:45:00Z</published>
+    <updated>2014-03-13T14:58:47-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;La comunidad &lt;strong&gt;oaxaca.rb&lt;/strong&gt; invita a propios y extraños al &lt;strong&gt;Coding Dojo&lt;/strong&gt; que se llevará a cabo el sábado 15 de marzo de 2014 en las instalaciones de la Secretaría de Desarrollo económico del municipio de Oaxaca de Juárez, ubicadas en la calle de Matamoros #102 Centro.&lt;/p&gt;
+
+&lt;h4 id="qu-es-un-coding-dojo"&gt;¿Qué es un Coding Dojo?&lt;/h4&gt;
+
+&lt;p&gt;Los Coding Dojos tienen como finalidad el fomentar las buenas prácticas de programación en el desarrollo de software, por medio de la práctica y ejercicios continuos (denominados katas) los asistentes aprenden nuevas técnicas y metodologías que pueden serles útiles en su día a día profesional; es un espacio para el aprendizaje, la compartición de conocimiento y la convivencia.&lt;/p&gt;
+
+&lt;p&gt;Si estás interesado en asistir puedes inscribirte en el &lt;a href="https://www.eventbrite.com/e/coding-dojo-tickets-10919244755"&gt;evento creado en Eventbrite&lt;/a&gt;. Asegura tu lugar, ya que tenemos cupo limitado.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Configuración del entorno de trabajo Ruby con RVM</title>
+    <link rel="alternate" href="http://blog.url.com/2014/03/11/configuracion-de-rvm-y-ruby.html"/>
+    <id>http://blog.url.com/2014/03/11/configuracion-de-rvm-y-ruby.html</id>
+    <published>2014-03-11T16:13:00Z</published>
+    <updated>2014-03-11T11:24:41-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Muchas veces, al trabajar con un lenguaje interpretado (como ruby o python) es necesario instalar varias librerías, pero siempre queda el miedo de romper algo con tanta instalación; es deseable poder tener múltiples configuraciones independientes, incluso por proyecto. Para eso tenemos &lt;a href="https://rvm.io/"&gt;RVM&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;En palabras del autor, &lt;strong&gt;Ruby Version Manager&lt;/strong&gt; (RVM) se puede describir de la siguiente manera:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Una herramienta que permite fácilmente instalar, gestionar y trabajar con múltiples entornos ruby, desde versiones del intérprete hasta sets de gemas.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="instalacin-de-rvm"&gt;Instalación de RVM&lt;/h3&gt;
+
+&lt;p&gt;Para instalar RVM en nuestro sistema &lt;strong&gt;Linux&lt;/strong&gt;, hay que seguir los siguientes pasos:&lt;/p&gt;
+
+&lt;p&gt;Descargamos e instalamos RVM&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;\curl -sSL https://get.rvm.io | bash&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Al final de la instalación, veremos un mensaje que nos pide copiar cierto contenido a nuestro archivo &lt;code&gt;.bash_profile&lt;/code&gt; (archivo oculto ubicado en nuestro directorio home), seguimos la recomendación para obtener un archivo parecido a lo siguiente:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;. $HOME/.bashrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;amp;&amp;amp; source "$HOME/.rvm/scripts/rvm"&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;source ~/.profile&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Luego, cargamos la nueva configuración de bash en nuestra sesión actual (o reiniciamos nuestra consola, lo que gusten)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;source ~/.bash_profile&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Listo, ya tenemos RVM instalado, lo podemos comprobar con el comando &lt;code&gt;rvm -v&lt;/code&gt;, lo que nos debe de mostrar la versión de RVM instalada en nuestro sistema.&lt;/p&gt;
+
+&lt;h3 id="instalacin-de-ruby"&gt;Instalación de Ruby&lt;/h3&gt;
+
+&lt;p&gt;Ya que tenemos instalado RVM, instalar Ruby es tan fácil como correr un comando, indicándole la versión deseada (recomendamos la &lt;em&gt;2.1.0&lt;/em&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;rvm install ruby-2.1.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Nos sentamos unos momentos a esperar a que termine la instalación…&lt;/p&gt;
+
+&lt;h3 id="configuracin-de-rvm-por-proyecto"&gt;Configuración de RVM por proyecto&lt;/h3&gt;
+
+&lt;p&gt;RVM es lo suficientemente "inteligente" como para identificar las versiones que requerimos dentro de un proyecto, agrupando las librerias requeridas en &lt;strong&gt;gemsets&lt;/strong&gt;, para ésto, requerimos tener un par de archivos dentro de nuestro directorio de trabajo: &lt;code&gt;.ruby-version&lt;/code&gt; y &lt;code&gt;.ruby-gemset&lt;/code&gt; (ambos archivos ocultos).&lt;/p&gt;
+
+&lt;p&gt;Para crear y configurar un nuevo directorio de proyecto, creamos los dos archivos mencionados anteriormente denotando la versión de ruby y el nombre del gemset deseado:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;mkdir proyecto &amp;amp;&amp;amp; cd proyecto&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;echo '2.1.0' &amp;gt; .ruby-version&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;echo 'proyecto' &amp;gt; .ruby-gemset&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Esto creará un gemset llamado &lt;em&gt;proyecto&lt;/em&gt; que utiliza la versión &lt;em&gt;2.1.0&lt;/em&gt; de ruby, denotado como &lt;strong&gt;ruby-2.1.0@proyecto&lt;/strong&gt;, ahora, cada que entremos al directorio &lt;code&gt;proyecto&lt;/code&gt;, RVM cargará automáticamente la configuración deseada, y todas las librerías (gemas) que instalemos en dicho proyecto quedarán aisladas en el mismo.&lt;/p&gt;
+
+&lt;p&gt;Si aún estamos dentro de nuestra carpeta &lt;em&gt;proyecto&lt;/em&gt;, ejecutamos el comando &lt;code&gt;cd .&lt;/code&gt; (punto):&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;=&amp;gt; ruby-2.1.0 - #gemset created ruby-2.1.0@proyecto&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;=&amp;gt; ruby-2.1.0 - #generating proyecto wrappers.......&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Por último, comprobamos que todo se encuentre en orden, verificamos la versión de ruby en uso con el comando:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rvm list&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;=* ruby-2.1.0 [ x86_64 ]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Y el gemset cargado actualmente:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rvm gemset list&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;=&amp;gt; proyecto&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Listo, ruby 2.1.0 instalado y gemset creado, estamos listos para trabajar.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Agradecimiento a PyPO</title>
+    <link rel="alternate" href="http://blog.url.com/2014/03/05/agradecimiento-a-pypo.html"/>
+    <id>http://blog.url.com/2014/03/05/agradecimiento-a-pypo.html</id>
+    <published>2014-03-05T05:36:00Z</published>
+    <updated>2014-03-08T12:27:24-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Queremos agradecer de manera muy especial al Lic. Claudio Ruiz, Gerente de la Empresa &lt;a href="http://www.pypo.mx/"&gt;PyPO: Pintura y Publicidad de Oaxaca&lt;/a&gt; por facilitarnos sus instalaciones ubicadas en la Calle Emiliano Zapata No. 412. Trinidad de las Huertas, en la Cd. de Oaxaca. Para la realización de nuestro evento.&lt;/p&gt;
+
+&lt;p&gt;No podemos dejar de agradecer a &lt;a href="http://twitter.com/eeecorona"&gt;Erik Corona&lt;/a&gt;, un miembro entusiasta de la Comunidad Ruby de Oaxaca quién realizó toda la gestión con la gerencia de PyPO para lograr que este evento se pudiera realizar.&lt;/p&gt;
+
+&lt;p&gt;Esperamos seguir contando con su invaluable apoyo.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Arranca la comunidad ruby de Oaxaca</title>
+    <link rel="alternate" href="http://blog.url.com/2014/03/04/arranca-la-comunidad-ruby-de-oaxaca.html"/>
+    <id>http://blog.url.com/2014/03/04/arranca-la-comunidad-ruby-de-oaxaca.html</id>
+    <published>2014-03-04T05:36:00Z</published>
+    <updated>2014-03-08T12:27:24-06:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;div class="row"&gt;
+  &lt;div class="large-6 columns"&gt;
+    &lt;p&gt;El día 26 de febrero de 2014 tuvo lugar el &lt;strong&gt;primer Coding Dojo de Oaxaca&lt;/strong&gt;, marcando también el inicio de esta &lt;strong&gt;comunidad de programadores ruby de Oaxaca&lt;/strong&gt;; durante el evento resaltaron los siguientes puntos:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Hubo gran variedad de personas, desde estudiantes de nivel licenciatura, desarrolladores en empresas privadas y desarrolladores en dependencias gubernamentales.&lt;/li&gt;
+      &lt;li&gt;Se practicó Pair Programming, TDD. (Utilizando Ruby y &lt;a href="http://rspec.info/"&gt;RSpec&lt;/a&gt;).&lt;/li&gt;
+      &lt;li&gt;Se despertó mucho interés, tanto que los participantes solicitaron que se hiciera el evento cada 15 días.&lt;/li&gt;
+      &lt;li&gt;Se practicó con una kata sencilla (&lt;a href="http://en.wikipedia.org/wiki/Fizz_buzz"&gt;FizzBuzz&lt;/a&gt;), que para ser la primera vez de muchos de los participantes, fue excelente.&lt;/li&gt;
+      &lt;li&gt;Sirvió como presentación para la comunidad Ruby de Oaxaca. (&lt;a href="http://twitter.com/oaxacarb"&gt;@oaxacarb&lt;/a&gt; en twitter).&lt;/li&gt;
+      &lt;li&gt;Y por supuesto, nos divertimos mucho.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class="large-6 columns"&gt;
+    &lt;p&gt;&lt;img alt="Coding Dojo" src="/images/dojo.jpg" /&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;En la retrospectiva del evento saltaron a la vista algunos puntos que mejoraremos en los siguientes eventos:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;La instalación de la máquina virtual llevó mucho tiempo. Será un requisito para la siguiente ocasión.&lt;/li&gt;
+  &lt;li&gt;Se dividirá en 2 grupos, avanzados y principiantes, para permitir que los que tengan un mejor nivel puedan hacer katas más avanzadas.&lt;/li&gt;
+  &lt;li&gt;Buscaremos hacer otros eventos como reuniones informales para abordar temas de interés de muchos participantes, como TDD con Rails y cuestiones de ese tipo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Les compartimos la liga a algunas fotos tomadas durante el evento &lt;a href="https://plus.google.com/107461695051836920312/posts/d1qbu2THi37"&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
