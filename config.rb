@@ -1,7 +1,7 @@
 ###
 # Blog settings
 ###
-
+require 'builder'
 # Time.zone = "UTC"
 
 activate :blog do |blog|
