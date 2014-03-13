@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Blog Name</title>
-  <subtitle>Blog subtitle</subtitle>
-  <id>http://blog.url.com/</id>
-  <link href="http://blog.url.com/"/>
-  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <title>oaxaca.rb</title>
+  <subtitle>Comunidad de Usuarios Ruby de Oaxaca</subtitle>
+  <id>http://oaxacarb.org/</id>
+  <link href="http://oaxacarb.org/"/>
+  <link href="http://oaxacarb.org/feed.xml" rel="self"/>
   <updated>2014-03-13T04:45:00Z</updated>
   <author>
-    <name>Blog Author</name>
+    <name>oaxaca.rb</name>
   </author>
   <entry>
     <title>Coding Dojo - Marzo 2014</title>
-    <link rel="alternate" href="http://blog.url.com/2014/03/13/coding-dojo-marzo-2014.html"/>
-    <id>http://blog.url.com/2014/03/13/coding-dojo-marzo-2014.html</id>
+    <link rel="alternate" href="http://oaxacarb.org/2014/03/13/coding-dojo-marzo-2014.html"/>
+    <id>http://oaxacarb.org/2014/03/13/coding-dojo-marzo-2014.html</id>
     <published>2014-03-13T04:45:00Z</published>
     <updated>2014-03-13T14:58:47-06:00</updated>
     <author>
-      <name>Article Author</name>
+      <name>oaxaca.rb</name>
     </author>
     <content type="html">&lt;p&gt;La comunidad &lt;strong&gt;oaxaca.rb&lt;/strong&gt; invita a propios y extraños al &lt;strong&gt;Coding Dojo&lt;/strong&gt; que se llevará a cabo el sábado 15 de marzo de 2014 en las instalaciones de la Secretaría de Desarrollo económico del municipio de Oaxaca de Juárez, ubicadas en la calle de Matamoros #102 Centro.&lt;/p&gt;
 
@@ -29,12 +29,12 @@
   </entry>
   <entry>
     <title>Configuración del entorno de trabajo Ruby con RVM</title>
-    <link rel="alternate" href="http://blog.url.com/2014/03/11/configuracion-de-rvm-y-ruby.html"/>
-    <id>http://blog.url.com/2014/03/11/configuracion-de-rvm-y-ruby.html</id>
+    <link rel="alternate" href="http://oaxacarb.org/2014/03/11/configuracion-de-rvm-y-ruby.html"/>
+    <id>http://oaxacarb.org/2014/03/11/configuracion-de-rvm-y-ruby.html</id>
     <published>2014-03-11T16:13:00Z</published>
     <updated>2014-03-11T11:24:41-06:00</updated>
     <author>
-      <name>Article Author</name>
+      <name>oaxaca.rb</name>
     </author>
     <content type="html">&lt;p&gt;Muchas veces, al trabajar con un lenguaje interpretado (como ruby o python) es necesario instalar varias librerías, pero siempre queda el miedo de romper algo con tanta instalación; es deseable poder tener múltiples configuraciones independientes, incluso por proyecto. Para eso tenemos &lt;a href="https://rvm.io/"&gt;RVM&lt;/a&gt;.&lt;/p&gt;
 
@@ -112,12 +112,12 @@
   </entry>
   <entry>
     <title>Agradecimiento a PyPO</title>
-    <link rel="alternate" href="http://blog.url.com/2014/03/05/agradecimiento-a-pypo.html"/>
-    <id>http://blog.url.com/2014/03/05/agradecimiento-a-pypo.html</id>
+    <link rel="alternate" href="http://oaxacarb.org/2014/03/05/agradecimiento-a-pypo.html"/>
+    <id>http://oaxacarb.org/2014/03/05/agradecimiento-a-pypo.html</id>
     <published>2014-03-05T05:36:00Z</published>
     <updated>2014-03-08T12:27:24-06:00</updated>
     <author>
-      <name>Article Author</name>
+      <name>oaxaca.rb</name>
     </author>
     <content type="html">&lt;p&gt;Queremos agradecer de manera muy especial al Lic. Claudio Ruiz, Gerente de la Empresa &lt;a href="http://www.pypo.mx/"&gt;PyPO: Pintura y Publicidad de Oaxaca&lt;/a&gt; por facilitarnos sus instalaciones ubicadas en la Calle Emiliano Zapata No. 412. Trinidad de las Huertas, en la Cd. de Oaxaca. Para la realización de nuestro evento.&lt;/p&gt;
 
@@ -128,12 +128,12 @@
   </entry>
   <entry>
     <title>Arranca la comunidad ruby de Oaxaca</title>
-    <link rel="alternate" href="http://blog.url.com/2014/03/04/arranca-la-comunidad-ruby-de-oaxaca.html"/>
-    <id>http://blog.url.com/2014/03/04/arranca-la-comunidad-ruby-de-oaxaca.html</id>
+    <link rel="alternate" href="http://oaxacarb.org/2014/03/04/arranca-la-comunidad-ruby-de-oaxaca.html"/>
+    <id>http://oaxacarb.org/2014/03/04/arranca-la-comunidad-ruby-de-oaxaca.html</id>
     <published>2014-03-04T05:36:00Z</published>
     <updated>2014-03-08T12:27:24-06:00</updated>
     <author>
-      <name>Article Author</name>
+      <name>oaxaca.rb</name>
     </author>
     <content type="html">&lt;div class="row"&gt;
   &lt;div class="large-6 columns"&gt;
