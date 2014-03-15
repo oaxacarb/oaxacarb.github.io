@@ -9,7 +9,7 @@ En palabras del autor, **Ruby Version Manager** (RVM) se puede describir de la s
 
 > Una herramienta que permite fácilmente instalar, gestionar y trabajar con múltiples entornos ruby, desde versiones del intérprete hasta sets de gemas.
 
-### Instalación de RVM
+#### Instalación de RVM
 
 Para instalar RVM en nuestro sistema **Linux**, hay que seguir los siguientes pasos:
 
@@ -31,7 +31,7 @@ Luego, cargamos la nueva configuración de bash en nuestra sesión actual (o rei
 
 Listo, ya tenemos RVM instalado, lo podemos comprobar con el comando ``rvm -v``, lo que nos debe de mostrar la versión de RVM instalada en nuestro sistema.
 
-### Instalación de Ruby
+#### Instalación de Ruby
 
 Ya que tenemos instalado RVM, instalar Ruby es tan fácil como correr un comando, indicándole la versión deseada (recomendamos la *2.1.0*)
 
@@ -39,7 +39,7 @@ Ya que tenemos instalado RVM, instalar Ruby es tan fácil como correr un comando
 
 Nos sentamos unos momentos a esperar a que termine la instalación...
 
-### Configuración de RVM por proyecto
+#### Configuración de RVM por proyecto
 
 RVM es lo suficientemente "inteligente" como para identificar las versiones que requerimos dentro de un proyecto, agrupando las librerias requeridas en **gemsets**, para ésto, requerimos tener un par de archivos dentro de nuestro directorio de trabajo: ``.ruby-version`` y ``.ruby-gemset`` (ambos archivos ocultos).
 
