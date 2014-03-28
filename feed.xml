@@ -5,10 +5,44 @@
   <id>http://oaxacarb.org/</id>
   <link href="http://oaxacarb.org/"/>
   <link href="http://oaxacarb.org/feed.xml" rel="self"/>
-  <updated>2014-03-13T04:45:00Z</updated>
+  <updated>2014-03-27T04:45:00Z</updated>
   <author>
     <name>oaxaca.rb</name>
   </author>
+  <entry>
+    <title>3er Coding Dojo - Marzo 2014</title>
+    <link rel="alternate" href="http://oaxacarb.org/2014/03/27/coding-dojo-29-marzo-2014.html"/>
+    <id>http://oaxacarb.org/2014/03/27/coding-dojo-29-marzo-2014.html</id>
+    <published>2014-03-27T04:45:00Z</published>
+    <updated>2014-03-28T16:49:25-06:00</updated>
+    <author>
+      <name>oaxaca.rb</name>
+    </author>
+    <content type="html">&lt;p&gt;La comunidad &lt;strong&gt;oaxaca.rb&lt;/strong&gt; invita a propios y extraños al &lt;strong&gt;3er Coding Dojo&lt;/strong&gt; que se llevará a cabo el sábado 29 de marzo de 2014 en las instalaciones de la empresa Pintura y Publicidad de Oaxaca, ubicadas en &lt;a href="https://www.google.com.mx/maps?q=Emiliano+Zapata+403A&amp;amp;amp;ll=17.055623,-96.716077&amp;amp;amp;spn=0.002321,0.004128&amp;amp;amp;t=m&amp;amp;amp;hnear=Emiliano+Zapata+403,+Plan+de+Ayala,+Puebla&amp;amp;amp;z=19&amp;amp;amp;layer=c&amp;amp;amp;cbll=17.055526,-96.716096&amp;amp;amp;panoid=XJ9QFI7BkMwWP046NzBHFw&amp;amp;amp;cbp=12,285.94,,0,1.52"&gt;Emiliano Zapata 412, Trinidad de las Huertas&lt;/a&gt;, Oaxaca de Juárez, Oaxaca.&lt;/p&gt;
+
+&lt;p&gt;Si estás interesado en asistir puedes inscribirte en el &lt;a href="https://www.eventbrite.com/e/coding-dojo-tickets-11089630383"&gt;evento creado en Eventbrite&lt;/a&gt;. Asegura tu lugar, ya que tenemos cupo limitado.&lt;/p&gt;
+
+&lt;h4 id="qu-es-un-coding-dojo"&gt;¿Qué es un Coding Dojo?&lt;/h4&gt;
+
+&lt;p&gt;Los Coding Dojos tienen como finalidad el fomentar las buenas prácticas de programación en el desarrollo de software, por medio de la práctica y ejercicios continuos (denominados katas) los asistentes aprenden nuevas técnicas y metodologías que pueden serles útiles en su día a día profesional; es un espacio para el aprendizaje, la compartición de conocimiento y la convivencia.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Agradecimiento a Desarrollo Económico</title>
+    <link rel="alternate" href="http://oaxacarb.org/2014/03/21/agradecimiento-a-desarrollo-economico.html"/>
+    <id>http://oaxacarb.org/2014/03/21/agradecimiento-a-desarrollo-economico.html</id>
+    <published>2014-03-21T15:52:00Z</published>
+    <updated>2014-03-28T16:48:49-06:00</updated>
+    <author>
+      <name>oaxaca.rb</name>
+    </author>
+    <content type="html">&lt;p&gt;Agradecemos al Secretario de Desarrollo Económico del municipio de Oaxaca de Juárez, el Lic. Jaime Castellanos del Campo, que junto con el apoyo de la &lt;a href="https://www.facebook.com/desarrollo.economicooaxacadejuarez"&gt;Dirección de Capacitación y Empleo&lt;/a&gt; es que fue posible la realización de nuestro segundo Dojo en sus instalaciones ubicadas en la calle de Matamoros #102 Centro.&lt;/p&gt;
+
+&lt;p&gt;Toda la comunidad de Oaxaca.rb esta muy agradecida y esperamos poder seguir contanto con su apoyo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Coding Dojo" src="/images/dojo-2.jpg" /&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Coding Dojo - Marzo 2014</title>
     <link rel="alternate" href="http://oaxacarb.org/2014/03/13/coding-dojo-marzo-2014.html"/>
@@ -32,7 +66,7 @@
     <link rel="alternate" href="http://oaxacarb.org/2014/03/11/configuracion-de-rvm-y-ruby.html"/>
     <id>http://oaxacarb.org/2014/03/11/configuracion-de-rvm-y-ruby.html</id>
     <published>2014-03-11T16:13:00Z</published>
-    <updated>2014-03-11T11:24:41-06:00</updated>
+    <updated>2014-03-28T16:48:49-06:00</updated>
     <author>
       <name>oaxaca.rb</name>
     </author>
@@ -44,7 +78,7 @@
   &lt;p&gt;Una herramienta que permite fácilmente instalar, gestionar y trabajar con múltiples entornos ruby, desde versiones del intérprete hasta sets de gemas.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id="instalacin-de-rvm"&gt;Instalación de RVM&lt;/h3&gt;
+&lt;h4 id="instalacin-de-rvm"&gt;Instalación de RVM&lt;/h4&gt;
 
 &lt;p&gt;Para instalar RVM en nuestro sistema &lt;strong&gt;Linux&lt;/strong&gt;, hay que seguir los siguientes pasos:&lt;/p&gt;
 
@@ -66,7 +100,7 @@
 
 &lt;p&gt;Listo, ya tenemos RVM instalado, lo podemos comprobar con el comando &lt;code&gt;rvm -v&lt;/code&gt;, lo que nos debe de mostrar la versión de RVM instalada en nuestro sistema.&lt;/p&gt;
 
-&lt;h3 id="instalacin-de-ruby"&gt;Instalación de Ruby&lt;/h3&gt;
+&lt;h4 id="instalacin-de-ruby"&gt;Instalación de Ruby&lt;/h4&gt;
 
 &lt;p&gt;Ya que tenemos instalado RVM, instalar Ruby es tan fácil como correr un comando, indicándole la versión deseada (recomendamos la &lt;em&gt;2.1.0&lt;/em&gt;)&lt;/p&gt;
 
@@ -75,7 +109,7 @@
 
 &lt;p&gt;Nos sentamos unos momentos a esperar a que termine la instalación…&lt;/p&gt;
 
-&lt;h3 id="configuracin-de-rvm-por-proyecto"&gt;Configuración de RVM por proyecto&lt;/h3&gt;
+&lt;h4 id="configuracin-de-rvm-por-proyecto"&gt;Configuración de RVM por proyecto&lt;/h4&gt;
 
 &lt;p&gt;RVM es lo suficientemente "inteligente" como para identificar las versiones que requerimos dentro de un proyecto, agrupando las librerias requeridas en &lt;strong&gt;gemsets&lt;/strong&gt;, para ésto, requerimos tener un par de archivos dentro de nuestro directorio de trabajo: &lt;code&gt;.ruby-version&lt;/code&gt; y &lt;code&gt;.ruby-gemset&lt;/code&gt; (ambos archivos ocultos).&lt;/p&gt;
 

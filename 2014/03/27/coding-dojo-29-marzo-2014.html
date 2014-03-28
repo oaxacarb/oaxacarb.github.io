@@ -6,13 +6,13 @@
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Configuración del entorno de trabajo Ruby con RVM - oaxaca.rb</title>
+    <title>3er Coding Dojo - Marzo 2014 - oaxaca.rb</title>
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
     <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="/javascripts/app.js" type="text/javascript"></script>
   </head>
-  <body class='x2014 x2014_03 x2014_03_11 x2014_03_11_configuracion-de-rvm-y-ruby'>
+  <body class='x2014 x2014_03 x2014_03_27 x2014_03_27_coding-dojo-29-marzo-2014'>
     <!-- Nav Bar -->
     <div class='row' id='main'>
       <div class='large-12 columns'>
@@ -47,82 +47,17 @@
       <div class='large-9 columns' role='content'>
         <article>
           <h3>
-            <a href="/2014/03/11/configuracion-de-rvm-y-ruby.html">Configuración del entorno de trabajo Ruby con RVM</a>
+            <a href="/2014/03/27/coding-dojo-29-marzo-2014.html">3er Coding Dojo - Marzo 2014</a>
           </h3>
-          <h6>Escrito el Tue 11 March, 2014</h6>
+          <h6>Escrito el Thu 27 March, 2014</h6>
           <hr>
-          <p>Muchas veces, al trabajar con un lenguaje interpretado (como ruby o python) es necesario instalar varias librerías, pero siempre queda el miedo de romper algo con tanta instalación; es deseable poder tener múltiples configuraciones independientes, incluso por proyecto. Para eso tenemos <a href="https://rvm.io/">RVM</a>.</p>
+          <p>La comunidad <strong>oaxaca.rb</strong> invita a propios y extraños al <strong>3er Coding Dojo</strong> que se llevará a cabo el sábado 29 de marzo de 2014 en las instalaciones de la empresa Pintura y Publicidad de Oaxaca, ubicadas en <a href="https://www.google.com.mx/maps?q=Emiliano+Zapata+403A&amp;amp;ll=17.055623,-96.716077&amp;amp;spn=0.002321,0.004128&amp;amp;t=m&amp;amp;hnear=Emiliano+Zapata+403,+Plan+de+Ayala,+Puebla&amp;amp;z=19&amp;amp;layer=c&amp;amp;cbll=17.055526,-96.716096&amp;amp;panoid=XJ9QFI7BkMwWP046NzBHFw&amp;amp;cbp=12,285.94,,0,1.52">Emiliano Zapata 412, Trinidad de las Huertas</a>, Oaxaca de Juárez, Oaxaca.</p>
           
-          <p>En palabras del autor, <strong>Ruby Version Manager</strong> (RVM) se puede describir de la siguiente manera:</p>
+          <p>Si estás interesado en asistir puedes inscribirte en el <a href="https://www.eventbrite.com/e/coding-dojo-tickets-11089630383">evento creado en Eventbrite</a>. Asegura tu lugar, ya que tenemos cupo limitado.</p>
           
-          <blockquote>
-            <p>Una herramienta que permite fácilmente instalar, gestionar y trabajar con múltiples entornos ruby, desde versiones del intérprete hasta sets de gemas.</p>
-          </blockquote>
+          <h4 id="qu-es-un-coding-dojo">¿Qué es un Coding Dojo?</h4>
           
-          <h4 id="instalacin-de-rvm">Instalación de RVM</h4>
-          
-          <p>Para instalar RVM en nuestro sistema <strong>Linux</strong>, hay que seguir los siguientes pasos:</p>
-          
-          <p>Descargamos e instalamos RVM</p>
-          
-          <p><code>\curl -sSL https://get.rvm.io | bash</code></p>
-          
-          <p>Al final de la instalación, veremos un mensaje que nos pide copiar cierto contenido a nuestro archivo <code>.bash_profile</code> (archivo oculto ubicado en nuestro directorio home), seguimos la recomendación para obtener un archivo parecido a lo siguiente:</p>
-          
-          <p><code>. $HOME/.bashrc</code></p>
-          
-          <p><code>[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; source "$HOME/.rvm/scripts/rvm"</code></p>
-          
-          <p><code>source ~/.profile</code></p>
-          
-          <p>Luego, cargamos la nueva configuración de bash en nuestra sesión actual (o reiniciamos nuestra consola, lo que gusten)</p>
-          
-          <p><code>source ~/.bash_profile</code></p>
-          
-          <p>Listo, ya tenemos RVM instalado, lo podemos comprobar con el comando <code>rvm -v</code>, lo que nos debe de mostrar la versión de RVM instalada en nuestro sistema.</p>
-          
-          <h4 id="instalacin-de-ruby">Instalación de Ruby</h4>
-          
-          <p>Ya que tenemos instalado RVM, instalar Ruby es tan fácil como correr un comando, indicándole la versión deseada (recomendamos la <em>2.1.0</em>)</p>
-          
-          <pre><code>rvm install ruby-2.1.0
-          </code></pre>
-          
-          <p>Nos sentamos unos momentos a esperar a que termine la instalación…</p>
-          
-          <h4 id="configuracin-de-rvm-por-proyecto">Configuración de RVM por proyecto</h4>
-          
-          <p>RVM es lo suficientemente "inteligente" como para identificar las versiones que requerimos dentro de un proyecto, agrupando las librerias requeridas en <strong>gemsets</strong>, para ésto, requerimos tener un par de archivos dentro de nuestro directorio de trabajo: <code>.ruby-version</code> y <code>.ruby-gemset</code> (ambos archivos ocultos).</p>
-          
-          <p>Para crear y configurar un nuevo directorio de proyecto, creamos los dos archivos mencionados anteriormente denotando la versión de ruby y el nombre del gemset deseado:</p>
-          
-          <p><code>mkdir proyecto &amp;&amp; cd proyecto</code></p>
-          
-          <p><code>echo '2.1.0' &gt; .ruby-version</code></p>
-          
-          <p><code>echo 'proyecto' &gt; .ruby-gemset</code></p>
-          
-          <p>Esto creará un gemset llamado <em>proyecto</em> que utiliza la versión <em>2.1.0</em> de ruby, denotado como <strong>ruby-2.1.0@proyecto</strong>, ahora, cada que entremos al directorio <code>proyecto</code>, RVM cargará automáticamente la configuración deseada, y todas las librerías (gemas) que instalemos en dicho proyecto quedarán aisladas en el mismo.</p>
-          
-          <p>Si aún estamos dentro de nuestra carpeta <em>proyecto</em>, ejecutamos el comando <code>cd .</code> (punto):</p>
-          
-          <p><code>=&gt; ruby-2.1.0 - #gemset created ruby-2.1.0@proyecto</code></p>
-          
-          <p><code>=&gt; ruby-2.1.0 - #generating proyecto wrappers.......</code></p>
-          
-          <p>Por último, comprobamos que todo se encuentre en orden, verificamos la versión de ruby en uso con el comando:</p>
-          
-          <p><code>rvm list</code></p>
-          
-          <p><code>=* ruby-2.1.0 [ x86_64 ]</code></p>
-          
-          <p>Y el gemset cargado actualmente:</p>
-          
-          <p><code>rvm gemset list</code></p>
-          
-          <p><code>=&gt; proyecto</code></p>
-          
-          <p>Listo, ruby 2.1.0 instalado y gemset creado, estamos listos para trabajar.</p>
+          <p>Los Coding Dojos tienen como finalidad el fomentar las buenas prácticas de programación en el desarrollo de software, por medio de la práctica y ejercicios continuos (denominados katas) los asistentes aprenden nuevas técnicas y metodologías que pueden serles útiles en su día a día profesional; es un espacio para el aprendizaje, la compartición de conocimiento y la convivencia.</p>
           <div id="disqus_thread"></div>
                       <script type="text/javascript">
                       //<![CDATA[
