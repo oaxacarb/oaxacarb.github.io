@@ -5,10 +5,31 @@
   <id>http://oaxacarb.org/</id>
   <link href="http://oaxacarb.org/"/>
   <link href="http://oaxacarb.org/feed.xml" rel="self"/>
-  <updated>2014-03-27T04:45:00Z</updated>
+  <updated>2014-04-09T01:16:00Z</updated>
   <author>
     <name>oaxaca.rb</name>
   </author>
+  <entry>
+    <title>4o Coding Dojo - Abril 2014</title>
+    <link rel="alternate" href="http://oaxacarb.org/2014/04/09/coding-dojo-abril-2014.html"/>
+    <id>http://oaxacarb.org/2014/04/09/coding-dojo-abril-2014.html</id>
+    <published>2014-04-09T01:16:00Z</published>
+    <updated>2014-04-10T19:22:20-05:00</updated>
+    <author>
+      <name>oaxaca.rb</name>
+    </author>
+    <content type="html">&lt;p&gt;Para comenzar las actividades del mes de abril, la comunidad &lt;strong&gt;oaxaca.rb&lt;/strong&gt; extiende la invitación a los programadores de Oaxaca (y zonas aledañas) al &lt;strong&gt;4o Coding Dojo&lt;/strong&gt;. Se realizará el &lt;strong&gt;sábado 12 de abril&lt;/strong&gt; en las instalaciones de la &lt;strong&gt;Secretaría de Desarrollo Económico&lt;/strong&gt;; la dirección es &lt;strong&gt;Matamoros #102, Centro. Oaxaca de Juárez Oaxaca&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div class="text-center"&gt;
+  &lt;p&gt;&lt;a href="https://www.eventbrite.com/e/coding-dojo-tickets-11244212743"&gt;&lt;img alt="flyer dojo" src="/images/codingdojo.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Puedes registrarte en el &lt;a href="https://www.eventbrite.com/e/coding-dojo-tickets-11244212743"&gt;evento de Eventbrite&lt;/a&gt;. Si ya has asistido anteriormente y conoces a alguien que pueda estar interesado en aprender metodologías de programación y de paso el lenguaje Ruby, invítalo con toda confianza (ya sabes, tenemos &lt;em&gt;kata&lt;/em&gt; de bienvenida).&lt;/p&gt;
+
+&lt;p&gt;La maquina virtual que se utiliza en el Dojo está disponible en &lt;a href="https://mega.co.nz/#!gNUWDQSS!UTuITd8SrT3sMbvAInYRbWBMI0Cy4_ToYPUckX7w59M"&gt;este enlace&lt;/a&gt;. Si tienes alguna duda, puedes dejarla en la sección de comentarios (en la parte inferior). ¡Nos vemos el sábado! &lt;/p&gt;
+
+</content>
+  </entry>
   <entry>
     <title>3er Coding Dojo - Marzo 2014</title>
     <link rel="alternate" href="http://oaxacarb.org/2014/03/27/coding-dojo-29-marzo-2014.html"/>
@@ -158,44 +179,6 @@
 &lt;p&gt;No podemos dejar de agradecer a &lt;a href="http://twitter.com/eeecorona"&gt;Erik Corona&lt;/a&gt;, un miembro entusiasta de la Comunidad Ruby de Oaxaca quién realizó toda la gestión con la gerencia de PyPO para lograr que este evento se pudiera realizar.&lt;/p&gt;
 
 &lt;p&gt;Esperamos seguir contando con su invaluable apoyo.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Arranca la comunidad ruby de Oaxaca</title>
-    <link rel="alternate" href="http://oaxacarb.org/2014/03/04/arranca-la-comunidad-ruby-de-oaxaca.html"/>
-    <id>http://oaxacarb.org/2014/03/04/arranca-la-comunidad-ruby-de-oaxaca.html</id>
-    <published>2014-03-04T05:36:00Z</published>
-    <updated>2014-03-08T12:27:24-06:00</updated>
-    <author>
-      <name>oaxaca.rb</name>
-    </author>
-    <content type="html">&lt;div class="row"&gt;
-  &lt;div class="large-6 columns"&gt;
-    &lt;p&gt;El día 26 de febrero de 2014 tuvo lugar el &lt;strong&gt;primer Coding Dojo de Oaxaca&lt;/strong&gt;, marcando también el inicio de esta &lt;strong&gt;comunidad de programadores ruby de Oaxaca&lt;/strong&gt;; durante el evento resaltaron los siguientes puntos:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Hubo gran variedad de personas, desde estudiantes de nivel licenciatura, desarrolladores en empresas privadas y desarrolladores en dependencias gubernamentales.&lt;/li&gt;
-      &lt;li&gt;Se practicó Pair Programming, TDD. (Utilizando Ruby y &lt;a href="http://rspec.info/"&gt;RSpec&lt;/a&gt;).&lt;/li&gt;
-      &lt;li&gt;Se despertó mucho interés, tanto que los participantes solicitaron que se hiciera el evento cada 15 días.&lt;/li&gt;
-      &lt;li&gt;Se practicó con una kata sencilla (&lt;a href="http://en.wikipedia.org/wiki/Fizz_buzz"&gt;FizzBuzz&lt;/a&gt;), que para ser la primera vez de muchos de los participantes, fue excelente.&lt;/li&gt;
-      &lt;li&gt;Sirvió como presentación para la comunidad Ruby de Oaxaca. (&lt;a href="http://twitter.com/oaxacarb"&gt;@oaxacarb&lt;/a&gt; en twitter).&lt;/li&gt;
-      &lt;li&gt;Y por supuesto, nos divertimos mucho.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-  &lt;div class="large-6 columns"&gt;
-    &lt;p&gt;&lt;img alt="Coding Dojo" src="/images/dojo.jpg" /&gt;&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;En la retrospectiva del evento saltaron a la vista algunos puntos que mejoraremos en los siguientes eventos:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;La instalación de la máquina virtual llevó mucho tiempo. Será un requisito para la siguiente ocasión.&lt;/li&gt;
-  &lt;li&gt;Se dividirá en 2 grupos, avanzados y principiantes, para permitir que los que tengan un mejor nivel puedan hacer katas más avanzadas.&lt;/li&gt;
-  &lt;li&gt;Buscaremos hacer otros eventos como reuniones informales para abordar temas de interés de muchos participantes, como TDD con Rails y cuestiones de ese tipo.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Les compartimos la liga a algunas fotos tomadas durante el evento &lt;a href="https://plus.google.com/107461695051836920312/posts/d1qbu2THi37"&gt;aqui&lt;/a&gt;.&lt;/p&gt;
 </content>
   </entry>
 </feed>
