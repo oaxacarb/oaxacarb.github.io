@@ -1,4 +1,7 @@
 %aside.large-3.columns
+  %div
+    = partial 'contador_evento'
+
   %h5 Etiquetas
   %ul.inline-list
     - blog.tags.each do |tag, articles|
@@ -6,6 +9,17 @@
         = link_to tag_path(tag) do
           %span.label
             = tag
+
+  .panel
+    %h5 ¡Importante!
+    %p
+      ¿Te interesa acudir al próximo Coding Dojo?
+      %strong
+        = link_to "Descarga esta nueva máquina virtual", 'https://mega.co.nz/#!NRkiTDzA!k5M2-eIJkuD5uZZmRxOpUHhSPNnHLtY8cP_lr4V6xWc'
+      con todo lo necesario para que puedas integrarte a las sesiones de trabajo.
+    %p
+      Instala con la última versión de
+      = link_to 'VirtualBox', 'https://www.virtualbox.org/'
 
   %h5 Artículos Recientes
   %ul.side-nav
@@ -17,15 +31,5 @@
   %ul.side-nav
     - blog.articles.group_by {|a| a.date.month }.each do |month, articles|
       %li= link_to "#{I18n.t(Date::MONTHNAMES[month])} (#{articles.size})", blog_month_path(2014, month)
-  .panel
-    %h5 ¡Importante!
-    %p
-      ¿Te interesa acudir al próximo Coding Dojo?
-      %strong
-        = link_to "Descarga esta nueva máquina virtual", 'https://mega.co.nz/#!NRkiTDzA!k5M2-eIJkuD5uZZmRxOpUHhSPNnHLtY8cP_lr4V6xWc'
-      con todo lo necesario para que puedas integrarte a las sesiones de trabajo.
-    %p
-      Instala con la última versión de
-      = link_to 'VirtualBox', 'https://www.virtualbox.org/'
 / End Sidebar
 
