@@ -1,7 +1,7 @@
 ---
 title: Cómo subir un Post
 date: 2014-04-16 16:11 UTC
-tags:
+tags: middleman,github,comunidad
 ---
 Subir un post a **oaxaca.rb** es muy sencillo, solo debes seguir los siguientes pasos y asi aportar conocimiento a la comunidad Ruby de Oaxaca.
 
