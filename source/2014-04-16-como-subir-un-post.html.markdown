@@ -1,5 +1,5 @@
 ---
-title: Comó subir un Post
+title: Cómo subir un Post
 date: 2014-04-16 16:11 UTC
 tags:
 ---
