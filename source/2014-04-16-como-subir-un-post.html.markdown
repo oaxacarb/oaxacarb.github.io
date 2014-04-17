@@ -1,15 +1,15 @@
 ---
-title: Como subir un Post
+title: Comó subir un Post
 date: 2014-04-16 16:11 UTC
 tags:
 ---
-Para subir un post es muy sencillo solo debes seguir los siguientes pasos y asi aportar conocimiento a la comunidad Ruby de Oaxaca
+Subir un post a **oaxaca.rb** es muy sencillo, solo debes seguir los siguientes pasos y asi aportar conocimiento a la comunidad Ruby de Oaxaca.
 
-El primer paso es crear un cuenta [Github](https://github.com) si esque aun no la tienen.
+El primer paso es crear un cuenta [Github](https://github.com) si es que aún no la tienen.
 
 Si acabas de crear la cuenta de **Github** debes crear tus llaves [SSH](https://help.github.com/articles/generating-ssh-keys).
 
-Mandar un correo con tu nombre de usuario de **Github** al correo **oaxacarb@gmail.com** y esperar el correo de confirmacion de que te has unido al grupo. 
+Mandar un correo con tu nombre de usuario de **Github** al correo **oaxacarb@gmail.com** y esperar el correo de confirmación de que te has unido al grupo. 
 
 #### Clonar el proyecto
 
@@ -23,15 +23,15 @@ Entras a la carpeta de tu proyecto
 
 ``cd oaxacarb.github.io``
 
-Cambiate a la rama Source
+Cámbiate a la rama Source
 
 ``git checkout source``
 
-> La rama source es donde se subira el codigo para que este pueda ser deployado a el servidor.
+> La rama source es donde se subirá el código para que éste pueda ser deployado al servidor.
 
 #### Crear el articulo
 
-Para crear el articulo desde terminal puedes chacer
+Para crear el artículo desde terminal puedes chacer
 
 ``middleman article "nombre de tu articulo"``
 
@@ -43,7 +43,7 @@ Puedes ver tus cambios reflejados antes de subirlos dentro de tu localhost en el
 
 ``middleman server``
 
-Ya que tu articulo esta listo, debes subir tus cambios al repositorio de **Github** para posteriormente subirlo al servidor.
+Ya que tu artículo esta listo, debes subir tus cambios al repositorio de **Github** para posteriormente subirlo al servidor.
 
 Agregar tus cambios al commit que se va subir a Github
 
@@ -57,9 +57,9 @@ Subir los cambios a github
 
 ``git push origin source`` 
 
-> Es importante que el push se haga hacia source porque ahi es donde se tendra el codigo
+> Es importante que el push se haga hacia source porque ahi es donde se tendra el código
 
-Finalmente hacer subirlo a servidor
+Finalmente, subirlo a servidor
 
 ``middleman deploy``
 
