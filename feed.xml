@@ -5,10 +5,90 @@
   <id>http://oaxacarb.org/</id>
   <link href="http://oaxacarb.org/"/>
   <link href="http://oaxacarb.org/feed.xml" rel="self"/>
-  <updated>2014-04-09T01:16:00Z</updated>
+  <updated>2014-04-16T16:11:00Z</updated>
   <author>
     <name>oaxaca.rb</name>
   </author>
+  <entry>
+    <title>Cómo subir un Post</title>
+    <link rel="alternate" href="http://oaxacarb.org/2014/04/16/como-subir-un-post.html"/>
+    <id>http://oaxacarb.org/2014/04/16/como-subir-un-post.html</id>
+    <published>2014-04-16T16:11:00Z</published>
+    <updated>2014-04-30T18:08:33-05:00</updated>
+    <author>
+      <name>oaxaca.rb</name>
+    </author>
+    <content type="html">&lt;p&gt;Subir un post a &lt;strong&gt;oaxaca.rb&lt;/strong&gt; es muy sencillo, solo debes seguir los siguientes pasos y asi aportar conocimiento a la comunidad Ruby de Oaxaca.&lt;/p&gt;
+
+&lt;p&gt;El primer paso es crear un cuenta &lt;a href="https://github.com"&gt;Github&lt;/a&gt; si es que aún no la tienen.&lt;/p&gt;
+
+&lt;p&gt;Si acabas de crear la cuenta de &lt;strong&gt;Github&lt;/strong&gt; debes crear tus llaves &lt;a href="https://help.github.com/articles/generating-ssh-keys"&gt;SSH&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Mandar un correo con tu nombre de usuario de &lt;strong&gt;Github&lt;/strong&gt; al correo &lt;strong&gt;oaxacarb@gmail.com&lt;/strong&gt; y esperar el correo de confirmación de que te has unido al grupo. &lt;/p&gt;
+
+&lt;h4 id="clonar-el-proyecto"&gt;Clonar el proyecto&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;En terminal&lt;/strong&gt; &lt;/p&gt;
+
+&lt;p&gt;Clona el proyecto&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git clone git@github.com:oaxacarb/oaxacarb.github.io.git&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Entras a la carpeta de tu proyecto&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;cd oaxacarb.github.io&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Cámbiate a la rama Source&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git checkout source&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;La rama source es donde se subirá el código para que éste pueda ser deployado al servidor.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id="crear-el-articulo"&gt;Crear el articulo&lt;/h4&gt;
+
+&lt;p&gt;Para crear el artículo desde terminal puedes chacer&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;middleman article "nombre de tu articulo"&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Este comando creara un archivo con una estampa de tiempo para que empieces a trabajar sobre el, tendra el siguiente formato. Ejemplo de este Post "2014-03-04-como-subir-un-post.html.markdown"&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Dentro de tu IDE favorito puedes editar el contenido del articulo con sintaxis &lt;a href="http://daringfireball.net/projects/markdown/syntax"&gt;Markdown&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Puedes ver tus cambios reflejados antes de subirlos dentro de tu localhost en el puerto 4567 con el comando&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;middleman server&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Ya que tu artículo esta listo, debes subir tus cambios al repositorio de &lt;strong&gt;Github&lt;/strong&gt; para posteriormente subirlo al servidor.&lt;/p&gt;
+
+&lt;p&gt;Agregar tus cambios al commit que se va subir a Github&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git add . -A&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Agregar el comentario al commit&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git commit -m "comentario"&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Subir los cambios a github&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git push origin source&lt;/code&gt; &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Es importante que el push se haga hacia source porque ahi es donde se tendra el código&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Finalmente, subirlo a servidor&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;middleman deploy&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Nota: Las veces posteriores que subas un Post debes descargar las actualizaciones que tenga el proyecto, que algun otro miembro de la comunidad haya subido un post, cambios de diseño, etc., con el siguiente comando&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git pull&lt;/code&gt; &lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>4o Coding Dojo - Abril 2014</title>
     <link rel="alternate" href="http://oaxacarb.org/2014/04/09/coding-dojo-abril-2014.html"/>
@@ -163,22 +243,6 @@
 &lt;p&gt;&lt;code&gt;=&amp;gt; proyecto&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Listo, ruby 2.1.0 instalado y gemset creado, estamos listos para trabajar.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Agradecimiento a PyPO</title>
-    <link rel="alternate" href="http://oaxacarb.org/2014/03/05/agradecimiento-a-pypo.html"/>
-    <id>http://oaxacarb.org/2014/03/05/agradecimiento-a-pypo.html</id>
-    <published>2014-03-05T05:36:00Z</published>
-    <updated>2014-03-08T12:27:24-06:00</updated>
-    <author>
-      <name>oaxaca.rb</name>
-    </author>
-    <content type="html">&lt;p&gt;Queremos agradecer de manera muy especial al Lic. Claudio Ruiz, Gerente de la Empresa &lt;a href="http://www.pypo.mx/"&gt;PyPO: Pintura y Publicidad de Oaxaca&lt;/a&gt; por facilitarnos sus instalaciones ubicadas en la Calle Emiliano Zapata No. 412. Trinidad de las Huertas, en la Cd. de Oaxaca. Para la realización de nuestro evento.&lt;/p&gt;
-
-&lt;p&gt;No podemos dejar de agradecer a &lt;a href="http://twitter.com/eeecorona"&gt;Erik Corona&lt;/a&gt;, un miembro entusiasta de la Comunidad Ruby de Oaxaca quién realizó toda la gestión con la gerencia de PyPO para lograr que este evento se pudiera realizar.&lt;/p&gt;
-
-&lt;p&gt;Esperamos seguir contando con su invaluable apoyo.&lt;/p&gt;
 </content>
   </entry>
 </feed>

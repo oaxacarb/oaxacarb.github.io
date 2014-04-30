@@ -49,6 +49,59 @@
       <div class='large-9 columns' role='content'>
         <article>
           <h3>
+            <a href="/2014/04/16/como-subir-un-post.html">Cómo subir un Post</a>
+          </h3>
+          <h6>
+            Escrito el
+            <span>Wed 16 April, 2014</span>
+          </h6>
+          <br>
+          <!--
+            use article.summary(250) if you have Nokogiri available to show just
+            the first 250 characters
+          -->
+          <p>Subir un post a <strong>oaxaca.rb</strong> es muy sencillo, solo debes seguir los siguientes pasos y asi aportar conocimiento a la comunidad Ruby de Oaxaca.</p>
+          
+          <p>El primer paso es crear un cuenta <a href="https://github.com">Github</a> si es que aún no la tienen.</p>
+          
+          <p>Si acabas de crear la cuenta de <strong>Github</strong> debes crear tus llaves <a href="https://help.github.com/articles/generating-ssh-keys">SSH</a>.</p>
+          
+          <p>Mandar un correo con tu nombre de usuario de <strong>Github</strong> al correo <strong>oaxacarb@gmail.com</strong> y esperar el correo de confirmación de que te has unido al grupo. </p>
+          
+          <h4 id="clonar-el-proyecto">Clonar el proyecto</h4>
+          
+          <p><strong>En terminal</strong> </p>
+          
+          <p>Clona el proyecto</p>
+          
+          <p><code>git clone git@github.com:oaxacarb/oaxacarb.github.io.git</code></p>
+          
+          <p>Entras a la carpeta de tu proyecto</p>
+          
+          <p><code>cd oaxacarb.github.io</code></p>
+          
+          <p>Cámbiate a la rama Source</p>
+          
+          <p><code>git checkout source</code></p>
+          
+          <blockquote>
+            <p>La rama source es donde se subirá el código para que éste pueda ser deployado al servidor.</p>
+          </blockquote>
+          
+          <h4 id="crear-el-articulo">Crear el articulo</h4>
+          
+          <p>Para crear el artículo desde terminal puedes chacer</p>
+          
+          <p><code>middleman article...</code></p>
+              <a href="/2014/04/16/como-subir-un-post.html"><i class='fi-page-search'></i>
+          &nbsp;
+          Leer más
+          </a>
+      
+          <hr>
+        </article>
+        <article>
+          <h3>
             <a href="/2014/04/09/coding-dojo-abril-2014.html">4o Coding Dojo - Abril 2014</a>
           </h3>
           <h6>
@@ -256,6 +309,18 @@
       </div>
       <!-- End Main Content -->
       <aside class='large-3 columns'>
+        <div>
+          <div style='width:195px; text-align:center;'>
+            <iframe allowtransparency='true' frameborder='0' height='282' marginheight='0' marginwidth='0' scrolling='no' src='https://www.eventbrite.com/countdown-widget?eid=11334538911' width='195'></iframe>
+            <div style='font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:195px; text-align:center;'>
+              <a href='http://www.eventbrite.com/r/ecount' style='color:#ddd; text-decoration:none;' target='_blank'>Online event registration</a>
+              <span style='color:#ddd;'>for</span>
+              <a href='https://www.eventbrite.com/e/coding-dojo-tickets-11334538911?ref=ecount' style='color:#ddd; text-decoration:none;' target='_blank'>Coding Dojo</a>
+              <span style='color:#ddd;'>powered by</span>
+              <a href='http://www.eventbrite.com?ref=ecount' style='color:#ddd; text-decoration:none;' target='_blank'>Eventbrite</a>
+            </div>
+          </div>
+        </div>
         <h5>Etiquetas</h5>
         <ul class='inline-list'>
           <li class='tag'>
@@ -293,9 +358,44 @@
             </a>
       
           </li>
+          <li class='tag'>
+                  <a href="/tags/middleman.html"><span class='label'>
+              middleman
+            </span>
+            </a>
+      
+          </li>
+          <li class='tag'>
+                  <a href="/tags/github.html"><span class='label'>
+              github
+            </span>
+            </a>
+      
+          </li>
         </ul>
+        <div class='panel'>
+          <h5>¡Importante!</h5>
+          <p>
+            ¿Te interesa acudir al próximo Coding Dojo?
+            <strong>
+              <a href="https://mega.co.nz/#!VU0GhRgB!Vhl0Vjc_xqZILoc1WKyMY4f4RbeAZQBCaZBOtSUhKl4">Descarga esta nueva máquina virtual</a>
+            </strong>
+            con todo lo necesario para que puedas integrarte a las sesiones de trabajo.
+          </p>
+          <p>
+            Instala con la última versión de
+            <a href="https://www.virtualbox.org/">VirtualBox</a>
+          </p>
+          <p>
+            <i>Actualizada: 30/04/2014</i>
+          </p>
+        </div>
         <h5>Artículos Recientes</h5>
         <ul class='side-nav'>
+          <li class='article'>
+            <a href="/2014/04/16/como-subir-un-post.html">Cómo subir un Post</a>
+            <span>April 16</span>
+          </li>
           <li class='article'>
             <a href="/2014/04/09/coding-dojo-abril-2014.html">4o Coding Dojo - Abril 2014</a>
             <span>April  9</span>
@@ -327,23 +427,9 @@
         </ul>
         <h5>Por mes</h5>
         <ul class='side-nav'>
-          <li><a href="/2014/04.html">Abril (1)</a></li>
+          <li><a href="/2014/04.html">Abril (2)</a></li>
           <li><a href="/2014/03.html">Marzo (6)</a></li>
         </ul>
-        <div class='panel'>
-          <h5>¡Importante!</h5>
-          <p>
-            ¿Te interesa acudir al próximo Coding Dojo?
-            <strong>
-              <a href="https://mega.co.nz/#!NRkiTDzA!k5M2-eIJkuD5uZZmRxOpUHhSPNnHLtY8cP_lr4V6xWc">Descarga esta nueva máquina virtual</a>
-            </strong>
-            con todo lo necesario para que puedas integrarte a las sesiones de trabajo.
-          </p>
-          <p>
-            Instala con la última versión de
-            <a href="https://www.virtualbox.org/">VirtualBox</a>
-          </p>
-        </div>
       </aside>
       <!-- End Sidebar -->
     </div>
