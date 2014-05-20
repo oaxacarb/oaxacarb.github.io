@@ -5,10 +5,31 @@
   <id>http://oaxacarb.org/</id>
   <link href="http://oaxacarb.org/"/>
   <link href="http://oaxacarb.org/feed.xml" rel="self"/>
-  <updated>2014-05-17T00:04:00Z</updated>
+  <updated>2014-05-20T22:21:00Z</updated>
   <author>
     <name>oaxaca.rb</name>
   </author>
+  <entry>
+    <title>Invitación al VII Coding Dojo</title>
+    <link rel="alternate" href="http://oaxacarb.org/2014/05/20/invitacion-al-vii-coding-dojo.html"/>
+    <id>http://oaxacarb.org/2014/05/20/invitacion-al-vii-coding-dojo.html</id>
+    <published>2014-05-20T22:21:00Z</published>
+    <updated>2014-05-20T17:33:35-05:00</updated>
+    <author>
+      <name>oaxaca.rb</name>
+    </author>
+    <content type="html">&lt;p&gt;La comunidad &lt;strong&gt;oaxaca.rb&lt;/strong&gt; extiende la invitación a los programadores de Oaxaca (y zonas aledañas) al &lt;strong&gt;7o Coding Dojo&lt;/strong&gt;. Se realizará el &lt;strong&gt;sábado 24 de mayo&lt;/strong&gt; en las instalaciones de la &lt;strong&gt;Secretaría de Desarrollo Económico&lt;/strong&gt;; la dirección es &lt;strong&gt;Matamoros #102, Centro. Oaxaca de Juárez Oaxaca&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div class="text-center"&gt;
+  &lt;p&gt;&lt;a href="https://www.eventbrite.com/e/coding-dojo-tickets-11696056219"&gt;&lt;img alt="flyer dojo" src="/images/codingdojo2.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Puedes registrarte en el &lt;a href="https://www.eventbrite.com/e/coding-dojo-tickets-11696056219"&gt;evento de Eventbrite&lt;/a&gt;. Si ya has asistido anteriormente y conoces a alguien que pueda estar interesado en aprender metodologías de programación y de paso el lenguaje Ruby, ¡invítalo! (tenemos &lt;em&gt;kata&lt;/em&gt; de bienvenida).&lt;/p&gt;
+
+&lt;p&gt;La maquina virtual que se utiliza en el Dojo está disponible en &lt;a href="https://mega.co.nz/#!VU0GhRgB!Vhl0Vjc_xqZILoc1WKyMY4f4RbeAZQBCaZBOtSUhKl4"&gt;este enlace&lt;/a&gt;. Si tienes alguna duda, puedes dejarla en la sección de comentarios (en la parte inferior). ¡Nos vemos el sábado!&lt;/p&gt;
+
+</content>
+  </entry>
   <entry>
     <title>Estructuras de datos y algoritmos (Ruby Edition)</title>
     <link rel="alternate" href="http://oaxacarb.org/2014/05/17/estructuras-de-datos-y-algoritmos-ruby-edition.html"/>
@@ -214,24 +235,6 @@ puts 10.to_romano
 
 &lt;p&gt;La maquina virtual que se utiliza en el Dojo está disponible en &lt;a href="https://mega.co.nz/#!gNUWDQSS!UTuITd8SrT3sMbvAInYRbWBMI0Cy4_ToYPUckX7w59M"&gt;este enlace&lt;/a&gt;. Si tienes alguna duda, puedes dejarla en la sección de comentarios (en la parte inferior). ¡Nos vemos el sábado! &lt;/p&gt;
 
-</content>
-  </entry>
-  <entry>
-    <title>3er Coding Dojo - Marzo 2014</title>
-    <link rel="alternate" href="http://oaxacarb.org/2014/03/27/coding-dojo-29-marzo-2014.html"/>
-    <id>http://oaxacarb.org/2014/03/27/coding-dojo-29-marzo-2014.html</id>
-    <published>2014-03-27T04:45:00Z</published>
-    <updated>2014-03-28T16:49:25-06:00</updated>
-    <author>
-      <name>oaxaca.rb</name>
-    </author>
-    <content type="html">&lt;p&gt;La comunidad &lt;strong&gt;oaxaca.rb&lt;/strong&gt; invita a propios y extraños al &lt;strong&gt;3er Coding Dojo&lt;/strong&gt; que se llevará a cabo el sábado 29 de marzo de 2014 en las instalaciones de la empresa Pintura y Publicidad de Oaxaca, ubicadas en &lt;a href="https://www.google.com.mx/maps?q=Emiliano+Zapata+403A&amp;amp;amp;ll=17.055623,-96.716077&amp;amp;amp;spn=0.002321,0.004128&amp;amp;amp;t=m&amp;amp;amp;hnear=Emiliano+Zapata+403,+Plan+de+Ayala,+Puebla&amp;amp;amp;z=19&amp;amp;amp;layer=c&amp;amp;amp;cbll=17.055526,-96.716096&amp;amp;amp;panoid=XJ9QFI7BkMwWP046NzBHFw&amp;amp;amp;cbp=12,285.94,,0,1.52"&gt;Emiliano Zapata 412, Trinidad de las Huertas&lt;/a&gt;, Oaxaca de Juárez, Oaxaca.&lt;/p&gt;
-
-&lt;p&gt;Si estás interesado en asistir puedes inscribirte en el &lt;a href="https://www.eventbrite.com/e/coding-dojo-tickets-11089630383"&gt;evento creado en Eventbrite&lt;/a&gt;. Asegura tu lugar, ya que tenemos cupo limitado.&lt;/p&gt;
-
-&lt;h4 id="qu-es-un-coding-dojo"&gt;¿Qué es un Coding Dojo?&lt;/h4&gt;
-
-&lt;p&gt;Los Coding Dojos tienen como finalidad el fomentar las buenas prácticas de programación en el desarrollo de software, por medio de la práctica y ejercicios continuos (denominados katas) los asistentes aprenden nuevas técnicas y metodologías que pueden serles útiles en su día a día profesional; es un espacio para el aprendizaje, la compartición de conocimiento y la convivencia.&lt;/p&gt;
 </content>
   </entry>
 </feed>
