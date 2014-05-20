@@ -5,10 +5,116 @@
   <id>http://oaxacarb.org/</id>
   <link href="http://oaxacarb.org/"/>
   <link href="http://oaxacarb.org/feed.xml" rel="self"/>
-  <updated>2014-04-16T16:11:00Z</updated>
+  <updated>2014-05-17T00:04:00Z</updated>
   <author>
     <name>oaxaca.rb</name>
   </author>
+  <entry>
+    <title>Estructuras de datos y algoritmos (Ruby Edition)</title>
+    <link rel="alternate" href="http://oaxacarb.org/2014/05/17/estructuras-de-datos-y-algoritmos-ruby-edition.html"/>
+    <id>http://oaxacarb.org/2014/05/17/estructuras-de-datos-y-algoritmos-ruby-edition.html</id>
+    <published>2014-05-17T00:04:00Z</published>
+    <updated>2014-05-20T11:19:05-05:00</updated>
+    <author>
+      <name>oaxaca.rb</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;strong&gt;Concise Notes on Data Structures and Algorithms Ruby Edition&lt;/strong&gt; (por &lt;em&gt;Christopher Fox&lt;/em&gt;) es un ebook gratuito en formato &lt;strong&gt;PDF&lt;/strong&gt; publicado por &lt;a href="http://bookboon.com/es"&gt;bookboon.com&lt;/a&gt; el cual trata conceptos como: &lt;em&gt;arrays&lt;/em&gt;, &lt;em&gt;contenedores&lt;/em&gt;, &lt;em&gt;pilas&lt;/em&gt;, &lt;em&gt;colas&lt;/em&gt;, &lt;em&gt;recursividad&lt;/em&gt;, &lt;em&gt;arboles&lt;/em&gt; y &lt;em&gt;grafos&lt;/em&gt; entre otros, así como también, aborda algunos algoritmos de ordenamiento básicos como podrían ser: &lt;em&gt;Bubble Sort&lt;/em&gt; y &lt;em&gt;Insertion Sort&lt;/em&gt; todo esto enfocado directamente al lenguaje Ruby.&lt;/p&gt;
+
+&lt;p&gt;El libro consta de 197 páginas y se encuentra dividido en 24 capítulos de fácil seguimiento. El indice temático es el siguiente:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Introduction&lt;/li&gt;
+  &lt;li&gt;Built-In Types&lt;/li&gt;
+  &lt;li&gt;Arrays&lt;/li&gt;
+  &lt;li&gt;Assertions&lt;/li&gt;
+  &lt;li&gt;Containers&lt;/li&gt;
+  &lt;li&gt;Stacks&lt;/li&gt;
+  &lt;li&gt;Queues&lt;/li&gt;
+  &lt;li&gt;Stacks and Recursion&lt;/li&gt;
+  &lt;li&gt;Collections&lt;/li&gt;
+  &lt;li&gt;Lists&lt;/li&gt;
+  &lt;li&gt;Analyzing Algorithms&lt;/li&gt;
+  &lt;li&gt;Function Growth Rates&lt;/li&gt;
+  &lt;li&gt;Basic Sorting Algorithms&lt;/li&gt;
+  &lt;li&gt;Recurrences&lt;/li&gt;
+  &lt;li&gt;Merge sort and Quicksort&lt;/li&gt;
+  &lt;li&gt;Trees, Heaps, and Heapsort&lt;/li&gt;
+  &lt;li&gt;Binary Trees&lt;/li&gt;
+  &lt;li&gt;Binary Search and Binary Search Trees&lt;/li&gt;
+  &lt;li&gt;Sets&lt;/li&gt;
+  &lt;li&gt;Maps&lt;/li&gt;
+  &lt;li&gt;Hashing&lt;/li&gt;
+  &lt;li&gt;Hashed Collections&lt;/li&gt;
+  &lt;li&gt;Graphs&lt;/li&gt;
+  &lt;li&gt;Graph Algorithms&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para descargar el ebook basta con acceder al siguiente &lt;a href="http://bookboon.com/es/concise-notes-on-data-structures-and-algorithms-ebook"&gt;enlace&lt;/a&gt; y llenar un pequeño cuestionario el cual una vez completado, permitirá el acceso a dicho archivo.&lt;/p&gt;
+
+&lt;p&gt;Que lo disfruten ;).&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Clases extendiendo las clases</title>
+    <link rel="alternate" href="http://oaxacarb.org/2014/05/07/clases-extendiendo-las-clases.html"/>
+    <id>http://oaxacarb.org/2014/05/07/clases-extendiendo-las-clases.html</id>
+    <published>2014-05-07T20:42:00Z</published>
+    <updated>2014-05-20T11:19:05-05:00</updated>
+    <author>
+      <name>oaxaca.rb</name>
+    </author>
+    <content type="html">&lt;p&gt;Todas las cosas que utilizamos en Ruby son objetos.
+En Ruby podemos ver diferentes tipos o clases de objetos: textos, enteros, flotantes, matrices, y algunos objetos especiales (true, false y nil). 
+En Ruby, estas clases están siempre en mayúsculas: String, Integer, Float, Array, etc. 
+Bién, ahora mensionaré después de esta breve explicación de las Clases como es que podemos EXTENDER de las clases en Ruby.
+En Ruby las clases nunca se consideran cerradas, y se pueden modificar añadiendo métodos, variables, por ejemplo, 
+vamos a añadir una nueva funcionalidad a la Clase Integer:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+class Integer
+   def to_romano
+      if self == 5
+         romano = 'V'
+      else
+         romano = 'X'
+      end
+      romano
+   end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Probaremos esto con un par de números:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+puts 5.to_romano
+puts 10.to_romano
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Resultado:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;V
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;X
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Agradecimiento a FLISOL Oaxaca</title>
+    <link rel="alternate" href="http://oaxacarb.org/2014/05/02/agradecimiento-a-flisol-oaxaca.html"/>
+    <id>http://oaxacarb.org/2014/05/02/agradecimiento-a-flisol-oaxaca.html</id>
+    <published>2014-05-02T20:53:00Z</published>
+    <updated>2014-05-20T11:19:05-05:00</updated>
+    <author>
+      <name>oaxaca.rb</name>
+    </author>
+    <content type="html">&lt;p&gt;Queremos agradecer a los organizadores del FLISOL Oaxaca 2014, especialmente a &lt;a href="http://twitter.com/urielmania"&gt;@urielmania&lt;/a&gt; por las atenciones brindadas para que pudiéramos llevar el Coding Dojo al FLISOL, el cual se llevó a cabo en el Centro Cultura Heriberto Pazos (Ccuherpo), ubicado en Camino al Rosario #308, Santa Lucía del Camino.&lt;/p&gt;
+
+&lt;p&gt;Esperamos seguir contando con su apoyo en futuros eventos.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Coding Dojo" src="/images/dojo-5.jpg" /&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Cómo subir un Post</title>
     <link rel="alternate" href="http://oaxacarb.org/2014/04/16/como-subir-un-post.html"/>
@@ -126,123 +232,6 @@
 &lt;h4 id="qu-es-un-coding-dojo"&gt;¿Qué es un Coding Dojo?&lt;/h4&gt;
 
 &lt;p&gt;Los Coding Dojos tienen como finalidad el fomentar las buenas prácticas de programación en el desarrollo de software, por medio de la práctica y ejercicios continuos (denominados katas) los asistentes aprenden nuevas técnicas y metodologías que pueden serles útiles en su día a día profesional; es un espacio para el aprendizaje, la compartición de conocimiento y la convivencia.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Agradecimiento a Desarrollo Económico</title>
-    <link rel="alternate" href="http://oaxacarb.org/2014/03/21/agradecimiento-a-desarrollo-economico.html"/>
-    <id>http://oaxacarb.org/2014/03/21/agradecimiento-a-desarrollo-economico.html</id>
-    <published>2014-03-21T15:52:00Z</published>
-    <updated>2014-03-28T16:48:49-06:00</updated>
-    <author>
-      <name>oaxaca.rb</name>
-    </author>
-    <content type="html">&lt;p&gt;Agradecemos al Secretario de Desarrollo Económico del municipio de Oaxaca de Juárez, el Lic. Jaime Castellanos del Campo, que junto con el apoyo de la &lt;a href="https://www.facebook.com/desarrollo.economicooaxacadejuarez"&gt;Dirección de Capacitación y Empleo&lt;/a&gt; es que fue posible la realización de nuestro segundo Dojo en sus instalaciones ubicadas en la calle de Matamoros #102 Centro.&lt;/p&gt;
-
-&lt;p&gt;Toda la comunidad de Oaxaca.rb esta muy agradecida y esperamos poder seguir contanto con su apoyo.&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt="Coding Dojo" src="/images/dojo-2.jpg" /&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Coding Dojo - Marzo 2014</title>
-    <link rel="alternate" href="http://oaxacarb.org/2014/03/13/coding-dojo-marzo-2014.html"/>
-    <id>http://oaxacarb.org/2014/03/13/coding-dojo-marzo-2014.html</id>
-    <published>2014-03-13T04:45:00Z</published>
-    <updated>2014-03-13T14:58:47-06:00</updated>
-    <author>
-      <name>oaxaca.rb</name>
-    </author>
-    <content type="html">&lt;p&gt;La comunidad &lt;strong&gt;oaxaca.rb&lt;/strong&gt; invita a propios y extraños al &lt;strong&gt;Coding Dojo&lt;/strong&gt; que se llevará a cabo el sábado 15 de marzo de 2014 en las instalaciones de la Secretaría de Desarrollo económico del municipio de Oaxaca de Juárez, ubicadas en la calle de Matamoros #102 Centro.&lt;/p&gt;
-
-&lt;h4 id="qu-es-un-coding-dojo"&gt;¿Qué es un Coding Dojo?&lt;/h4&gt;
-
-&lt;p&gt;Los Coding Dojos tienen como finalidad el fomentar las buenas prácticas de programación en el desarrollo de software, por medio de la práctica y ejercicios continuos (denominados katas) los asistentes aprenden nuevas técnicas y metodologías que pueden serles útiles en su día a día profesional; es un espacio para el aprendizaje, la compartición de conocimiento y la convivencia.&lt;/p&gt;
-
-&lt;p&gt;Si estás interesado en asistir puedes inscribirte en el &lt;a href="https://www.eventbrite.com/e/coding-dojo-tickets-10919244755"&gt;evento creado en Eventbrite&lt;/a&gt;. Asegura tu lugar, ya que tenemos cupo limitado.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Configuración del entorno de trabajo Ruby con RVM</title>
-    <link rel="alternate" href="http://oaxacarb.org/2014/03/11/configuracion-de-rvm-y-ruby.html"/>
-    <id>http://oaxacarb.org/2014/03/11/configuracion-de-rvm-y-ruby.html</id>
-    <published>2014-03-11T16:13:00Z</published>
-    <updated>2014-03-28T16:48:49-06:00</updated>
-    <author>
-      <name>oaxaca.rb</name>
-    </author>
-    <content type="html">&lt;p&gt;Muchas veces, al trabajar con un lenguaje interpretado (como ruby o python) es necesario instalar varias librerías, pero siempre queda el miedo de romper algo con tanta instalación; es deseable poder tener múltiples configuraciones independientes, incluso por proyecto. Para eso tenemos &lt;a href="https://rvm.io/"&gt;RVM&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;En palabras del autor, &lt;strong&gt;Ruby Version Manager&lt;/strong&gt; (RVM) se puede describir de la siguiente manera:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Una herramienta que permite fácilmente instalar, gestionar y trabajar con múltiples entornos ruby, desde versiones del intérprete hasta sets de gemas.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id="instalacin-de-rvm"&gt;Instalación de RVM&lt;/h4&gt;
-
-&lt;p&gt;Para instalar RVM en nuestro sistema &lt;strong&gt;Linux&lt;/strong&gt;, hay que seguir los siguientes pasos:&lt;/p&gt;
-
-&lt;p&gt;Descargamos e instalamos RVM&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;\curl -sSL https://get.rvm.io | bash&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Al final de la instalación, veremos un mensaje que nos pide copiar cierto contenido a nuestro archivo &lt;code&gt;.bash_profile&lt;/code&gt; (archivo oculto ubicado en nuestro directorio home), seguimos la recomendación para obtener un archivo parecido a lo siguiente:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;. $HOME/.bashrc&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;amp;&amp;amp; source "$HOME/.rvm/scripts/rvm"&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;source ~/.profile&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Luego, cargamos la nueva configuración de bash en nuestra sesión actual (o reiniciamos nuestra consola, lo que gusten)&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;source ~/.bash_profile&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Listo, ya tenemos RVM instalado, lo podemos comprobar con el comando &lt;code&gt;rvm -v&lt;/code&gt;, lo que nos debe de mostrar la versión de RVM instalada en nuestro sistema.&lt;/p&gt;
-
-&lt;h4 id="instalacin-de-ruby"&gt;Instalación de Ruby&lt;/h4&gt;
-
-&lt;p&gt;Ya que tenemos instalado RVM, instalar Ruby es tan fácil como correr un comando, indicándole la versión deseada (recomendamos la &lt;em&gt;2.1.0&lt;/em&gt;)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;rvm install ruby-2.1.0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Nos sentamos unos momentos a esperar a que termine la instalación…&lt;/p&gt;
-
-&lt;h4 id="configuracin-de-rvm-por-proyecto"&gt;Configuración de RVM por proyecto&lt;/h4&gt;
-
-&lt;p&gt;RVM es lo suficientemente "inteligente" como para identificar las versiones que requerimos dentro de un proyecto, agrupando las librerias requeridas en &lt;strong&gt;gemsets&lt;/strong&gt;, para ésto, requerimos tener un par de archivos dentro de nuestro directorio de trabajo: &lt;code&gt;.ruby-version&lt;/code&gt; y &lt;code&gt;.ruby-gemset&lt;/code&gt; (ambos archivos ocultos).&lt;/p&gt;
-
-&lt;p&gt;Para crear y configurar un nuevo directorio de proyecto, creamos los dos archivos mencionados anteriormente denotando la versión de ruby y el nombre del gemset deseado:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;mkdir proyecto &amp;amp;&amp;amp; cd proyecto&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;echo '2.1.0' &amp;gt; .ruby-version&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;echo 'proyecto' &amp;gt; .ruby-gemset&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Esto creará un gemset llamado &lt;em&gt;proyecto&lt;/em&gt; que utiliza la versión &lt;em&gt;2.1.0&lt;/em&gt; de ruby, denotado como &lt;strong&gt;ruby-2.1.0@proyecto&lt;/strong&gt;, ahora, cada que entremos al directorio &lt;code&gt;proyecto&lt;/code&gt;, RVM cargará automáticamente la configuración deseada, y todas las librerías (gemas) que instalemos en dicho proyecto quedarán aisladas en el mismo.&lt;/p&gt;
-
-&lt;p&gt;Si aún estamos dentro de nuestra carpeta &lt;em&gt;proyecto&lt;/em&gt;, ejecutamos el comando &lt;code&gt;cd .&lt;/code&gt; (punto):&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;=&amp;gt; ruby-2.1.0 - #gemset created ruby-2.1.0@proyecto&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;=&amp;gt; ruby-2.1.0 - #generating proyecto wrappers.......&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Por último, comprobamos que todo se encuentre en orden, verificamos la versión de ruby en uso con el comando:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;rvm list&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;=* ruby-2.1.0 [ x86_64 ]&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Y el gemset cargado actualmente:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;rvm gemset list&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;=&amp;gt; proyecto&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Listo, ruby 2.1.0 instalado y gemset creado, estamos listos para trabajar.&lt;/p&gt;
 </content>
   </entry>
 </feed>
