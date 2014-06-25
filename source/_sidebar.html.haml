@@ -23,6 +23,12 @@
     %p
       %i Actualizada: 30/04/2014
 
+  .panel
+    %h5 Eventos próximos
+    %p
+      Obtén la información de nuestros próximos eventos antes que nadie:
+      = link_to 'RSS de Eventos', 'https://www.eventbrite.com/rss/user_list_events/91036845119'
+
   %h5 Artículos Recientes
   %ul.side-nav
     - blog.articles[0...10].each do |article|
