@@ -1,5 +1,5 @@
 ---
-title: Agradecimiento: COCyT
+title: "Agradecimiento al COCyT"
 date: 2014-09-25 21:47 UTC
 tags: comunidad
 ---
