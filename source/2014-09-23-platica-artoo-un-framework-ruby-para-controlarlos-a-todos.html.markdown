@@ -1,6 +1,6 @@
 ---
 title: "Plática: Artoo, un framework Ruby para controlarlos a todos..."
-date: 2014-09-24 20:58 UTC
+date: 2014-09-23 20:58 UTC
 tags: platicas,comunidad
 ---
 
