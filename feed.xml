@@ -5,10 +5,80 @@
   <id>http://oaxacarb.org/</id>
   <link href="http://oaxacarb.org/"/>
   <link href="http://oaxacarb.org/feed.xml" rel="self"/>
-  <updated>2014-05-20T22:21:00Z</updated>
+  <updated>2014-09-23T21:47:00Z</updated>
   <author>
     <name>oaxaca.rb</name>
   </author>
+  <entry>
+    <title>Agradecimiento al COCyT</title>
+    <link rel="alternate" href="http://oaxacarb.org/2014/09/23/agradecimiento-cocyt.html"/>
+    <id>http://oaxacarb.org/2014/09/23/agradecimiento-cocyt.html</id>
+    <published>2014-09-23T21:47:00Z</published>
+    <updated>2014-09-23T17:39:53-05:00</updated>
+    <author>
+      <name>oaxaca.rb</name>
+    </author>
+    <content type="html">&lt;p&gt;A nombre de la comunidad oaxaca.rb queremos agradecer al Consejo Oaxaqueño de Ciencia y Tecnología (&lt;a href="http://www.cocyt.oaxaca.gob.mx/"&gt;COCyT&lt;/a&gt;) por su apoyo para la realización de los eventos de la comunidad, y así contribuir a la difusión de técnicas y herramientas actuales para el desarrollo de software, que tanta falta hace en nuestro estado.&lt;/p&gt;
+
+&lt;p&gt;Después de tener dificultades para conseguir un lugar fijo para la realización de los eventos, el COCyT nos está apoyando a partir del 20 de Septiembre, para la realización del evento en sus instalaciones los días sábados de 4 a 6 pm, cada 15 días, como lo habíamos venido realizando.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Plática: Artoo, un framework Ruby para controlarlos a todos...</title>
+    <link rel="alternate" href="http://oaxacarb.org/2014/09/23/platica-artoo-un-framework-ruby-para-controlarlos-a-todos.html"/>
+    <id>http://oaxacarb.org/2014/09/23/platica-artoo-un-framework-ruby-para-controlarlos-a-todos.html</id>
+    <published>2014-09-23T20:58:00Z</published>
+    <updated>2014-09-23T17:39:41-05:00</updated>
+    <author>
+      <name>oaxaca.rb</name>
+    </author>
+    <content type="html">&lt;p&gt;En esta plática se brinda un introducción al framework Artoo, y se brindan algunos ejemplos básicos de su funcionamiento con Arduino y OpenCV.&lt;/p&gt;
+
+&lt;iframe width="560" height="315" src="//www.youtube.com/embed/ndJcWJgqGo0" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Le agradecemos al personal de &lt;a href="http://oaxacanuestro.com/"&gt;Oaxaca Nuestro&lt;/a&gt; por facilitarnos el equipo para realizar la grabación de la plática.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Plática/Taller: Modelos en Rails</title>
+    <link rel="alternate" href="http://oaxacarb.org/2014/09/23/platica-taller-modelos-en-rails.html"/>
+    <id>http://oaxacarb.org/2014/09/23/platica-taller-modelos-en-rails.html</id>
+    <published>2014-09-23T20:54:00Z</published>
+    <updated>2014-09-23T16:11:33-05:00</updated>
+    <author>
+      <name>oaxaca.rb</name>
+    </author>
+    <content type="html">&lt;p&gt;En esta plática se aborda de manera básica el manejo de modelos con el framework Ruby on Rails.&lt;/p&gt;
+
+&lt;iframe width="420" height="315" src="//www.youtube.com/embed/Fq9NMqqPvZE" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;iframe width="420" height="315" src="//www.youtube.com/embed/KrPkLEOa3nc" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;p&gt;La grabación de esta plática fue un poco improvisada, pero forma parte del aprendizaje :).&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Invitación al X Coding Dojo</title>
+    <link rel="alternate" href="http://oaxacarb.org/2014/07/22/invitacion-al-x-coding-dojo.html"/>
+    <id>http://oaxacarb.org/2014/07/22/invitacion-al-x-coding-dojo.html</id>
+    <published>2014-07-22T20:57:00Z</published>
+    <updated>2014-09-23T16:56:04-05:00</updated>
+    <author>
+      <name>oaxaca.rb</name>
+    </author>
+    <content type="html">&lt;p&gt;La comunidad &lt;strong&gt;oaxaca.rb&lt;/strong&gt; extiende la invitación a los programadores de Oaxaca al &lt;strong&gt;10o Coding Dojo&lt;/strong&gt;. Se realizará el &lt;strong&gt;viernes 25 de julio&lt;/strong&gt; en las instalaciones del &lt;strong&gt;Impact Hub&lt;/strong&gt;, las cuales se encuentran en &lt;strong&gt;Andrés Quintana Roo 211, Centro. Oaxaca de Juárez Oaxaca&lt;/strong&gt;, a unos pasos del jardín Conzatti.&lt;/p&gt;
+
+&lt;div class="text-center"&gt;
+  &lt;p&gt;&lt;a href="https://www.eventbrite.com/e/coding-dojo-tickets-12356900823"&gt;&lt;img alt="flyer dojo" src="/images/codingdojo-x.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Puedes registrarte en el &lt;a href="http://www.eventbrite.com/e/coding-dojo-tickets-12356900823"&gt;evento de Eventbrite&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;La maquina virtual que se utiliza en el Dojo está disponible en &lt;a href="https://mega.co.nz/#!VU0GhRgB!Vhl0Vjc_xqZILoc1WKyMY4f4RbeAZQBCaZBOtSUhKl4"&gt;este enlace&lt;/a&gt;. Si tienes alguna duda, puedes dejarla en la sección de comentarios (en la parte inferior). ¡Nos vemos el viernes!&lt;/p&gt;
+
+</content>
+  </entry>
   <entry>
     <title>Invitación al VII Coding Dojo</title>
     <link rel="alternate" href="http://oaxacarb.org/2014/05/20/invitacion-al-vii-coding-dojo.html"/>
@@ -73,168 +143,6 @@
 &lt;p&gt;Para descargar el ebook basta con acceder al siguiente &lt;a href="http://bookboon.com/es/concise-notes-on-data-structures-and-algorithms-ebook"&gt;enlace&lt;/a&gt; y llenar un pequeño cuestionario el cual una vez completado, permitirá el acceso a dicho archivo.&lt;/p&gt;
 
 &lt;p&gt;Que lo disfruten ;).&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Clases extendiendo las clases</title>
-    <link rel="alternate" href="http://oaxacarb.org/2014/05/07/clases-extendiendo-las-clases.html"/>
-    <id>http://oaxacarb.org/2014/05/07/clases-extendiendo-las-clases.html</id>
-    <published>2014-05-07T20:42:00Z</published>
-    <updated>2014-05-20T11:19:05-05:00</updated>
-    <author>
-      <name>oaxaca.rb</name>
-    </author>
-    <content type="html">&lt;p&gt;Todas las cosas que utilizamos en Ruby son objetos.
-En Ruby podemos ver diferentes tipos o clases de objetos: textos, enteros, flotantes, matrices, y algunos objetos especiales (true, false y nil). 
-En Ruby, estas clases están siempre en mayúsculas: String, Integer, Float, Array, etc. 
-Bién, ahora mensionaré después de esta breve explicación de las Clases como es que podemos EXTENDER de las clases en Ruby.
-En Ruby las clases nunca se consideran cerradas, y se pueden modificar añadiendo métodos, variables, por ejemplo, 
-vamos a añadir una nueva funcionalidad a la Clase Integer:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;
-class Integer
-   def to_romano
-      if self == 5
-         romano = 'V'
-      else
-         romano = 'X'
-      end
-      romano
-   end
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Probaremos esto con un par de números:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;
-puts 5.to_romano
-puts 10.to_romano
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Resultado:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;V
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;X
-&lt;/code&gt;&lt;/pre&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Agradecimiento a FLISOL Oaxaca</title>
-    <link rel="alternate" href="http://oaxacarb.org/2014/05/02/agradecimiento-a-flisol-oaxaca.html"/>
-    <id>http://oaxacarb.org/2014/05/02/agradecimiento-a-flisol-oaxaca.html</id>
-    <published>2014-05-02T20:53:00Z</published>
-    <updated>2014-05-20T11:19:05-05:00</updated>
-    <author>
-      <name>oaxaca.rb</name>
-    </author>
-    <content type="html">&lt;p&gt;Queremos agradecer a los organizadores del FLISOL Oaxaca 2014, especialmente a &lt;a href="http://twitter.com/urielmania"&gt;@urielmania&lt;/a&gt; por las atenciones brindadas para que pudiéramos llevar el Coding Dojo al FLISOL, el cual se llevó a cabo en el Centro Cultura Heriberto Pazos (Ccuherpo), ubicado en Camino al Rosario #308, Santa Lucía del Camino.&lt;/p&gt;
-
-&lt;p&gt;Esperamos seguir contando con su apoyo en futuros eventos.&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt="Coding Dojo" src="/images/dojo-5.jpg" /&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Cómo subir un Post</title>
-    <link rel="alternate" href="http://oaxacarb.org/2014/04/16/como-subir-un-post.html"/>
-    <id>http://oaxacarb.org/2014/04/16/como-subir-un-post.html</id>
-    <published>2014-04-16T16:11:00Z</published>
-    <updated>2014-04-30T18:08:33-05:00</updated>
-    <author>
-      <name>oaxaca.rb</name>
-    </author>
-    <content type="html">&lt;p&gt;Subir un post a &lt;strong&gt;oaxaca.rb&lt;/strong&gt; es muy sencillo, solo debes seguir los siguientes pasos y asi aportar conocimiento a la comunidad Ruby de Oaxaca.&lt;/p&gt;
-
-&lt;p&gt;El primer paso es crear un cuenta &lt;a href="https://github.com"&gt;Github&lt;/a&gt; si es que aún no la tienen.&lt;/p&gt;
-
-&lt;p&gt;Si acabas de crear la cuenta de &lt;strong&gt;Github&lt;/strong&gt; debes crear tus llaves &lt;a href="https://help.github.com/articles/generating-ssh-keys"&gt;SSH&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Mandar un correo con tu nombre de usuario de &lt;strong&gt;Github&lt;/strong&gt; al correo &lt;strong&gt;oaxacarb@gmail.com&lt;/strong&gt; y esperar el correo de confirmación de que te has unido al grupo. &lt;/p&gt;
-
-&lt;h4 id="clonar-el-proyecto"&gt;Clonar el proyecto&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;En terminal&lt;/strong&gt; &lt;/p&gt;
-
-&lt;p&gt;Clona el proyecto&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;git clone git@github.com:oaxacarb/oaxacarb.github.io.git&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Entras a la carpeta de tu proyecto&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;cd oaxacarb.github.io&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Cámbiate a la rama Source&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;git checkout source&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;La rama source es donde se subirá el código para que éste pueda ser deployado al servidor.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id="crear-el-articulo"&gt;Crear el articulo&lt;/h4&gt;
-
-&lt;p&gt;Para crear el artículo desde terminal puedes chacer&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;middleman article "nombre de tu articulo"&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Este comando creara un archivo con una estampa de tiempo para que empieces a trabajar sobre el, tendra el siguiente formato. Ejemplo de este Post "2014-03-04-como-subir-un-post.html.markdown"&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Dentro de tu IDE favorito puedes editar el contenido del articulo con sintaxis &lt;a href="http://daringfireball.net/projects/markdown/syntax"&gt;Markdown&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Puedes ver tus cambios reflejados antes de subirlos dentro de tu localhost en el puerto 4567 con el comando&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;middleman server&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Ya que tu artículo esta listo, debes subir tus cambios al repositorio de &lt;strong&gt;Github&lt;/strong&gt; para posteriormente subirlo al servidor.&lt;/p&gt;
-
-&lt;p&gt;Agregar tus cambios al commit que se va subir a Github&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;git add . -A&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Agregar el comentario al commit&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;git commit -m "comentario"&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Subir los cambios a github&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;git push origin source&lt;/code&gt; &lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Es importante que el push se haga hacia source porque ahi es donde se tendra el código&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Finalmente, subirlo a servidor&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;middleman deploy&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Nota: Las veces posteriores que subas un Post debes descargar las actualizaciones que tenga el proyecto, que algun otro miembro de la comunidad haya subido un post, cambios de diseño, etc., con el siguiente comando&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;git pull&lt;/code&gt; &lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>4o Coding Dojo - Abril 2014</title>
-    <link rel="alternate" href="http://oaxacarb.org/2014/04/09/coding-dojo-abril-2014.html"/>
-    <id>http://oaxacarb.org/2014/04/09/coding-dojo-abril-2014.html</id>
-    <published>2014-04-09T01:16:00Z</published>
-    <updated>2014-04-10T19:22:20-05:00</updated>
-    <author>
-      <name>oaxaca.rb</name>
-    </author>
-    <content type="html">&lt;p&gt;Para comenzar las actividades del mes de abril, la comunidad &lt;strong&gt;oaxaca.rb&lt;/strong&gt; extiende la invitación a los programadores de Oaxaca (y zonas aledañas) al &lt;strong&gt;4o Coding Dojo&lt;/strong&gt;. Se realizará el &lt;strong&gt;sábado 12 de abril&lt;/strong&gt; en las instalaciones de la &lt;strong&gt;Secretaría de Desarrollo Económico&lt;/strong&gt;; la dirección es &lt;strong&gt;Matamoros #102, Centro. Oaxaca de Juárez Oaxaca&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;div class="text-center"&gt;
-  &lt;p&gt;&lt;a href="https://www.eventbrite.com/e/coding-dojo-tickets-11244212743"&gt;&lt;img alt="flyer dojo" src="/images/codingdojo.png" /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Puedes registrarte en el &lt;a href="https://www.eventbrite.com/e/coding-dojo-tickets-11244212743"&gt;evento de Eventbrite&lt;/a&gt;. Si ya has asistido anteriormente y conoces a alguien que pueda estar interesado en aprender metodologías de programación y de paso el lenguaje Ruby, invítalo con toda confianza (ya sabes, tenemos &lt;em&gt;kata&lt;/em&gt; de bienvenida).&lt;/p&gt;
-
-&lt;p&gt;La maquina virtual que se utiliza en el Dojo está disponible en &lt;a href="https://mega.co.nz/#!gNUWDQSS!UTuITd8SrT3sMbvAInYRbWBMI0Cy4_ToYPUckX7w59M"&gt;este enlace&lt;/a&gt;. Si tienes alguna duda, puedes dejarla en la sección de comentarios (en la parte inferior). ¡Nos vemos el sábado! &lt;/p&gt;
-
 </content>
   </entry>
 </feed>
