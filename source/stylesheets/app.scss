@@ -14,7 +14,8 @@ $gray: #585450;
 
 body{
   border-top: 5px solid $main-color !important;
-  background: url(/images/agsquare.png);
+  /*background: url(/images/agsquare.png);*/
+  background-color: #444444;
   color: #444444;
 }
 
@@ -57,14 +58,14 @@ a.logo{
 }
 
 #main{
-  background-color: white;
+  background-color: #eeeeee;
   border: 1px solid #eeeeee;
   border-top: 0px;
   @include border-bottom-radius(6px);
 }
 
 #content{
-  background-color: white;
+  background-color: #eeeeee;
   border: 1px solid #eeeeee;
   margin-top: 10px;
   padding-top: 15px;
