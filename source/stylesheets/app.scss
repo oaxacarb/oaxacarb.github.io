@@ -20,8 +20,10 @@ body{
 }
 
 .nav-bar{
+
   .button{
     @include button-style($gray);
+    font-family: 'Inconsolata'; 
   }
 }
 
