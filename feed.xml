@@ -5,10 +5,58 @@
   <id>http://oaxacarb.org/</id>
   <link href="http://oaxacarb.org/"/>
   <link href="http://oaxacarb.org/feed.xml" rel="self"/>
-  <updated>2014-09-23T21:47:00Z</updated>
+  <updated>2015-01-24T22:34:00Z</updated>
   <author>
     <name>oaxaca.rb</name>
   </author>
+  <entry>
+    <title>Recuento: Global Day of CodeRetreat Oaxaca 2014</title>
+    <link rel="alternate" href="http://oaxacarb.org/2015/01/24/recuento-global-day-of-coderetreat-oaxaca-2014.html"/>
+    <id>http://oaxacarb.org/2015/01/24/recuento-global-day-of-coderetreat-oaxaca-2014.html</id>
+    <published>2015-01-24T22:34:00Z</published>
+    <updated>2015-01-24T17:11:03-06:00</updated>
+    <author>
+      <name>oaxaca.rb</name>
+    </author>
+    <content type="html">&lt;p&gt;El día 15 de Noviembre de 2014 realizamos el evento &lt;a href="http://globalday.coderetreat.org"&gt;Global Day of CodeRetreat 2014&lt;/a&gt; en el cual convivimos con nuevos compañeros y tratamos de resolver el ploblema del &lt;a href="http://es.wikipedia.org/wiki/Juego_de_la_vida"&gt;Juego De La Vida&lt;/a&gt; Durante las 8 horas que duro el evento. &lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="flyer code retreat" src="/images/gdcr2014/gdcr2014-3.jpg" /&gt;   &lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Durante el desarrollo del CodeRetreat, nos enfocamos en practicas técnicas como TDD(Test-Driven Development) y Pair Programming, para mejorar el dominio de dichas técnicas.&lt;/p&gt;
+
+&lt;p&gt;Algo interesante de este Code Retreat es que ademas de utilizar el lenguaje Ruby, se utilizo Java, lo cual ayudó a los participantes a explorar nuevos lenguajes y formas de solución.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="flyer code retreat" src="/images/gdcr2014/gdcr2014-4.jpg" /&gt;   &lt;/p&gt;
+
+&lt;p&gt;Agradecemos a todos los asistentes por su activa participación y entusiasmo. Y los invitamos a participar en las actividades de la comunidad oaxaca.rb.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="flyer code retreat" src="/images/gdcr2014/gdcr2014-1.jpg" /&gt;   &lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="flyer code retreat" src="/images/gdcr2014/gdcr2014-2.jpg" /&gt;   &lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="flyer code retreat" src="/images/gdcr2014/gdcr2014-5.jpg" /&gt;   &lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Global Day Code Retreat Oaxaca 2014</title>
+    <link rel="alternate" href="http://oaxacarb.org/2014/11/12/global-day-code-retreat-oaxaca-2014.html"/>
+    <id>http://oaxacarb.org/2014/11/12/global-day-code-retreat-oaxaca-2014.html</id>
+    <published>2014-11-12T18:37:00Z</published>
+    <updated>2014-12-13T17:19:27-06:00</updated>
+    <author>
+      <name>oaxaca.rb</name>
+    </author>
+    <content type="html">&lt;p&gt;Te invitamos a asistir al &lt;strong&gt;Global Day Code Retreat Oaxaca 2014&lt;/strong&gt;, será el sábado 15 de noviembre de 9:00 am a 6:00 pm en la calle de &lt;strong&gt;Manuel García Vigil #517, Centro&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title="Click para apartar lugares" href="http://www.eventbrite.com/e/global-day-code-retreat-oaxaca-2014-tickets-14079697755"&gt;&lt;img alt="flyer code retreat" src="/images/GDCR-2014-Flyer.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;El Coderetreat es un evento de un día completo de práctica, enfocado a revisar los &lt;strong&gt;fundamentos del diseño y desarrollo de software&lt;/strong&gt;. A través de proveer a los desarrolladores la oportunidad de formar parte de éste ejercicio práctico, eliminando la presión de terminar lo que se comenzó, el formato del Coderetreat ha probado ser una herramienta efectiva para el desarrollo y mejora de las habilidades de los asistentes.&lt;/p&gt;
+
+&lt;p&gt;El evento &lt;strong&gt;no tienen ningún costo&lt;/strong&gt;. Si estás interesado en asistir, puedes apartar tus lugares en eventbrite siguiendo &lt;a href="http://www.eventbrite.com/e/global-day-code-retreat-oaxaca-2014-tickets-14079697755"&gt;este enlace&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Agradecimiento al COCyT</title>
     <link rel="alternate" href="http://oaxacarb.org/2014/09/23/agradecimiento-cocyt.html"/>
@@ -77,72 +125,6 @@
 
 &lt;p&gt;La maquina virtual que se utiliza en el Dojo está disponible en &lt;a href="https://mega.co.nz/#!VU0GhRgB!Vhl0Vjc_xqZILoc1WKyMY4f4RbeAZQBCaZBOtSUhKl4"&gt;este enlace&lt;/a&gt;. Si tienes alguna duda, puedes dejarla en la sección de comentarios (en la parte inferior). ¡Nos vemos el viernes!&lt;/p&gt;
 
-</content>
-  </entry>
-  <entry>
-    <title>Invitación al VII Coding Dojo</title>
-    <link rel="alternate" href="http://oaxacarb.org/2014/05/20/invitacion-al-vii-coding-dojo.html"/>
-    <id>http://oaxacarb.org/2014/05/20/invitacion-al-vii-coding-dojo.html</id>
-    <published>2014-05-20T22:21:00Z</published>
-    <updated>2014-05-20T17:33:35-05:00</updated>
-    <author>
-      <name>oaxaca.rb</name>
-    </author>
-    <content type="html">&lt;p&gt;La comunidad &lt;strong&gt;oaxaca.rb&lt;/strong&gt; extiende la invitación a los programadores de Oaxaca (y zonas aledañas) al &lt;strong&gt;7o Coding Dojo&lt;/strong&gt;. Se realizará el &lt;strong&gt;sábado 24 de mayo&lt;/strong&gt; en las instalaciones de la &lt;strong&gt;Secretaría de Desarrollo Económico&lt;/strong&gt;; la dirección es &lt;strong&gt;Matamoros #102, Centro. Oaxaca de Juárez Oaxaca&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;div class="text-center"&gt;
-  &lt;p&gt;&lt;a href="https://www.eventbrite.com/e/coding-dojo-tickets-11696056219"&gt;&lt;img alt="flyer dojo" src="/images/codingdojo2.png" /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Puedes registrarte en el &lt;a href="https://www.eventbrite.com/e/coding-dojo-tickets-11696056219"&gt;evento de Eventbrite&lt;/a&gt;. Si ya has asistido anteriormente y conoces a alguien que pueda estar interesado en aprender metodologías de programación y de paso el lenguaje Ruby, ¡invítalo! (tenemos &lt;em&gt;kata&lt;/em&gt; de bienvenida).&lt;/p&gt;
-
-&lt;p&gt;La maquina virtual que se utiliza en el Dojo está disponible en &lt;a href="https://mega.co.nz/#!VU0GhRgB!Vhl0Vjc_xqZILoc1WKyMY4f4RbeAZQBCaZBOtSUhKl4"&gt;este enlace&lt;/a&gt;. Si tienes alguna duda, puedes dejarla en la sección de comentarios (en la parte inferior). ¡Nos vemos el sábado!&lt;/p&gt;
-
-</content>
-  </entry>
-  <entry>
-    <title>Estructuras de datos y algoritmos (Ruby Edition)</title>
-    <link rel="alternate" href="http://oaxacarb.org/2014/05/17/estructuras-de-datos-y-algoritmos-ruby-edition.html"/>
-    <id>http://oaxacarb.org/2014/05/17/estructuras-de-datos-y-algoritmos-ruby-edition.html</id>
-    <published>2014-05-17T00:04:00Z</published>
-    <updated>2014-05-20T11:19:05-05:00</updated>
-    <author>
-      <name>oaxaca.rb</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;strong&gt;Concise Notes on Data Structures and Algorithms Ruby Edition&lt;/strong&gt; (por &lt;em&gt;Christopher Fox&lt;/em&gt;) es un ebook gratuito en formato &lt;strong&gt;PDF&lt;/strong&gt; publicado por &lt;a href="http://bookboon.com/es"&gt;bookboon.com&lt;/a&gt; el cual trata conceptos como: &lt;em&gt;arrays&lt;/em&gt;, &lt;em&gt;contenedores&lt;/em&gt;, &lt;em&gt;pilas&lt;/em&gt;, &lt;em&gt;colas&lt;/em&gt;, &lt;em&gt;recursividad&lt;/em&gt;, &lt;em&gt;arboles&lt;/em&gt; y &lt;em&gt;grafos&lt;/em&gt; entre otros, así como también, aborda algunos algoritmos de ordenamiento básicos como podrían ser: &lt;em&gt;Bubble Sort&lt;/em&gt; y &lt;em&gt;Insertion Sort&lt;/em&gt; todo esto enfocado directamente al lenguaje Ruby.&lt;/p&gt;
-
-&lt;p&gt;El libro consta de 197 páginas y se encuentra dividido en 24 capítulos de fácil seguimiento. El indice temático es el siguiente:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Introduction&lt;/li&gt;
-  &lt;li&gt;Built-In Types&lt;/li&gt;
-  &lt;li&gt;Arrays&lt;/li&gt;
-  &lt;li&gt;Assertions&lt;/li&gt;
-  &lt;li&gt;Containers&lt;/li&gt;
-  &lt;li&gt;Stacks&lt;/li&gt;
-  &lt;li&gt;Queues&lt;/li&gt;
-  &lt;li&gt;Stacks and Recursion&lt;/li&gt;
-  &lt;li&gt;Collections&lt;/li&gt;
-  &lt;li&gt;Lists&lt;/li&gt;
-  &lt;li&gt;Analyzing Algorithms&lt;/li&gt;
-  &lt;li&gt;Function Growth Rates&lt;/li&gt;
-  &lt;li&gt;Basic Sorting Algorithms&lt;/li&gt;
-  &lt;li&gt;Recurrences&lt;/li&gt;
-  &lt;li&gt;Merge sort and Quicksort&lt;/li&gt;
-  &lt;li&gt;Trees, Heaps, and Heapsort&lt;/li&gt;
-  &lt;li&gt;Binary Trees&lt;/li&gt;
-  &lt;li&gt;Binary Search and Binary Search Trees&lt;/li&gt;
-  &lt;li&gt;Sets&lt;/li&gt;
-  &lt;li&gt;Maps&lt;/li&gt;
-  &lt;li&gt;Hashing&lt;/li&gt;
-  &lt;li&gt;Hashed Collections&lt;/li&gt;
-  &lt;li&gt;Graphs&lt;/li&gt;
-  &lt;li&gt;Graph Algorithms&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Para descargar el ebook basta con acceder al siguiente &lt;a href="http://bookboon.com/es/concise-notes-on-data-structures-and-algorithms-ebook"&gt;enlace&lt;/a&gt; y llenar un pequeño cuestionario el cual una vez completado, permitirá el acceso a dicho archivo.&lt;/p&gt;
-
-&lt;p&gt;Que lo disfruten ;).&lt;/p&gt;
 </content>
   </entry>
 </feed>
