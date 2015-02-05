@@ -7887,17 +7887,19 @@ th.hide-for-touch {
 .fi-zoom-out:before {
   content: "\f21a"; }
 
-/* line 53, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+/* line 15, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
 body {
   border-top: 5px solid #cc342d !important;
-  background: url(/images/agsquare.png);
+  /*background: url(/images/agsquare.png);*/
+  background-color: #444444;
   color: #444444; }
 
-/* line 60, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+/* line 24, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
 .nav-bar .button {
   background-color: #585450;
   border-color: #464340;
-  color: white; }
+  color: white;
+  font-family: 'Inconsolata'; }
   /* line 144, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/foundation/components/_buttons.scss */
   .nav-bar .button:hover, .nav-bar .button:focus {
     background-color: #464340; }
@@ -7905,7 +7907,7 @@ body {
   .nav-bar .button:hover, .nav-bar .button:focus {
     color: white; }
 
-/* line 65, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+/* line 30, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
 a.logo {
   margin-top: 5px;
   margin-left: 20px;
@@ -7913,28 +7915,28 @@ a.logo {
   background: url(/images/oaxacarb.png) no-repeat left;
   background-position: 0% 70%;
   padding: 10px 0 10px 100px; }
-  /* line 73, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+  /* line 38, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
   a.logo h2 {
     margin-bottom: 0px;
     font-family: 'Inconsolata';
     line-height: 1.1; }
-    /* line 78, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+    /* line 43, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
     a.logo h2 span {
       font-size: inherit;
       color: #cc352d !important;
       margin-left: -20px; }
-  /* line 85, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+  /* line 50, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
   a.logo span {
     font-size: 14px;
     color: #585450 !important; }
 
-/* line 92, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+/* line 57, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
 .nav-bar ul.button-group {
   margin-top: 10px; }
 
-/* line 97, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+/* line 62, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
 #main {
-  background-color: white;
+  background-color: #eeeeee;
   border: 1px solid #eeeeee;
   border-top: 0px;
   -moz-border-radius-bottomleft: 6px;
@@ -7944,9 +7946,9 @@ a.logo {
   -webkit-border-bottom-right-radius: 6px;
   border-bottom-right-radius: 6px; }
 
-/* line 104, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+/* line 69, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
 #content {
-  background-color: white;
+  background-color: #eeeeee;
   border: 1px solid #eeeeee;
   margin-top: 10px;
   padding-top: 15px;
@@ -7957,52 +7959,60 @@ a.logo {
   -webkit-border-top-right-radius: 6px;
   border-top-right-radius: 6px; }
 
-/* line 112, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+/* line 77, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
 hr.ruby {
   border-color: #cc342d; }
 
-/* line 116, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+/* line 81, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
 .panel {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5); }
 
-/* line 120, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+/* line 85, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
 a {
   color: #cc352d; }
-  /* line 122, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+  /* line 87, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
   a:hover {
     color: #85140f; }
 
-/* line 127, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+/* line 92, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
 .side-nav li a:not(.button) {
   display: block;
   color: #cc352d; }
-  /* line 130, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+  /* line 95, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
   .side-nav li a:not(.button):hover {
     color: #e6665f; }
 
-/* line 137, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+/* line 102, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
 ul.side-nav li.article a {
   display: initial; }
-/* line 138, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+/* line 103, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
 ul.side-nav li.article span {
   color: #555555; }
 
-/* line 143, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
-h1 i[class^="fi-"], h2 i[class^="fi-"], h3 i[class^="fi-"] {
-  color: #cc342d; }
+/* line 107, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+h1, h2, h3 {
+  font-family: 'Inconsolata';
+  font-weight: bold; }
+  /* line 111, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+  h1 i[class^="fi-"], h2 i[class^="fi-"], h3 i[class^="fi-"] {
+    color: #cc342d; }
 
-/* line 148, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+/* line 116, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+h6.datos {
+  font-family: 'Inconsolata' !important; }
+
+/* line 120, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
 span.label {
   background-color: #BF1B12; }
-  /* line 151, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+  /* line 123, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
   span.label:hover {
     background-color: #cc342d; }
 
-/* line 156, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+/* line 128, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
 h3 span {
   color: #cc342d; }
 
-/* line 161, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
+/* line 133, /data/logicalbricks/oaxacarb.github.io/source/stylesheets/app.scss */
 ul.posts li {
   padding: 5px 0;
   list-style: none; }
