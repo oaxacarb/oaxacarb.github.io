@@ -22,7 +22,8 @@
             = link_to current_article.title, current_article.url
           %h6.datos= "Escrito el #{current_article.date.strftime("%a %e %B, %Y")}"
           %hr/
-          = yield
+          .text-justify
+            = yield
           = partial 'social'
           = disqus
       = partial 'sidebar'

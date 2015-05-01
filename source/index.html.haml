@@ -25,7 +25,8 @@ pageable: true
       /
         use article.summary(250) if you have Nokogiri available to show just
         the first 250 characters
-      = article.summary(830)
+      .text-justify
+        = article.summary
       = link_to article do
         %i.fi-page-search
         &nbsp;
