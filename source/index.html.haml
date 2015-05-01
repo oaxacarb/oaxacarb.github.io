@@ -7,9 +7,13 @@ pageable: true
 .large-9.columns{:role => "content"}
   - if paginate && num_pages > 1
     %p
-      Page #{page_number} of #{num_pages}
-  - if prev_page
-    %p= link_to 'Previous page', prev_page
+      Página #{page_number} de #{num_pages}
+  - if paginate
+    - if prev_page
+      %span.left= link_to 'Anterior', prev_page
+    - if next_page
+      %span.right= link_to 'Siguiente', next_page
+  %br
   - page_articles.each_with_index do |article, i|
     %article
       %h3
@@ -28,6 +32,8 @@ pageable: true
         Leer más
       %hr/
   - if paginate
+    - if prev_page
+      %p= link_to 'Anterior', prev_page
     - if next_page
-      %p= link_to 'Next page', next_page
+      %p= link_to 'Siguiente', next_page
 / End Main Content
