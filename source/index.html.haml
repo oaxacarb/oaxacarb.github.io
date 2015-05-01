@@ -33,7 +33,7 @@ pageable: true
       %hr/
   - if paginate
     - if prev_page
-      %p= link_to 'Anterior', prev_page
+      %span.left= link_to 'Anterior', prev_page
     - if next_page
-      %p= link_to 'Siguiente', next_page
+      %span.right= link_to 'Siguiente', next_page
 / End Main Content
