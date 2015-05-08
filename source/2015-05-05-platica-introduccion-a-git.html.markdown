@@ -1,7 +1,7 @@
 ---
 title: "Plática: Introducción a Git"
 date: 2015-05-05 03:19 UTC
-tags: plática, comunidad
+tags: platicas, comunidad
 ---
 
 El día sábado 2  de Mayo de 2015, se llevo acabo la plática introductoria a [Git](http://git-scm.com/).
