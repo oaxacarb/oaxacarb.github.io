@@ -6,7 +6,6 @@ gem "builder"
 gem "middleman", "~>3.3.12"
 gem 'middleman-deploy'
 gem 'middleman-disqus'
-gem 'foundation'
 
 gem 'middleman-blog'
 gem 'nokogiri'
