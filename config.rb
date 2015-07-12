@@ -114,3 +114,14 @@ activate :disqus do |d|
 end
 
 activate :i18n, langs: [:es]
+
+activate :syntax
+
+set :markdown_engine, :kramdown
+
+set :markdown,
+  :fenced_code_blocks => true,
+  :tables => true,
+  :autolink => true,
+  :smartypants => true,
+  :with_toc_data => true
