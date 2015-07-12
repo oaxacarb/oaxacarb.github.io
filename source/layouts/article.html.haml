@@ -23,7 +23,7 @@
           %h6.datos= "Escrito el #{current_article.date.strftime("%a %e %B, %Y")}"
           %hr/
           .text-justify
-            = yield
+            ~ yield
           = partial 'social'
           = disqus
       = partial 'sidebar'
