@@ -1,7 +1,7 @@
 ---
 title: Convenciones sobre la estructura de directorios en RSpec y Minitest
 date: 2015-07-11 15:31 UTC
-tags:
+tags: [ruby, rspec, minitest]
 ---
 
 Al crear un nuevo proyecto en Ruby, la estructura básica es poner el código en un directorio llamado `lib`. Además, podemos agregar un directorio `test` o `spec` para nuestros archivos de prueba. No es obligatorio, pero es una convención que debemos seguir, no solo porque nuestra estructura de directorios será más intuitiva, sino también porque los frameworks de testing algunas veces así lo asumen.
