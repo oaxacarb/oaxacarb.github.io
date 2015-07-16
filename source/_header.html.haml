@@ -1,39 +1,40 @@
 /nav-bar small
-%nav.top-bar.show-for-small{"data-topbar" => ""}
-  %ul.title-area
-    / Title Area
-    %li.name
-      %h1
+%div.sticky
+  %nav.top-bar.show-for-small{"data-topbar" => ""}
+    %ul.title-area
+      / Title Area
+      %li.name
+        %h1
+          %a{:href => "/"}
+            oaxacarb
+      %li.toggle-topbar.menu-icon
         %a{:href => "#"}
-          oaxacarb
-    %li.toggle-topbar.menu-icon
-      %a{:href => "#"}
-        menu
-  %section.top-bar-section
-    / Right Nav Section
-    %ul.right
-      %li.divider
-      %li
-        %a{:href => "/"} Post
-      %li.divider
-      %li.divider
-      %li
-        %a{:href => "/tags/evento.html"} Eventos
-      %li.divider
-      %li.divider
-      %li
-        %a{:href => "/tags/platicas.html"} Platicas
-      %li.divider
-      %li.divider
-      %li
-        %a{:href => "/about.html"} Acerca de
-      %li.divider
-      %li.divider
-      %li
-        %a{:href => "/contacto.html"} Contacto
-      %li.divider
-      %li
-        %a{:href => "/agradecimientos.html"} Agradecimientos
+          menu
+    %section.top-bar-section
+      / Right Nav Section
+      %ul.right
+        %li.divider
+        %li
+          %a{:href => "/"} Post
+        %li.divider
+        %li.divider
+        %li
+          %a{:href => "/tags/evento.html"} Eventos
+        %li.divider
+        %li.divider
+        %li
+          %a{:href => "/tags/platicas.html"} Platicas
+        %li.divider
+        %li.divider
+        %li
+          %a{:href => "/about.html"} Acerca de
+        %li.divider
+        %li.divider
+        %li
+          %a{:href => "/contacto.html"} Contacto
+        %li.divider
+        %li
+          %a{:href => "/agradecimientos.html"} Agradecimientos
 
 .large-12.columns
   .nav-bar.right.hide-for-small
