@@ -20,11 +20,8 @@ pageable: true
         = link_to article.title, article
       %h6.datos
         Escrito el
-        %span= article.date.strftime('%a %e %B, %Y')
+        %span= I18n.localize(article.date.to_date)
       %br/
-      /
-        use article.summary(250) if you have Nokogiri available to show just
-        the first 250 characters
       .text-justify
         = article.summary
       = link_to article do

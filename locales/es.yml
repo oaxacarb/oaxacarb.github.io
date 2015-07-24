@@ -12,3 +12,6 @@ es:
   October: Octubre
   November: Noviembre
   December: Diciembre
+  date:
+    formats:
+      default: "%e de %B de %Y"
