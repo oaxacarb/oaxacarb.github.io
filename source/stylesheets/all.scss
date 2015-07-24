@@ -24,7 +24,7 @@ body{
 
   .button{
     @include button-style($gray);
-    font-family: 'Inconsolata';
+    font-family: '$header-font-family';
   }
 }
 
@@ -106,7 +106,7 @@ ul.side-nav{
 }
 
 h1, h2, h3 {
-  font-family: 'Inconsolata';
+  font-family: '$header-font-family';
   font-weight: bold;
 
   i[class^="fi-"]{
@@ -115,7 +115,7 @@ h1, h2, h3 {
 }
 
 h6.datos{
-  font-family: 'Inconsolata' !important;
+  font-family: '$header-font-family' !important;
 }
 
 span.label{
