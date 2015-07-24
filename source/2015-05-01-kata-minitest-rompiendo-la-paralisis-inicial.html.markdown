@@ -12,10 +12,27 @@ BREAK_ARTICLE
 
 **Ejemplo de Minitest para versión menor a la 5**
 
-<script src="https://gist.github.com/thotmx/fc7bb11da10a96dc5ddf.js"></script>
+~~~ruby
+require 'minitest/autorun'
+ 
+class TestExample < MiniTest::Unit::TestCase
+  def test_example
+    assert_equal true, nil.nil?
+  end
+end
+~~~
 
 **Ejemplo de Minitest para versión 5**
-<script src="https://gist.github.com/thotmx/3a77697c5aea8324df1e.js"></script>
+
+~~~ruby
+require 'minitest/autorun'
+ 
+class TestExample < Minitest::Test
+  def test_example
+    assert_equal true, nil.nil?
+  end
+end
+~~~
 
 Lo único que tenemos que hacer es copiar ese código, pegarlo (aunque lo más recomendable es escribirlo de nuevo, pero ya no hay que recordar ni pensar demasiado). Después ejecutar:
 
