@@ -4,8 +4,8 @@ date: 2015-05-05 03:19 UTC
 tags: platicas, comunidad
 ---
 
-El día sábado 2  de Mayo de 2015, se llevó acabo la plática introductoria a [Git](http://git-scm.com/).
-La cual, trato de dar a conocer las ventajas de usarlo en los diferentes proyectos que se realizan día con día.
+El día sábado 2 de Mayo de 2015, se llevó acabo la plática introductoria a [Git](http://git-scm.com/).
+La cual, dio a conocer las ventajas de usarlo en los diferentes proyectos que se realizan día con día.
 
 Con [Git](http://git-scm.com/) se puede llevar un mejor control en los proyectos, y más cuando el proyecto es realizado por varias
 personas, porque [Git](http://git-scm.com/) lleva un registro de todos los cambios que se hacen y quiénes los hacen, y si por algún motivo se realizan cambios no deseados, estos cambios se pueden deshacer.

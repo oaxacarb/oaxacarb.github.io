@@ -4,9 +4,9 @@ date: 2015-07-11 15:31 UTC
 tags: [ruby, rspec, minitest]
 ---
 
-Al crear un nuevo proyecto en Ruby, la estructura básica es poner el código en un directorio llamado `lib`. Además, podemos agregar un directorio `test` o `spec` para nuestros archivos de prueba. No es obligatorio, pero es una convención que debemos seguir, no solo porque nuestra estructura de directorios será más intuitiva, sino también porque los frameworks de testing algunas veces así lo asumen.
+Al crear un nuevo proyecto en Ruby, la estructura básica es poner el código en un directorio llamado `lib`. Además, podemos agregar un directorio `test` o `spec` para nuestros archivos de prueba. No es obligatorio, pero es una convención que deberíamos seguir, no solo porque nuestra estructura de directorios será más intuitiva, sino también porque algunos frameworks de testing así lo asumen.
 
-Si queremos usar Rspec, el directorio se debe llamar `spec`. Si queremos usar Minitest, podemos nombrarlo de cualquier forma que queramos, pero es común nombrarlo `test` o también `spec`.
+Si queremos usar Rspec, el directorio se debe llamar `spec`. Si queremos usar Minitest, podemos nombrarlo de cualquier forma, pero es común nombrarlo `test` o también `spec`.
 
 ## RSpec
 
@@ -54,11 +54,11 @@ Finished in 0.00151 seconds (files took 0.1615 seconds to load)
 1 example, 0 failures
 ~~~
 
-Estoy empezando con una prueba en verde porque el resultado no es tan verboso, pero ya sabemos que debemos empezar una prueba en rojo, ¿cierto? Cierto?
+Estoy empezando con una prueba en verde porque el resultado no es tan verboso como si la prueba fallara, pero ya sabemos que debemos empezar una prueba en rojo, ¿cierto? ¿Cierto? :)
 
 Como vemos, no necesitamos ninguna configuración extra. En nuestro archivo `fizz_buzz_spec` requerimos el archivo `fizz_buzz` y nada más. De hecho, no necesitamos requerir la biblioteca `rspec` y no necesitamos especificar dónde están nuestros archivos de prueba. Simplemente ejecutamos el comando `rspec` desde la línea de comandos dentro de nuestro proyecto y Rspec se encargó del resto.
 
-¿QUé hubiera pasado si nuestro directorio `spec` fuera nombrado de manera distinta? Digamos
+¿Qué hubiera pasado si nuestro directorio `spec` fuera nombrado de manera distinta? Digamos
 
 ~~~
 fizz_buzz_rspec
@@ -67,7 +67,6 @@ fizz_buzz_rspec
 └── my_testing_directory
     └── fizz_buzz_spec.rb
 ~~~
-
 
 Bien, en test caso, si ejecutamos el comando `rspec`, no se encontrará ninguna prueba para ejecutar.
 
@@ -90,7 +89,7 @@ Finished in 0.00151 seconds (files took 0.1615 seconds to load)
 1 example, 0 failures
 ~~~
 
-Además, es importante seguir la convención de nombres del archivo spec. RSpec espera que todos los archivos de pruebas termien con `_spec`. En nuestro caso, `fizz_buzz_spec.rb`. So lo renombramos, RSpec no lo ejecutará. Veamos:
+Además, es importante seguir la convención de nombres del archivo spec. RSpec espera que todos los archivos de pruebas termien con `_spec`. En nuestro caso, `fizz_buzz_spec.rb`. Si lo renombramos, RSpec no lo ejecutará. Veamos:
 
 ~~~
 fizz_buzz_rspec
@@ -113,7 +112,7 @@ Finished in 0.00031 seconds (files took 0.07711 seconds to load)
 
 De nuevo, RSpec no cargó nuestro archivo porque no sigue la convención de nombrado. Si lo renombramos de nuevo `fizz_buzz_spec.rb`, funcionará.
 
-Si vemos el archivo de pruebas, podemos ver que no necesitamos ninguna configuración especial para cargar el archivo `fizz_buzz.rb` además de requerirlo. RSpec asume que nuestro código está en el directorio `lib` y por eso es que puede carglo correctamente. Intentemos renombrar el directorio `lib` y veamos qué pasa.
+Si observamos el archivo de pruebas, podemos ver que no necesitamos ninguna configuración especial para cargar el archivo `fizz_buzz.rb`, además de requerirlo claro está. RSpec asume que nuestro código está en el directorio `lib` y por eso es que puede carglo correctamente. Intentemos renombrar el directorio `lib` y veamos qué pasa.
 
 ~~~
 fizz_buzz_rspec
@@ -148,7 +147,7 @@ Digamos que queremos usar la gema `rspec-given`. Después de instarlar, necesita
 require 'rspec/given'
 ~~~
 
-En nuestro proyecto sólo tenemos un archivo, pero si tubiéramos más, tendríamos que agregar esta línea a cada archivo de pruebas. Para evitar eso, podemos unar un `spec_helper`.
+En nuestro proyecto sólo tenemos un archivo, pero si tuviéramos más, tendríamos que agregar esta línea a cada archivo de pruebas. Para evitar eso, podemos unar un `spec_helper`.
 
 Primero necesitamos crear un archivo `spec_helper.rb` en nuestro directorio `spec`.
 
@@ -177,7 +176,7 @@ end
 
 Si lo ejecutamos ahora, se ejecuta correctamente. No importa dónde está nuestro archivo de pruebas (por ejemplo, podría estar en `spec/models/inbox/fizz_buzz_spec.rb`), siempre podrá requerir el archivo `spec_helper` con `require 'spec_helper'`.
 
-Veamos un archivo `spec_helper` de Rails, sólo como ejemplo:
+En proyectos más grandes, la ventaja de un archivo `spec_helper` es más notorio. Veamos un archivo `spec_helper` de Rails, sólo como ejemplo:
 
 ~~~ruby
 #rails_project/spec/spec_helper.rb
@@ -232,9 +231,9 @@ class FizzBuzz
 end
 ~~~
 
-Lo primero que me gustaría señalar es que en Minitest es obligatorio requerir la bibilioteca Minitest, específicamente `minitest/autorun`, que provee de todo lo que necesitamos para ejecutar la prueba (por ejemplo, los métodos de aserciones). Nota que estoy usndo la sintaxis _spec_ aquí, pero también es posible usar la clásica sintaxis de minitest. Puedes ver un poco de las bases [aquí](/2015/05/01/kata-minitest-rompiendo-la-paralisis-inicial.html).
+Lo primero que me gustaría señalar es que en Minitest es obligatorio requerir la bibilioteca Minitest, específicamente `minitest/autorun`, que provee de todo lo que necesitamos para ejecutar la prueba (por ejemplo, los métodos de aserciones y la capacidad de que el archivo se ejecute automáticamente). Nota que estoy usando la sintaxis _spec_ aquí, pero también es posible usar la clásica sintaxis de minitest. Puedes ver un poco de las bases en el post de la [Kata Minitest: Rompiendo la parálisis inicial](/2015/05/01/kata-minitest-rompiendo-la-paralisis-inicial.html).
 
-Ahora, tristemente, aquí no tenemos un comando `minitest` para ejecutar, como lo teníamos con RSpec. Minitest is un framework de testing muy básico (pero muy poderoso). Una de sus fortalezas es que que no es un DSL como RSpec, sino Ruby puro (aunque por la sintaxis que estamos usando nostros, sí hacemos uso de un DSL). De cualquier forma, para ejecutar nuestras prueba, solo necesitamos ejecutar Ruby.
+Ahora, tristemente, no tenemos un comando `minitest` para ejecutar, como lo teníamos con RSpec. Minitest is un framework de pruebas muy básico (pero muy poderoso). Una de sus fortalezas es que que no es un DSL como RSpec, sino Ruby puro (aunque por la sintaxis que estamos usando nostros, sí hacemos uso de un DSL). De cualquier forma, para ejecutar nuestras pruebas, solo necesitamos ejecutar Ruby.
 
 ~~~
 [fizz_buzz_minitest]$ ruby test/fizz_buzz_test.rb
@@ -243,7 +242,7 @@ Ahora, tristemente, aquí no tenemos un comando `minitest` para ejecutar, como l
         from test/fizz_buzz_test.rb:1:in `<main>'
 ~~~
 
-Humm, sl parecer, sí ejecutó algo, pero no funcionó correctamente. Lo que pasó aquí es que no fue posible cargar el archivo `fizz_buzz`. Afortunadamente, es algo fácil de solicionar. Ruby incluye `require_relative` para requerir un archivo especificando una ruta relativa. Esta ruta debe ser construída con base en la ruta del archivo actual. En nuestro caso, nuestro archivo de pruebas está dentro de un directorio `test`. así que tenemos que movernos un directorio atrás (esto se hace con dos puntos `..`) para llegar al directorio base del proyecto y entonces agregar la ruta al archivo requerido.
+Humm, al parecer, sí ejecutó algo, pero no funcionó correctamente. Lo que pasó aquí es que no fue posible cargar el archivo `fizz_buzz`. Afortunadamente, es algo fácil de solucionar. Ruby incluye `require_relative` para requerir un archivo especificando una ruta relativa. Esta ruta debe ser construida con base en la ruta del archivo actual. En nuestro caso, nuestro archivo de pruebas está dentro de un directorio `test`, así que tenemos que indicar que nos moveremos un directorio atrás (esto se hace con dos puntos `..`) para llegar al directorio base del proyecto y entonces agregar la ruta al archivo requerido.
 
 Nuestro archivo de prueba ahora se ve de esta manera:
 
@@ -390,8 +389,7 @@ Y tratamos de ejecutarlo:
 
 Ups, algo falló.
 
-La razón es que el archivo requerido no pudo se cargado. Indicamos a RUby que debía cargar el directorio `lib`, pero `test_helper` no está ahí, sino en el directorio `test`. Bien, para este caso, podemos usar `require_relative`, pero podemos tener el mismo problema potencial: si movemos los archivos a otros directorios, todos las rutas pasadas a `require_relative` deben ser actualizadas también.
-
+La razón es que el archivo requerido no pudo se cargado. Indicamos a Ruby que debía cargar el directorio `lib`, pero `test_helper` no está ahí, sino en el directorio `test`. Bien, para este caso, podemos usar `require_relative`, pero podemos tener el mismo problema potencial: si movemos los archivos a otros directorios, todos las rutas pasadas a `require_relative` deben ser actualizadas también.
 
 De nuevo, la mejor opción es especificar que Ruby debe cargar otro directorio cuando ejecute nuestro archivo de prueba. Podemos hacerlo agregando el directorio `test` a la lista (separado por dos puntos `:`).
 
@@ -410,4 +408,4 @@ Fabulous run in 0.000797s, 1254.2865 runs/s, 1254.2865 assertions/s.
 
 Y... todo funciona de nuevo.
 
-Como podemos ver, Minitest no asume una estructura de directorios específica porque podemos especificar sus dependencias como opciones en línea de comandos. Sin embargo, recomiendo usar la estructura que hemos visto aquí porque es una muy difundida. Cualquier desarrollador podría imaginar dónde encontrar qué archivos y es fácil de crecer si queremos usar rake (por ejemplo) para ejecutar nuestras pruebas en lotes. Anuque esto último es un tema que dejaremos para un siguiente artículo.
+Como podemos ver, Minitest no asume una estructura de directorios específica porque podemos indicar sus dependencias como opciones en línea de comandos. Sin embargo, se recomienda usar la estructura que hemos visto aquí porque es una muy difundida. Cualquier desarrollador podría imaginar dónde encontrar qué archivos y es fácil de crecer si queremos usar rake (por ejemplo) para ejecutar nuestras pruebas en lotes. Aunque esto último es un tema que dejaremos para un siguiente post.
