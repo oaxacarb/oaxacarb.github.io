@@ -13,11 +13,9 @@ title: Contacto
     = link_to 'Ruby', 'https://www.ruby-lang.org/es/'
     ? ¿Quieres compartir tu conocimiento? ¿Te gustaría aprender sobre metodologías de desarrollo de software? ¿Quieres saber qué significa el siguiente fragmento de código?
 
-  %pre
-    %code.language-html
-      .code-container
-        %span
-          3.times { puts 'hola' }
+  .example
+    ~ code 'ruby' do
+      3.times { puts 'hola' }
 
   %p
     Estás en el lugar indicado, únete a nuestra comunidad de usuarios ruby y asiste a nuestros eventos donde juntos aprenderemos. Ponemos a tu disposición nuestras redes:
