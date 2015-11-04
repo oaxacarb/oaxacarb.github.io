@@ -3,14 +3,10 @@ title: Global Day Coderetreat Oaxaca 2015
 date: 2015-11-04 06:30 UTC
 tags:
 ---
-
-### Global Day Coderetreat Oaxaca 2015   
-
-***
 ~~~
 puts ¡Es un evento mundial!
 ~~~
-
+***
 ​
 ![global day](images/GDCR2015.jpg)
 ​
