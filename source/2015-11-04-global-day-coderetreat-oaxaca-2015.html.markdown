@@ -22,7 +22,7 @@ Si programas en **Php, Java, Python no te preocupes en la maquina virtual que pr
 
 No olvides cubrir los prerrequisitos:  
 * [NO ES NECESARIO QUE SEPAS RUBY](http://tryruby.org/levels/1/challenges/0)  
-* [Descargar la maquina virtual](https://mega.nz/#F!ABsjFarQ!XTeVpRZalw-y-k7IUJVj6w)  
+* [Descargar la maquina virtual](https://mega.nz/#F!RFcHkQ4Q!61dqWQYNZydbukrhdNJ6yw)  
 * [Realizar el registro](https://goo.gl/ehLW7Q)  
 * [Ganas de convivir y compartir](http://oaxacarb.org/)  
 ​
