@@ -20,11 +20,11 @@ Esta vez será mi segundo año acompañando a la comunidad en el GDCR y estoy em
 Si programas en **Php, Java, Python no te preocupes en la maquina virtual que proporcionamos viene instalado** el entorno para que puedas desarrollar a gusto.
 ​
 
-No olvides cubrir los prerrequisitos:
-* [NO ES NECESARIO QUE SEPAS RUBY](http://tryruby.org/levels/1/challenges/0)
-* [Descargar la maquina virtual](https://mega.nz/#F!ABsjFarQ!XTeVpRZalw-y-k7IUJVj6w)
-* [Realizar el registro](https://goo.gl/ehLW7Q)
-* [Ganas de convivir y compartir](http://oaxacarb.org/)
+No olvides cubrir los prerrequisitos:  
+* [NO ES NECESARIO QUE SEPAS RUBY](http://tryruby.org/levels/1/challenges/0)  
+* [Descargar la maquina virtual](https://mega.nz/#F!ABsjFarQ!XTeVpRZalw-y-k7IUJVj6w)  
+* [Realizar el registro](https://goo.gl/ehLW7Q)  
+* [Ganas de convivir y compartir](http://oaxacarb.org/)  
 ​
 
 ~~~
