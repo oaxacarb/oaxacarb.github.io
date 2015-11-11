@@ -4,7 +4,7 @@ date: 2015-11-04 06:30 UTC
 tags: evento, comunidad, dojo 
 ---
 ~~~
-puts ¡Es un evento mundial!
+puts '¡Es un evento mundial!'
 ~~~
 ***
 ​
@@ -28,7 +28,7 @@ No olvides cubrir los prerrequisitos:
 ​
 
 ~~~
-puts no te lo pierdas, el GDCR es una vez al año.
+puts 'no te lo pierdas, el GDCR es una vez al año.'
 ~~~
 
 **predicamos el [lenguaje ruby](http://tryruby.org/levels/1/challenges/0)**
