@@ -1,7 +1,7 @@
 ---
 title: Global Day Coderetreat Oaxaca 2015
 date: 2015-11-04 06:30 UTC
-tags:
+tags: evento, comunidad, dojo 
 ---
 ~~~
 puts ¡Es un evento mundial!
