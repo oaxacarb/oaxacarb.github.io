@@ -1,23 +1,30 @@
 ---
-title: React.js - Una guía para desarrolladores
+title: React.js - Una guía para desarrolladores Rails
 date: 2016-01-09 19:05 UTC
 tags: rails, react, frontend, javascript
-published: false
 ---
 
-_Este artículo es una traducción; la versión original se puede leer en [airpair](https://www.airpair.com/reactjs/posts/reactjs-a-guide-for-rails-developers)_.
+<div data-alert class="alert-box info radius">
+  <i class="fi-info size-14"></i>
+  &nbsp;
+  <span>
+    Este artículo es una traducción; la versión original se puede leer en <a href="https://www.airpair.com/reactjs/posts/reactjs-a-guide-for-rails-developers" target="_blank">Airpair</a>.
+  </span>
+</div>
 
-## Introducción a React.js
+![](/images/react_rails/cover.png)
+
+### Introducción a React.js
 
 React.js es el nuevo chico popular de la cuadra de los "Frameworks Javascript", y resalta por su simplicidad. Donde otros frameworks implementan un framework MVC completo, podríamos decir que React sólo implementa la V (de hecho, algunos reemplazan la V de su framework con React). Las aplicaciones React son construidas sobre dos principios importantes: Componentes y Estados. Los compomentes se pueden formar de otros componentes más pequeños, empotrados o personalizados; el Estado {dirige} lo que los chicos en Facebook llaman one-way reactive data flow, que significa que nuestro UI reaccionará a cada cambio de estado.
 
 Una de las cosas buenas sobre React es que no requiere dependencias adicionales, por lo que puede trabajar prácticamente con cualquier otra biblioteca de JavaScript. Aprovechando esta característica, vamos a incluirlo en nuestro stack de Rails para construir una aplicación enfocada a frontend, o, como se podría decir, Rails con esteroides.
 
-## Una aplicación de seguimiento de gastos
+### Una aplicación de seguimiento de gastos
 
 Para esta guía, vamos a construir una pequeña aplicación desde cero para hacer un seguimiento de nuestros gastos; cada registro consistirá en una fecha, un título y una cantidad. Un registro se tratará como crédito si su cantidad es mayor que cero, en caso contrario se tratará como débito. Aquí una maqueta del proyecto:
 
-![Imagen](/url)
+![](/images/react_rails/mockup.png)
 
 Resumiendo, la aplicación se comportará como sigue:
 
@@ -26,7 +33,7 @@ Resumiendo, la aplicación se comportará como sigue:
 * Al hacer clic en cualquier botón "Borrar" se eliminará el registro asociado de la tabla
 * Al agregar, editar o eliminar un registro existente, se actualizarán las cantidades en la parte superior de la página
 
-## Inicializando nuestro proyecto React.js en Rails
+### Inicializando nuestro proyecto React.js en Rails
 
 Primero lo primero: tenemos que crear nuestro nuevo proyecto Rails; le llamaremos `Accounts`:
 
@@ -66,7 +73,7 @@ Si ves el archivo `application.js` después de ejecutar el instalador, te darás
 
 Básicamente, incluye la biblioteca de *React*, el archivo manifiesto `componentes` y un archivo que luce familiar terminado en _ujs_. Como ya habrás adivinado por el nombre del archivo, react-rails incluye un driver JavaScript no instrusivo que nos ayudará a montar nuestros componentes React y también se encargará de eventos Turbolinks.
 
-## Creación del recurso
+### Creación del recurso
 
 Vamos a construir un recurso `Record`, que incluirá una fecha, un título y una cantidad. En lugar de utilizar el generador de `scaffold`, vamos a utilizar el generador de `resource`, ya que no vamos a utilizar todos los archivos y métodos creados por el scaffold. Otra opción podría ser ejecutar el `scaffold` y luego eliminar los archivos/métodos no utilizados, pero nuestro proyecto podría quedar muy revuelto después de esto. Dentro de tu proyecto, ejecuta el siguiente comando:
 
@@ -91,7 +98,7 @@ No se olvide de iniciar el servidor con `rails server`.
 
 ¡Listo! Estamos listos para escribir algo de código.
 
-## Anidando componentes: Listado de registros {records}
+### Anidando componentes: Listado de registros {records}
 
 Para nuestra primera tarea, tenemos que _renderear_ todos los registro existentes dentro de una tabla. Primero, tenemos que crear una acción `index` dentro de nuestro `RecordsController`:
 
@@ -153,7 +160,7 @@ Personalmente, cuando trabajo con CoffeeScript, prefiero usar la sintaxis `React
 
 Ahora puedes refrescar tu navegador.
 
-![Imagen](/url)
+![](/images/react_rails/listing-records-1.png)
 
 ¡Perfecto! Hemos _rendereado_ nuestro primer componente React. Ahora, es tiempo de mostrar nuestros registros.
 
@@ -224,12 +231,12 @@ El componente `Record` mostrará una fila que contiene la información de cada a
 
 Cuando trabajamos con contenido dinámico (en este caso, registros), necesitamos proporcionar una propiedad `key` a los elementos generados dinámicamente para que React no tenga problemas al refrescar nuestra UI, es por eso que enviamos `key: record.id` junto con el propio registro al crear elementos `Record`. Si no hacemos esto, recibiremos un mensaje de advertencia en la consola JS del navegador (y probablemente algunos dolores de cabeza en un futuro cercano).
 
-![Imagen](/url)
+![](/images/react_rails/listing-records-2.png)
 
 Puedes echar un vistazo al código resultante de esta sección [aquí](https://github.com/fervisa/accounts-react-rails/tree/bf1d80cf3d23a9a5e4aa48c86368262b7a7bd809), o sólo los cambios introducidos por esta sección [aquí](https://github.com/fervisa/accounts-react-rails/commit/bf1d80cf3d23a9a5e4aa48c86368262b7a7bd809).
 
 
-## Comunicación padre-hijo: Creación de registros
+### Comunicación padre-hijo: Creación de registros
 
 Ahora que estamos mostrando todos los registros existentes, sería bueno incluir un formulario para crear nuevos registros. Agrerguemos esta nueva característica a nuestra aplicación React/Rails.
 
@@ -355,7 +362,8 @@ Definimos un atributo `disabled` con el valor de `!valid()`, lo que significa qu
 
 Por simplicidad sólo vamos a validar cadenas vacías para atributos dentro del `state`. De esta manera, cada vez que el estado se actualice, el botón "Crear registro" se activará/desactivará dependiendo de la validez de los datos.
 
-![Imagen](/url)
+![](/images/react_rails/creating-records-1.png)
+![](/images/react_rails/creating-records-2.png)
 
 Ahora que tenemos nuestro controlador y formulario en su lugar, es momento de _submitear_ nuestro nuevo registro al servidor. Tenemos que manejar el evento `submit` del formulario. Para lograr esto, tenemos que añadir un atributo `onSubmit` a nuestro formulario y un nuevo método `handleSubmit` (de la misma forma que manejamos los eventos `onChange` antes):
 
@@ -412,13 +420,13 @@ Añade el nuevo método `addRecord` dentro `records.js.coffee` y crea el nuevo e
 
 Refresca tu navegador, rellena el formulario con un nuevo registro, haz clic en "Create record"... Sin suspenso esta vez, se añadió el registro casi de inmediato y el formulario se limpia después del _submit_. Refrezca de nuevo sólo para asegurarte que el servidor ha almacenado la nueva información.
 
-![Imagen](/url)
+![](/images/react_rails/creating-records-3.png)
 
 Si has utilizado otros frameworks JS junto con Rails (por ejemplo, AngularJS) para construir cosas similares, es posible que hayas tenido problemas porque sus peticiones POST no incluyen el token CSRF que Rails necesita, así que, ¿por qué no tuvimos el mismo problema? Fácil, porque estamos usando `jQuery` para interactuar con nuestro backend y el driver `jquery_ujs` de rails incluye automáticamente el token `CSRF` en cada petición AJAX por nosotros. ¡Bien!
 
 Puedes revisar el código resultante de esta sección [aquí](https://github.com/fervisa/accounts-react-rails/tree/f4708e19f8be929471bc0c8c2bda93f36b9a7f23), o sólo los cambios introducidos por esta sección [aquí](https://github.com/fervisa/accounts-react-rails/commit/f4708e19f8be929471bc0c8c2bda93f36b9a7f23).
 
-## Componentes reutilizables: Indicadores de Cantidad
+### Componentes reutilizables: Indicadores de Cantidad
 
 ¿Qué sería de una aplicación sin algunos (bonitos) indicadores? Añadamos algunas recuadros en la parte superior de la ventana con un poco de información útil. Nuestro objetivo de esta sección es mostrar tres valores: cantidad total de crédito, cantidad total de débito y el balance. Esto parece un trabajo para tres componentes, ¿o tal vez sólo uno con propiedades?
 
@@ -490,12 +498,12 @@ Para tener una solución completa, necesitamos crear este elemento (tres veces) 
 
 ¡Hemos terminado con esta funcionalidad! Refresca el navegador, deberías ver tres recuadros que muestran las cantidades que hemos calculado anteriormente. ¡Pero espera! ¡Hay más! Crea un nuevo registro y ve la magia...
 
-![Imagen](/url)
+![](/images/react_rails/indicators.png)
 
 Puedes ver el código resultante de esta sección [aquí](https://github.com/fervisa/accounts-react-rails/tree/8d6f0a4fb62f2a9abd5d34d502461388863302cb), o sólo los cambios introducidos por esta sección [aquí](https://github.com/fervisa/accounts-react-rails/commit/8d6f0a4fb62f2a9abd5d34d502461388863302cb).
 
 
-## `setState`/`replaceState`: Eliminación de registros
+### `setState`/`replaceState`: Eliminación de registros
 
 La siguiente funcionalidad en nuestra lista es poder eliminar registros. Necesitamos una nueva columna `Actions` en nuestra tabla de registros, esta columna tendrá un botón "Delete" para cada registro, con una UI bastante estándar. Al igual que en el ejemplo anterior, tenemos que crear el método `destroy` en nuestro controlador Rails:
 
@@ -556,7 +564,7 @@ Y, por último, abre el componente `Record` y añade una columna adicional con u
 
 Guarda el archivo, refreca tu navegador y ... ¡Tenemos un botón inútil sin eventos asociados a él!
 
-![Imagen](/url)
+![](/images/react_rails/deleting-records-1.png)
 
 Añadamos funcionalidad. Como hemos aprendido de nuestro componente `RecordForm`, el camino a seguir es:
 
@@ -630,7 +638,7 @@ Después de la actualización de esta última pieza de código, refrescamos la v
  1. Los registros deben desaparecer de la tabla y ...
  2. Los indicadores deben actualizar las cantidades de inmediato, no se requiere ningún código adicional
 
-![Imagen](/url)
+![](/images/react_rails/deleting-records-2.png)
 
 Casi terminamos con nuestra aplicación, pero antes implementar nuestra última funcionalidad, podemos aplicar un pequeño refactor y, al mismo tiempo, introducir una nueva funcionaldad de React.
 
@@ -788,7 +796,8 @@ Por último, el método `render` se reduce al siguiente código:
 
 Puedes refescar tu navegador para jugar con el nuevo comportamiento, pero no presentará ningún cambio todavía ya que no hemos implementado la funcionalidad real.
 
-![Imagen](/url)
+![](/images/react_rails/editing-records-1.png)
+![](/images/react_rails/editing-records-2.png)
 
 Para manejar las actualizaciones de registros, tenemos que añadir el método `update` a nuestro controlador Rails:
 
@@ -868,7 +877,7 @@ Como hemos aprendido en la sección anterior, usar `React.addons.update` para ca
 
 Refresca el navegador por última vez y trata de actualizar algunos registros existentes, observa cómo las recuadros de cantidad en la parte superior de la página mantienen un seguimiento de cada cambio en los registros.
 
-![Imagen](/url)
+![](/images/react_rails/editing-records-3.png)
 
 ¡Hemos terminado! Sonríe, ¡acabamos de construir una pequeña aplicación Rails + React desde cero!
 
