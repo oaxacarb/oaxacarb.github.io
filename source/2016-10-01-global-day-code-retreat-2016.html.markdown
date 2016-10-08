@@ -1,24 +1,25 @@
 ---
 title: Global Day Code Retreat 2016
 date: 2016-10-01 20:44 UTC
-tags:
-published: false
+tags: [code retreat]
 ---
 
-Esta es una invitación a la comunidad de desarrolladores de software de Oaxaca. Oaxaca.rb organiza el Global Day Code Retreat 2016, a realizarse el sábado 22 de octubre del presente año, en las oficinas del COCYT Oaxaca, ubicadas en Manuel García Vigil # 517, Centro, Oaxaca.
+La comunidad de Oaxaca.rb invita a todos los desarrolladores de software a participar en el Global Day Code Retreat 2016 a realizarse el sábado 22 de octubre del presente año, en las oficinas del COCYT, ubicadas en Manuel García Vigil # 517, Centro, Oaxaca.
 
-La dinámica del Global Day Code Retreat consiste en 8 horas practicando la técnica de diseño TDD (Desarrollo Dirigido por Pruebas, por sus siglas en Inglés). Se practica una única Kata, que es El juego de la vida.
+[image]
+
+La dinámica del Global Day Code Retreat consiste en 8 horas de práctica de TDD (Desarrollo Dirigido por Pruebas, por sus siglas en Inglés). TDD es una técnica de diseño de software y la kata que se practica durante el code retreat es El juego de la vida.
 
 Puedes programar en el lenguaje en el que te sientas más cómodo, PHP, Java, Python, etc. Nosotros, obviamente, recomendamos Ruby :)
 
-Dado que la práctica se extiende durante todo el día, nosotros nos encargamos de la alimentación, para que tú sólo te preocupes por aprender y practicar.
+Dado que la práctica se extiende durante todo el día, para que tú sólo te preocupes por aprender y practicar, nosotros nos encargamos de la comida.
 
-Si estas interesado, debes incribirte a la siguiente página:
+Si estás interesado, debes incribirte a la siguiente página:
 
+[link to eventbrite]
 
 Lleva la siguiente máquina virtual ya instalada: 
 
+[link to disk]
 
 Te esperamos.
-
-Saludos.
