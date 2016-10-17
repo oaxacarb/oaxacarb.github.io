@@ -5,29 +5,26 @@ pageable: true
 
 / Main Blog Content
 .large-9.columns{:role => "content"}
-  - if paginate && num_pages > 1
-    %p
-      Página #{page_number} de #{num_pages}
-  - if paginate
-    - if prev_page
-      %span.left= link_to 'Anterior', prev_page
-    - if next_page
-      %span.right= link_to 'Siguiente', next_page
-  %br
-  - page_articles.each_with_index do |article, i|
-    %article
-      %h3
-        = link_to article.title, article
-      %h6.datos
-        Escrito el
-        %span= I18n.localize(article.date.to_date)
-      %br/
-      .text-justify
-        = article.summary
-      = link_to article do
-        %i.fi-page-search
-        &nbsp;
-        Leer más
+  %article.row
+    - page_articles.each_with_index do |article, i|
+      .large-3.columns.datos
+        %span.fecha
+          = I18n.localize(article.date.to_date)
+        %hr/
+        %span.etiquetas Etiquetas:
+        %ul.etiquetas
+          - article.tags.each do |tag|
+            %li= link_to tag, tag_path(tag)
+      .large-9.columns.articulo
+        %h3
+          = link_to article.title, article
+        %br/
+        .text-justify
+          = article.summary
+        = link_to article do
+          %i.fi-page-search
+          &nbsp;
+          Leer más
       %hr/
   - if paginate
     - if prev_page
