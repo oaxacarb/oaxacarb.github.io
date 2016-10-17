@@ -1,7 +1,7 @@
 ---
 title: Global Day Code Retreat 2016
 date: 2016-10-01 20:44 UTC
-tags: [code retreat]
+tags: [code retreat, evento, comunidad]
 ---
 
 ![flyer code retreat](/images/GDCR_2016_Oaxaca_Flyer.jpg)
