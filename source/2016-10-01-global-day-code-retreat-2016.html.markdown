@@ -1,5 +1,5 @@
 ---
-title: Global Day Code Retreat 2016
+title: Global Day Coderetreat Oaxaca 2016
 date: 2016-10-01 20:44 UTC
 tags: [code retreat, evento, comunidad]
 ---
