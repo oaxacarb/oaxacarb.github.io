@@ -93,19 +93,30 @@ ul.related-links {
 }
 
 .articulo {
-  padding: 20px 30px;
+  @media #{$large-up} { padding: 15px 30px; }
+
+  h2, h3 {
+    font-family: "Inconsolata";
+  }
 }
 
-.datos {
-  font-family: 'Inconsolata';
-
-  span.fecha {
-    box-sizing: border-box;
-    padding: 5px 10px;
-    color: $white;
-    background-color: $box-color;  
-    font-size: 0.75em;
+article {
+  h2, h3 {
+    font-family: "Inconsolata";
   }
+}
+
+span.fecha {
+  box-sizing: border-box;
+  padding: 5px 10px;
+  color: $white;
+  background-color: $box-color;  
+  font-size: 0.75em;
+}
+
+div.datos {
+  font-family: 'Inconsolata';
+  @media #{$large-up} { padding-top: 25px; }
 
   span.etiquetas {
     font-weight: bold;
@@ -117,6 +128,11 @@ ul.related-links {
     li {
       color: $main-color;
       text-decoration: underline;
+
+      @media #{$medium-up} {
+        display: inline-block;
+        padding: 3px;
+      }
     }
   }
 }

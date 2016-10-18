@@ -8,9 +8,10 @@ pageable: true
   %article.row
     - page_articles.each_with_index do |article, i|
       .large-3.columns.datos
-        %span.fecha
-          = I18n.localize(article.date.to_date)
-        %hr/
+        .show-for-large-up
+          %span.fecha
+            = I18n.localize(article.date.to_date)
+          %hr/
         %span.etiquetas Etiquetas:
         %ul.etiquetas
           - article.tags.each do |tag|
@@ -18,6 +19,9 @@ pageable: true
       .large-9.columns.articulo
         %h3
           = link_to article.title, article
+        .show-for-medium-down
+          %span.fecha
+            = I18n.localize(article.date.to_date)
         %br/
         .text-justify
           = article.summary
