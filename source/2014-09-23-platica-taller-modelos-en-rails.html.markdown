@@ -1,7 +1,7 @@
 ---
-title: "Plática/Taller: Modelos en Rails"
+title: "Plática: Modelos en Rails"
 date: 2014-09-23 20:54 UTC
-tags: platicas,comunidad,rails
+tags: platicas, comunidad, rails
 ---
 
 En esta plática se aborda de manera básica el manejo de modelos con el framework Ruby on Rails.

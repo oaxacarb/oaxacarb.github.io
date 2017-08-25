@@ -1,7 +1,7 @@
 ---
-title: "Agradecimiento al COCyT"
+title: Agradecimiento al COCyT
 date: 2014-09-23 21:47 UTC
-tags: comunidad
+tags: comunidad, gracias
 ---
 
 A nombre de la comunidad oaxaca.rb queremos agradecer al Consejo Oaxaqueño de Ciencia y Tecnología ([COCyT](http://www.cocyt.oaxaca.gob.mx/)) por su apoyo para la realización de los eventos de la comunidad, y así contribuir a la difusión de técnicas y herramientas actuales para el desarrollo de software, que tanta falta hace en nuestro estado.

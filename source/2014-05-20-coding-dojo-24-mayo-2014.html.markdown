@@ -1,12 +1,13 @@
 ---
-title: Invitación al VII Coding Dojo
+title: Coding Dojo - 24 Mayo 2014
 date: 2014-05-20 22:21 UTC
 tags: dojo, evento
 ---
+
 La comunidad **oaxaca.rb** extiende la invitación a los programadores de Oaxaca (y zonas aledañas) al **7o Coding Dojo**. Se realizará el **sábado 24 de mayo** en las instalaciones de la **Secretaría de Desarrollo Económico**; la dirección es **Matamoros #102, Centro. Oaxaca de Juárez Oaxaca**.
 
 <div class="text-center" markdown="1">
-  [![flyer dojo](/images/codingdojo2.png)](https://www.eventbrite.com/e/coding-dojo-tickets-11696056219)
+  [![flyer dojo](/images/2014/0520/codingdojo.png)](https://www.eventbrite.com/e/coding-dojo-tickets-11696056219)
 </div>
 
 Puedes registrarte en el [evento de Eventbrite](https://www.eventbrite.com/e/coding-dojo-tickets-11696056219). Si ya has asistido anteriormente y conoces a alguien que pueda estar interesado en aprender metodologías de programación y de paso el lenguaje Ruby, ¡invítalo! (tenemos *kata* de bienvenida).

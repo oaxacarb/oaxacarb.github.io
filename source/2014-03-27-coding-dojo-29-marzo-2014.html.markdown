@@ -1,5 +1,5 @@
 ---
-title: 3er Coding Dojo - Marzo 2014
+title: Coding Dojo - 29 Marzo 2014
 date: 2014-03-27 04:45 UTC
 tags: dojo, evento
 ---

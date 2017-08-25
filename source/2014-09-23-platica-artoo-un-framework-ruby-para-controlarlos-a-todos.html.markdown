@@ -1,7 +1,7 @@
 ---
 title: "Plática: Artoo, un framework Ruby para controlarlos a todos..."
 date: 2014-09-23 20:58 UTC
-tags: platicas,comunidad
+tags: platicas, comunidad
 ---
 
 En esta plática se brinda un introducción al framework Artoo, y se brindan algunos ejemplos básicos de su funcionamiento con Arduino y OpenCV.

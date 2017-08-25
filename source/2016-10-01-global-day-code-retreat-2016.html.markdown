@@ -4,7 +4,7 @@ date: 2016-10-01 20:44 UTC
 tags: [code retreat, evento, comunidad]
 ---
 
-![flyer code retreat](/images/GDCR_2016_Oaxaca_Flyer.jpg)
+![flyer code retreat](/images/2016/1001/GDCR_2016_Oaxaca_Flyer.jpg)
 
 La comunidad de Oaxaca.rb invita a todos los desarrolladores de software a participar en el Global Day Code Retreat 2016 a realizarse el sábado 22 de octubre del presente año, en las oficinas del COCYT, ubicadas en Manuel García Vigil # 517, Centro, Oaxaca.
 

@@ -3,6 +3,7 @@ title: Estructuras de datos y algoritmos (Ruby Edition)
 date: 2014-05-17 00:04 UTC
 tags: ruby, recursos, ebook
 ---
+
 **Concise Notes on Data Structures and Algorithms Ruby Edition** (por *Christopher Fox*) es un ebook gratuito en formato **PDF** publicado por [bookboon.com](http://bookboon.com/es) el cual trata conceptos como: *arrays*, *contenedores*, *pilas*, *colas*, *recursividad*, *arboles* y *grafos* entre otros, así como también, aborda algunos algoritmos de ordenamiento básicos como podrían ser: *Bubble Sort* y *Insertion Sort* todo esto enfocado directamente al lenguaje Ruby.
 
 El libro consta de 197 páginas y se encuentra dividido en 24 capítulos de fácil seguimiento. El indice temático es el siguiente:
