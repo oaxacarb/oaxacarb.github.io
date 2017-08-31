@@ -24,6 +24,7 @@
           %h6.datos= "Escrito el #{ I18n.localize(current_article.date.to_date) }"
           %hr/
           .text-justify
+            = partial 'texto_trivia' if trivia? current_article
             ~ yield
           = partial 'social'
           = disqus
