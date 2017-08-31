@@ -1,7 +1,7 @@
 ---
-title: Coding Dojo - Marzo 2014
+title: Coding Dojo - 15 de Marzo 2014
 date: 2014-03-13 04:45 UTC
-tags: dojo, evento
+tags: dojo, comunidad
 ---
 
 La comunidad **oaxaca.rb** invita a propios y extraños al **Coding Dojo** que se llevará a cabo el sábado 15 de marzo de 2014 en las instalaciones de la Secretaría de Desarrollo económico del municipio de Oaxaca de Juárez, ubicadas en la calle de Matamoros #102 Centro.

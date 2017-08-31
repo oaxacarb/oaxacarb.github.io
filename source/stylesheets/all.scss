@@ -16,6 +16,10 @@ $light-gray: #777;
 $box-color: #808080;
 $white: #FFF;
 
+.row{
+  max-width: 70rem !important;
+}
+
 .nav-bar{
   .button{
     @include button-style($white);
@@ -36,7 +40,7 @@ $white: #FFF;
 
 aside {
   font-family: 'Inconsolata';
-  
+
   h1, h2, h3, h4 ,h5, h6 {
     font-family: 'Inconsolata';
     font-weight: bold;
@@ -45,7 +49,7 @@ aside {
   ul.etiquetas {
     margin-left: 0px;
     list-style-type: none;
-    
+
     li {
       display: inline-block;
       padding: 3px;

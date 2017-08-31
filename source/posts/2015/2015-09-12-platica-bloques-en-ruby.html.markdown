@@ -1,7 +1,7 @@
 ---
 title: "Plática: Bloques en Ruby"
 date: 2015-09-12 13:39 UTC
-tags: platicas, evento, comunidad
+tags: platica, comunidad
 ---
 
 Hace un par de meses ApuX dio una plática sobre ["Bloques en Ruby"](https://www.youtube.com/embed/IW9ZiP7f8Ck).

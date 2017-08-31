@@ -1,7 +1,7 @@
 ---
 title: "Trivia vim 3: ¿Cuál es la forma más rapida de borrar el último parámetro?"
 date: 2017-08-29 11:07 UTC
-tags: trivias
+tags: trivia
 ---
 
 Si quieres estar al día en las #trivias entra al [Slack Oaxacarb](https://oaxacarb.herokuapp.com), posteriormente se publica [aquí](http://localhost:4567/posts/trivia-uno-vim.html) y en [facebook](https://www.facebook.com/oaxacarb) te invitamos a participar en esta actividad dejando tu comentario de la respuesta la cual tiene una característica, debe ser **la forma más simple de resolver la trivia**.

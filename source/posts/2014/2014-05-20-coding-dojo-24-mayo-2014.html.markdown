@@ -1,7 +1,7 @@
 ---
 title: Coding Dojo - 24 Mayo 2014
 date: 2014-05-20 22:21 UTC
-tags: dojo, evento
+tags: dojo, comunidad
 ---
 
 La comunidad **oaxaca.rb** extiende la invitación a los programadores de Oaxaca (y zonas aledañas) al **7o Coding Dojo**. Se realizará el **sábado 24 de mayo** en las instalaciones de la **Secretaría de Desarrollo Económico**; la dirección es **Matamoros #102, Centro. Oaxaca de Juárez Oaxaca**.

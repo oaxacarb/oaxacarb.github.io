@@ -1,7 +1,7 @@
 ---
 title: Coding Dojo - 25 Julio 2014
 date: 2014-07-22 20:57 UTC
-tags: dojo, evento
+tags: dojo, comunidad
 ---
 
 La comunidad **oaxaca.rb** extiende la invitación a los programadores de Oaxaca al **10o Coding Dojo**. Se realizará el **viernes 25 de julio** en las instalaciones del **Impact Hub**, las cuales se encuentran en **Andrés Quintana Roo 211, Centro. Oaxaca de Juárez Oaxaca**, a unos pasos del jardín Conzatti.

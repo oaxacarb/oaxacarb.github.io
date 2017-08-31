@@ -1,7 +1,7 @@
 ---
 title: "Plática: React.js - Una guía para desarrolladores Rails"
 date: 2016-01-09 19:05 UTC
-tags: rails, react, frontend, javascript, platicas
+tags: rails, react, frontend, javascript
 ---
 
 <div data-alert class="alert-box info radius">

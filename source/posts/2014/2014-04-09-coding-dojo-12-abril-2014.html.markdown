@@ -1,7 +1,7 @@
 ---
 title: Coding Dojo - 12 Abril 2014
 date: 2014-04-09 01:16 UTC
-tags: dojo, evento
+tags: dojo, comunidad
 ---
 
 Para comenzar las actividades del mes de abril, la comunidad **oaxaca.rb** extiende la invitación a los programadores de Oaxaca (y zonas aledañas) al **4o Coding Dojo**. Se realizará el **sábado 12 de abril** en las instalaciones de la **Secretaría de Desarrollo Económico**; la dirección es **Matamoros #102, Centro. Oaxaca de Juárez Oaxaca**.

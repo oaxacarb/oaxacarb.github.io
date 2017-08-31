@@ -1,7 +1,7 @@
 ---
 title: "Plática: ¡Nick Sutterer en Oaxaca!"
 date: 2015-02-06 18:53 UTC
-tags: evento, comunidad, platicas
+tags: platica, comunidad
 ---
 
 El 21 de Febrero de 2015 estaremos de manteles largos, [Nick Sutterer](https://twitter.com/apotonick) el creador de [TrailBlazer](http://www.trailblazerb.org/) nos dará una plática a toda la comunidad.

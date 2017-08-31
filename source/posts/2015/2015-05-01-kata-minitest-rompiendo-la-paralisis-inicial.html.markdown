@@ -1,7 +1,7 @@
 ---
 title: "Kata Minitest: Rompiendo la parálisis inicial"
 date: 2015-05-01 21:44 UTC
-tags: ruby, dojo, kata
+tags: ruby, comunidad, kata
 ---
 
 Algo que suele detener al comenzar algún proyecto, práctica o actividad es la parálisis inicial, esto es, de pensar en todas las cosas que tenemos que hacer, recordar o investigar antes de comenzar la actividad, nos quita la motivación de hacerlo y decidimos posponerlo.
