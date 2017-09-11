@@ -11,6 +11,6 @@ Si el cursor está ubicado sobre la letra e de la palabra elm.
 By @thotmx -->
 
 <html>
-    <p>La platica de elm estuvo exelente!</p>
+    <p>La plática de elm estuvo excelente!</p>
 </html>
 ~~~
