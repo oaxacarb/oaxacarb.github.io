@@ -77,6 +77,18 @@ main =
 
 ### Más de elm
 
-[Visita el gist de @thotmx](https://gist.github.com/thotmx/f0b0a1b5b97ccb4d8f301d482a366fb8/revisions), donde encontraras la platica paso a paso.
+[Visita el gist de @thotmx](https://gist.github.com/thotmx/f0b0a1b5b97ccb4d8f301d482a366fb8/revisions), donde encontraras la plática paso a paso.
 
-Comentamos como te fue...
+### Enlaces recomendados (escrito por @thotmx)
+ 
+ * [Sitio oficial de Elm](http://elm-lang.org/) - Esta es la entrada al mundo de Elm. Un sitio con buenos recursos y excelente documentación. Puedes probar Elm directamente en un editor en la web.
+
+ * [Tutorial de Elm](https://www.elm-tutorial.org/en/) - Un tutorial de Elm que aborda detalles de lenguaje y arquitectura. Muy fácil de seguir y muy explicativo.
+
+ * [Elm in Action](https://www.manning.com/books/elm-in-action) - Libro sobre Elm escrito por un miembro relevante de la comunidad Elm.
+
+ * [Elm, Building web apps](https://pragmaticstudio.com/courses/elm) - Curso de Pragmatic Studio, vale mucho la pena, es muy concreto, los videos son muy cortos pero abordan temas relevantes en cada video. El curso consta de 22 videos. También es recomendable revisar los recursos gratuitos de Pragmatic Studio relacionados con Elm.
+
+ * [Phoenix with Elm](http://www.cultivatehq.com/posts/phoenix-elm-1/) - Un tutorial sumamente interesante de integración de Elm con Phoenix (Elixir). Nos lleva a construir una aplicación de reservación de asientos en un autobús. Aunque la versión de Elm que utiliza el tutorial es antigua, en mi [cuenta de github](https://github.com/thotmx) se puede encontrar un repositorio con el tutorial con la versión 0.18 de Elm.
+
+Coméntanos como te fue...
