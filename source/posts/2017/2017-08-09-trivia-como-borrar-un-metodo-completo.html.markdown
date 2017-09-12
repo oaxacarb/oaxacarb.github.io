@@ -1,7 +1,7 @@
 ---
 title: "Trivia vim 1: ¿Como borrar un metodo completo?"
 date: 2017-08-09 11:07 UTC
-tags: trivia, comunidad
+tags: trivia, comunidad, vim
 ---
 
 ~~~ruby

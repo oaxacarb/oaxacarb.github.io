@@ -1,7 +1,7 @@
 ---
 title: "Trivia vim 2: ¿Cuál es la forma mas rapida de sustituir el texto entre comillas?"
 date: 2017-08-15 11:07 UTC
-tags: trivia, comunidad
+tags: trivia, comunidad, vim
 ---
 
 ~~~ruby

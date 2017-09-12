@@ -1,7 +1,7 @@
 ---
 title: "Trivia vim 3: ¿Cuál es la forma más rapida de borrar el último parámetro?"
 date: 2017-08-29 11:07 UTC
-tags: trivia, comunidad
+tags: trivia, comunidad, vim
 ---
 
 ~~~ruby

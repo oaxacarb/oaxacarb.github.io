@@ -1,7 +1,7 @@
 ---
 title: "Trivia vim 4: ¿Cuál es la forma más rapida de borrar el texto dentro del tag <p>?"
 date: 2017-09-11 11:16 UTC
-tags: trivia, comunidad
+tags: trivia, comunidad, vim
 ---
 
 ~~~html

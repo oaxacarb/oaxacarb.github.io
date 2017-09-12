@@ -1,7 +1,7 @@
 ---
 title: "Platica: Elm Un lenguaje delicioso para webapps"
 date: 2017-09-12 11:16 UTC
-tags: platica, comunidad
+tags: platica, comunidad, elm
 ---
 
 Hola, hoy les contare sobre “La platica de elm” que por cierto estuvo excelente, gracias a [@thotmx](https://github.com/thotmx).
