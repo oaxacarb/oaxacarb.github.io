@@ -3,13 +3,14 @@
 source 'http://rubygems.org'
 
 gem "builder"
-gem "middleman", "~>3.3.12"
-gem 'middleman-deploy'
+gem 'middleman', '~> 4.2', '>= 4.2.1'
+gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-disqus'
-gem 'middleman-syntax'
+gem 'middleman-syntax', '~> 3.0'
 
-gem 'middleman-blog'
+gem 'middleman-blog', '~> 4.0', '>= 4.0.2'
 gem 'nokogiri'
+gem 'middleman-sprockets'
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"

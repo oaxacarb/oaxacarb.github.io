@@ -106,7 +106,7 @@ configure :build do
 end
 
 activate :deploy do |deploy|
-  deploy.method = :git
+  deploy.deploy_method = :git
   deploy.branch = 'master'
   deploy.build_before = true
 end
@@ -117,7 +117,8 @@ end
 
 activate :i18n, langs: [:es]
 
-activate :syntax
+activate :syntax, :line_numbers => true
+activate :sprockets
 
 set :markdown_engine, :kramdown
 
@@ -127,3 +128,4 @@ set :markdown,
   :autolink => true,
   :smartypants => true,
   :with_toc_data => true
+Haml::TempleEngine.disable_option_validator!
