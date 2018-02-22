@@ -2,6 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 
 //@import "compass";
+@import "normalize";
 @import "foundation";
 @import "foundation-icons";
 @import "foundation/functions";
@@ -64,7 +65,7 @@ aside {
 ul.related-links {
   list-style-type: none;
   margin-left: 0px;
-  
+
   li {
     margin-top: 10px;
 
@@ -114,7 +115,7 @@ span.fecha {
   box-sizing: border-box;
   padding: 5px 10px;
   color: $white;
-  background-color: $box-color;  
+  background-color: $box-color;
   font-size: 0.75em;
 }
 
