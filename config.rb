@@ -117,7 +117,7 @@ end
 
 activate :i18n, langs: [:es]
 
-activate :syntax, :line_numbers => true
+activate :syntax
 activate :sprockets
 
 set :markdown_engine, :kramdown

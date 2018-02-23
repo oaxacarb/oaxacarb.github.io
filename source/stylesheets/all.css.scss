@@ -1,12 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Inconsolata);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 
-//@import "compass";
 @import "normalize";
 @import "foundation";
 @import "foundation-icons";
 @import "foundation/functions";
-//@import "highlight";
+@import "highlight.css";
 
 $main-color: #CC342D;
 $opaque-primary: #85140F;
@@ -16,6 +15,26 @@ $gray: #585450;
 $light-gray: #777;
 $box-color: #808080;
 $white: #FFF;
+
+pre.highlight {
+  margin-bottom: 1em;
+
+  code {
+    display: block;
+    padding: 1em !important;
+    background-color: inherit;
+    border-color: inherit !important;
+    border: inherit;
+    color: inherit;
+    padding: inherit;
+  }
+}
+
+.example {
+  pre.highlight {
+    padding: 3em;
+  }
+}
 
 .row{
   max-width: 70rem !important;
