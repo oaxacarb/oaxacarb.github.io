@@ -16,4 +16,4 @@ Addison ha trabajado en documentación técnica y entrenamiento desde el año 20
 
 Addison (Addy, para los cuates) nos compartirá un poco de sus experiencias colaborando en Drupal y cómo el esfuerzo comunitario ha jugado una rol primordial para la creación, mantenimiento y modernización del proyecto.
 
-Si quieres acompañarnos en esta plática, te esperamos en las oficinas de [Cowork Inn](https://www.facebook.com/coworkinn.mx/), ubicadas en Privada de Amapolas #220, en la colonia Reforma. [¡Aparta tu lugar aquí!]() Tenemos **cupo limitado**.
+Si quieres acompañarnos en esta plática, te esperamos en las oficinas de [Cowork Inn](https://www.facebook.com/coworkinn.mx/), ubicadas en Privada de Amapolas #220, en la colonia Reforma. [¡Aparta tu lugar aquí!](https://goo.gl/ju31ez) Tenemos **cupo limitado**.
