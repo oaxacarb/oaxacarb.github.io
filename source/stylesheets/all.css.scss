@@ -281,3 +281,23 @@ img.grayscale:hover {
   filter: none;
   -webkit-filter: grayscale(0%);
 }
+
+.profile-image {
+  img {
+    width: 160px;
+    height: 160px;
+  }
+
+  float: left;
+  margin-right: 2em;
+  margin-bottom: 1.5em;
+
+  @include thumb(
+    // Width of border around thumbnail
+    $border-width: 2px,
+    // Box shadow to apply to thumbnail
+    $box-shadow: 0 0 0 1px rgba(#000,.2),
+    // Box shadow to apply on hover
+    $box-shadow-hover: 0 0 6px 1px rgba(#ccc,0.5)
+  );
+}
