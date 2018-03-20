@@ -5,10 +5,127 @@
   <id>http://oaxacarb.org/</id>
   <link href="http://oaxacarb.org/"/>
   <link href="http://oaxacarb.org/feed.xml" rel="self"/>
-  <updated>2018-03-06T23:29:00-06:00</updated>
+  <updated>2018-03-19T18:00:00-06:00</updated>
   <author>
     <name>oaxaca.rb</name>
   </author>
+  <entry>
+    <title>Editor markdown con vue.js</title>
+    <link rel="alternate" href="http://oaxacarb.org/posts/editor-markdown-con-vue-js.html"/>
+    <id>http://oaxacarb.org/posts/editor-markdown-con-vue-js.html</id>
+    <published>2018-03-19T18:00:00-06:00</published>
+    <updated>2018-03-20T14:54:08-06:00</updated>
+    <author>
+      <name>oaxaca.rb</name>
+    </author>
+    <content type="html">&lt;p&gt;Regresando con el tema de Vue.js que vimos en un &lt;a href="http://oaxacarb.org/posts/vuejs-primeros-pasos-en-vuejs.html"&gt;post anterior&lt;/a&gt; y como lo mencione ahi haremos un editor markdown.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Aquí tenemos el &lt;a href="http://oaxacarb.org/markdown.html"&gt;editor markdown&lt;/a&gt; funcionando.&lt;/li&gt;
+  &lt;li&gt;Aquí tenemos el &lt;a href="https://github.com/oaxacarb/markdown-editor"&gt;código&lt;/a&gt;, lo subi conforme explicó en el post.&lt;/li&gt;
+  &lt;li&gt;Usamos la &lt;a href="https://github.com/markedjs/marked"&gt;librería&lt;/a&gt; para pasar el texto plano a markdown.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="comenzamos"&gt;Comenzamos&lt;/h3&gt;
+&lt;p&gt;El editor se divide en tres partes, &lt;strong&gt;Root, Editor, Preview&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Root&lt;/strong&gt; es la instancia de vue donde se &lt;em&gt;“aloja”&lt;/em&gt; el componente Editor y dentro de Editor se &lt;em&gt;“aloja”&lt;/em&gt; el componente Preview.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Editor&lt;/strong&gt; es el &lt;strong&gt;componente&lt;/strong&gt; donde se escribe en markdown. (Izquierda)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Preview&lt;/strong&gt; es el &lt;strong&gt;componente&lt;/strong&gt; donde &lt;strong&gt;visualiza&lt;/strong&gt; lo escrito en markdown pero &lt;strong&gt;transformado&lt;/strong&gt;. (Derecha)&lt;/p&gt;
+
+&lt;h3 id="plugin-vuejs"&gt;Plugin Vuejs&lt;/h3&gt;
+&lt;p&gt;Puedes apoyarte de la &lt;a href="https://github.com/vuejs/vue-devtools"&gt;extensión&lt;/a&gt; para visualizar los componentes y sus propiedades.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/2018/0320/root.png" alt="editor" /&gt;&lt;/p&gt;
+
+&lt;h3 id="estructura-inicial"&gt;1. Estructura inicial&lt;/h3&gt;
+
+&lt;p&gt;Creó la estructura inicial cargando la librería de vue.js&lt;/p&gt;
+
+&lt;h3 id="instancia-de-vue"&gt;2. Instancia de vue&lt;/h3&gt;
+
+&lt;p&gt;La instancia es la llamada a Vue y hace referencia que es carga en el identificador &lt;em&gt;#app&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="kd"&gt;let&lt;/span&gt; &lt;span class="nx"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Vue&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+    &lt;span class="na"&gt;el&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'#app'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;})&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="creacin-del-componente-editor"&gt;3. Creación del componente Editor&lt;/h3&gt;
+
+&lt;p&gt;El componente &lt;strong&gt;Editor&lt;/strong&gt; se encuentra en la variable &lt;strong&gt;let Editor&lt;/strong&gt; y tiene a su disposición la propiedad &lt;strong&gt;text&lt;/strong&gt; dentro de &lt;strong&gt;data()&lt;/strong&gt; y su &lt;em&gt;html&lt;/em&gt; declarado en &lt;strong&gt;template&lt;/strong&gt;,&lt;/p&gt;
+
+&lt;p&gt;Por lo tanto lo que escribamos en el &lt;strong&gt;textarea&lt;/strong&gt; se verá reflejado en la propiedad &lt;strong&gt;text&lt;/strong&gt; y viceversa.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/2018/0320/editor.png" alt="editor" /&gt;&lt;/p&gt;
+
+&lt;h3 id="creacin-del-componente-preview"&gt;4. Creación del componente Preview&lt;/h3&gt;
+
+&lt;p&gt;El componente &lt;strong&gt;Preview&lt;/strong&gt; se encuentra dentro del componente &lt;strong&gt;Editor&lt;/strong&gt; a esto se le conoce como &lt;em&gt;componente hijo&lt;/em&gt;, al igual que el componente &lt;strong&gt;Editor&lt;/strong&gt; cuenta con su &lt;em&gt;html&lt;/em&gt; declarado en &lt;strong&gt;template&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;El &lt;em&gt;componente hijo&lt;/em&gt; se declara dentro del &lt;em&gt;componente padre&lt;/em&gt;. Como podemos ver en el plugin de chrome Preview está dentro de Editor&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/2018/0320/preview.png" alt="editor" /&gt;&lt;/p&gt;
+
+&lt;h3 id="agregar-estilos-css"&gt;5. Agregar estilos css&lt;/h3&gt;
+
+&lt;p&gt;Se encuentra en el &lt;strong&gt;header&lt;/strong&gt; del archivo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/2018/0320/css.png" alt="editor" /&gt;&lt;/p&gt;
+
+&lt;h3 id="props-en-componente-preview"&gt;6. Props en componente Preview&lt;/h3&gt;
+
+&lt;p&gt;Cada componente tiene su propio alcance &lt;strong&gt;data&lt;/strong&gt;. Esto significa que no puede y no debería hacer referencia directa a los datos principales de un componente hijo, los datos se pueden pasar a los componentes hijos usando &lt;strong&gt;props&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;v-bind&lt;/strong&gt; o &lt;strong&gt;:&lt;/strong&gt; permite pasar &lt;strong&gt;data&lt;/strong&gt; del componente padre al hijo y el componente hijo lo toma a través de &lt;strong&gt;props&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/2018/0320/props.png" alt="editor" /&gt;&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre class="highlight javascript"&gt;&lt;code&gt;    &lt;span class="c1"&gt;// Los ":" es shortcut de v-bind:&lt;/span&gt;
+
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;preview&lt;/span&gt; &lt;span class="nx"&gt;v&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;bind&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"text"&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="sr"&gt;/preview&lt;/span&gt;&lt;span class="err"&gt;&amp;gt;
+&lt;/span&gt;    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;preview&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"text"&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="sr"&gt;/preview&lt;/span&gt;&lt;span class="err"&gt;&amp;gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="computed-property-en-componente-preview"&gt;7. Computed property en componente Preview&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Computed property&lt;/em&gt; reacciona al &lt;strong&gt;cambio&lt;/strong&gt; de una propiedad, en nuestro caso es &lt;strong&gt;text&lt;/strong&gt;, cuando a text se le asigna un &lt;strong&gt;valor&lt;/strong&gt; nuevo, &lt;strong&gt;markdownText&lt;/strong&gt; se lanza y ejecuta la función donde se encuentre dicha propiedad.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/2018/0320/computed.png" alt="editor" /&gt;&lt;/p&gt;
+
+&lt;h3 id="implementando-marked"&gt;8. Implementando marked&lt;/h3&gt;
+
+&lt;p&gt;Implementamos marked y sucede algo inesperado&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="nx"&gt;computed&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;markdownText&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;marked&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="na"&gt;sanitize&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En el componente &lt;strong&gt;Preview&lt;/strong&gt; &lt;em&gt;imprime las etiquetas html&lt;/em&gt;, esto sucede porque vuejs automáticamente &lt;strong&gt;escapa&lt;/strong&gt; las &lt;strong&gt;etiquetas html&lt;/strong&gt; cuando usamos la sintaxis &lt;strong&gt;doble corchete&lt;/strong&gt; &lt;code&gt;{{}}&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre class="highlight html"&gt;&lt;code&gt; &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"editor__preview"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;{{ markdownText }}&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre class="highlight html"&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Párrafo&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&lt;/span&gt;#h1&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src="/images/2018/0320/parrafo.png" alt="editor" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para &lt;strong&gt;solucionar&lt;/strong&gt; el escape de html vuejs cuenta con una etiqueta &lt;strong&gt;v-html&lt;/strong&gt; la cual implementaremos.&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre class="highlight html"&gt;&lt;code&gt; &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"editor__preview"&lt;/span&gt; &lt;span class="na"&gt;v-html=&lt;/span&gt;&lt;span class="s"&gt;"markdownText"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;Vuejs por ser reactivo a través de la etiqueta &lt;strong&gt;v-model&lt;/strong&gt; es two data binding (el valor “viaja” en dos sentidos)&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://vuejs.org/"&gt;Vuejs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://vuejs.org/v2/guide/forms.html#v-model-with-Components"&gt;v-model&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://vuejs.org/v2/guide/components.html#Props"&gt;Props&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://vuejs.org/v2/guide/computed.html"&gt;Computed property&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>Addison, CEO de Lullabot, visita Oaxaca.rb</title>
     <link rel="alternate" href="http://oaxacarb.org/posts/addison-ceo-de-lullabot-visita-oaxaca-rb.html"/>
@@ -277,25 +394,6 @@ By @thotmx --&amp;gt;&lt;/span&gt;
 &lt;span class="nt"&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
     &lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;La plática de elm estuvo excelente!&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
 &lt;span class="nt"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Trivia vim 3: ¿Cuál es la forma más rapida de borrar el último parámetro?</title>
-    <link rel="alternate" href="http://oaxacarb.org/posts/trivia-cual-es-la-forma-mas-rapida-de-borrar-el-ultimo-parametro.html"/>
-    <id>http://oaxacarb.org/posts/trivia-cual-es-la-forma-mas-rapida-de-borrar-el-ultimo-parametro.html</id>
-    <published>2017-08-29T06:07:00-05:00</published>
-    <updated>2018-03-07T12:22:29-06:00</updated>
-    <author>
-      <name>oaxaca.rb</name>
-    </author>
-    <content type="html">&lt;div class="highlight"&gt;&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="c1"&gt;# Trivia vim 3:&lt;/span&gt;
-&lt;span class="c1"&gt;# Si el cursor está ubicado sobre la segunda coma (después de slack).&lt;/span&gt;
-&lt;span class="c1"&gt;# ¿Cuál es la forma más rapida de borrar el último parámetro?&lt;/span&gt;
-&lt;span class="c1"&gt;# By @thotmx&lt;/span&gt;
-
-  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;trivia_tres&lt;/span&gt;
-    &lt;span class="n"&gt;explodify&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;comunidad&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;slack&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;oaxaca&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="k"&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
   </entry>
 </feed>
