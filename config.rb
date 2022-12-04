@@ -4,6 +4,19 @@
 require 'builder'
 require 'uri'
 # Time.zone = "UTC"
+require 'vite_ruby'
+require 'vite_padrino/tag_helpers'
+
+configure :development do
+  use ViteRuby::DevServerProxy, ssl_verify_none: true
+end
+helpers VitePadrino::TagHelpers
+
+activate :external_pipeline,
+         name: :vite,
+         command: build? ? "yarn run build" : "yarn run dev",
+         source: ".tmp/dist",
+         latency: 1
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
@@ -81,12 +94,6 @@ page "/feed.xml", layout: false
    end
  end
 
-set :css_dir, 'stylesheets'
-
-set :js_dir, 'javascripts'
-
-set :images_dir, 'images'
-
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -118,7 +125,6 @@ end
 activate :i18n, langs: [:es]
 
 activate :syntax
-activate :sprockets
 
 set :markdown_engine, :kramdown
 
