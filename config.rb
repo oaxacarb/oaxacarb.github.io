@@ -12,12 +12,6 @@ configure :development do
 end
 helpers VitePadrino::TagHelpers
 
-activate :external_pipeline,
-         name: :vite,
-         command: build? ? "yarn run build" : "yarn run dev",
-         source: ".tmp/dist",
-         latency: 1
-
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
