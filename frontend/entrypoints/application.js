@@ -5,3 +5,4 @@
 console.log("Vite ⚡️ Ruby and Middleman");
 
 import "~/stylesheets/all.scss";
+import "~/javascripts/app";
