@@ -10,8 +10,8 @@ gem 'middleman-syntax', '~> 3.0'
 
 gem 'middleman-blog', '~> 4.0', '>= 4.0.2'
 gem 'nokogiri'
-gem 'middleman-sprockets'
-gem 'sprockets', '3.7.2'
+gem "vite_padrino"
+gem "vite_ruby"
 gem 'haml', '~> 5.2', '>= 5.2.2'
 
 # Live-reloading plugin
