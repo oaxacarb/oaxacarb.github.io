@@ -19,4 +19,6 @@ Además se darán algunas pláticas rápidas, sobre diferentes temas:
 
 Si quieres acompañarnos en este evento, te esperamos en la 2a Privada de la Noria 209-A. [¡Aparta tu lugar aquí!](http://bit.ly/3wKCAV5) Tenemos **cupo limitado**.
 
+La plática también será transmitida por Facebook: [https://www.facebook.com/oaxacarb](https://www.facebook.com/oaxacarb)
+
 
