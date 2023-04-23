@@ -1,12 +1,4 @@
 %aside.large-3.columns
-  /
-    %div.row.collapse.postfix-round.search
-      %div.small-10.columns
-        %input{ type: 'text', placeholder: 'Buscar en el blog' }
-      %div.small-2.columns
-        %button.button.postfix{ type: 'submit' }
-          %i.fi-magnifying-glass
-
   %ul.related-links
     %li.eventbrite
       %a{href: 'http://www.eventbrite.com/o/oaxacarb-6130967443', :target => '_blank'}
@@ -14,31 +6,17 @@
         %span Próximos eventos
   %hr/
 
+  %ul.related-links
+    %li.slack
+      %a{href: 'https://communityinviter.com/apps/oaxacarb/oaxacarb', :target => '_blank'}
+        = image_tag 'slack.png'
+        %span Únete a nuestro Slack 
+  %hr/
+
   %h5 Etiquetas
   %ul.etiquetas
     - blog.tags.each do |tag, articles|
       %li
         = link_to tag, tag_path(tag)
-
-  /
-    .panel
-      %h5 ¡Importante!
-      %p
-        ¿Te interesa acudir al próximo Coding Dojo?
-        %strong
-          = link_to "Descarga esta nueva máquina virtual", 'https://mega.co.nz/#!VU0GhRgB!Vhl0Vjc_xqZILoc1WKyMY4f4RbeAZQBCaZBOtSUhKl4'
-        con todo lo necesario para que puedas integrarte a las sesiones de trabajo.
-      %p
-        Instala con la última versión de
-        = link_to 'VirtualBox', 'https://www.virtualbox.org/'
-      %p
-        %i Actualizada: 30/04/2014
-
-  /
-    .panel
-      %h5 Eventos próximos
-      %p
-        Obtén la información de nuestros próximos eventos antes que nadie:
-        = link_to 'RSS de Eventos', 'https://www.eventbrite.com/rss/user_list_events/91036845119'
 
 / End Sidebar
