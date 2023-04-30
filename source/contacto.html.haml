@@ -38,3 +38,47 @@ title: Contacto
         = link_to 'https://www.instagram.com/oaxacarb/', title: 'instagram', target: '_blank' do
           %i.fi-social-instagram
           oaxacarb
+
+  %p También puedes unirte a nuestra comunidad en Slack
+  %ul.related-links
+    %li.slack
+      %a{href: 'https://communityinviter.com/apps/oaxacarb/oaxacarb', :target => '_blank'}
+        = image_tag 'slack.png'
+        %span Únete
+  %hr/
+
+  %p Así como suscribirte a nuestra lista de correo para recibir información de los próximos eventos en tu bandeja de entrada:
+  / Begin Mailchimp Signup Form
+  %link{:href => "//cdn-images.mailchimp.com/embedcode/classic-071822.css", :rel => "stylesheet", :type => "text/css"}/
+  :css
+    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;}
+    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  #mc_embed_signup
+    %form#mc-embedded-subscribe-form.validate{:action => "https://oaxacarb.us21.list-manage.com/subscribe/post?u=a35706c9d186c310531abbd03&id=c2f339a80f&f_id=00e3ace1f0", :method => "post", :name => "mc-embedded-subscribe-form", :novalidate => "", :target => "_blank"}
+      #mc_embed_signup_scroll
+        .indicates-required
+          %span.asterisk *
+          indicates required
+        .mc-field-group
+          %label{:for => "mce-EMAIL"}
+            Email Address
+            %span.asterisk *
+          %input#mce-EMAIL.required.email{:name => "EMAIL", :required => "", :type => "email", :value => ""}/
+          %span#mce-EMAIL-HELPERTEXT.helper_text
+        #mce-responses.clear.foot
+          #mce-error-response.response{:style => "display:none"}
+          #mce-success-response.response{:style => "display:none"}
+        / real people should not fill this in and expect good things - do not remove this or risk form bot signups
+        %div{"aria-hidden" => "true", :style => "position: absolute; left: -5000px;"}
+          %input{:name => "b_a35706c9d186c310531abbd03_c2f339a80f", :tabindex => "-1", :type => "text", :value => ""}/
+        .optionalParent
+          .clear.foot
+            %input#mc-embedded-subscribe.button{:name => "subscribe", :type => "submit", :value => "Subscribe"}/
+            %p.brandingLogo
+              %a{:href => "http://eepurl.com/ipJGwA", :title => "Mailchimp - email marketing made easy and fun"}
+                %img{:src => "https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"}/
+  %script{:src => "//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js", :type => "text/javascript"}
+  :javascript
+    (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);
+  / End mc_embed_signup
