@@ -1,0 +1,28 @@
+<h1 id="oaxaca-ruby-user-group-website">Oaxaca Ruby User Group Website</h1>
+
+<h2 id="general-information">General information</h2>
+
+<p>This website is powered by <a href="http://middlemanapp.com">Middleman</a>.</p>
+
+<h2 id="how-to-build-the-website">How to build the website?</h2>
+
+<ul>
+  <li>Clone the repository</li>
+  <li>Change to <strong>source</strong> branch
+<code>
+git checkout source
+</code></li>
+  <li>Install all the dependencies
+<code>
+bundle install
+</code></li>
+  <li>Run the server
+<code>
+middleman server
+</code></li>
+  <li>The website is in http://localhost:4567</li>
+  <li>To deploy the site:
+<code>
+middleman deploy
+</code></li>
+</ul>

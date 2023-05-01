@@ -1,0 +1,677 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='utf-8'>
+<!-- Always force latest IE rendering engine or request Chrome Frame -->
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<!-- Use title if it's in the page YAML frontmatter -->
+<title>Plática: React.js - Una guía para desarrolladores Rails - oaxaca.rb</title>
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+<link href="/stylesheets/all.css" rel="stylesheet" />
+<script src="/javascripts/app.js"></script>
+</head>
+<body class='posts posts_react-js-una-guia-para-desarrolladores'>
+<!-- Nav Bar -->
+<div class='row' id='main'>
+<!-- nav-bar small -->
+<div class='sticky'>
+<nav class='top-bar show-for-small' data-topbar=''>
+<ul class='title-area'>
+<!-- Title Area -->
+<li class='name'>
+<h1>
+<a href='/'>
+oaxacarb
+</a>
+</h1>
+</li>
+<li class='toggle-topbar menu-icon'>
+<a href='#'>
+menu
+</a>
+</li>
+</ul>
+<section class='top-bar-section'>
+<!-- Right Nav Section -->
+<ul class='right'>
+<li class='divider'></li>
+<li class='divider'></li>
+<li>
+<a href='/tags/dojo.html'>Dojos</a>
+</li>
+<li class='divider'></li>
+<li class='divider'></li>
+<li>
+<a href='/tags/platica.html'>Pláticas</a>
+</li>
+<li class='divider'></li>
+<li class='divider'></li>
+<li>
+<a href='/tags/evento.html'>Eventos</a>
+</li>
+<li class='divider'></li>
+<li class='divider'></li>
+<li>
+<a href='/tags/trivia.html'>Trivias</a>
+</li>
+<li class='divider'></li>
+<li class='divider'></li>
+<li>
+<a href='/about.html'>Acerca de</a>
+</li>
+<li class='divider'></li>
+<li class='divider'></li>
+<li>
+<a href='/contacto.html'>Contacto</a>
+</li>
+<li class='divider'></li>
+<li>
+<a href='/agradecimientos.html'>Gracias</a>
+</li>
+</ul>
+</section>
+</nav>
+</div>
+<div class='large-12 columns'>
+<div class='nav-bar right hide-for-small'>
+<ul class='button-group main-menu'>
+<li>
+<a class='button' href='/tags/dojo.html'>Dojos</a>
+</li>
+<li>
+<a class='button' href='/tags/platica.html'>Pláticas</a>
+</li>
+<li>
+<a class='button' href='/tags/evento.html'>Eventos</a>
+</li>
+<li>
+<a class='button' href='/tags/trivia.html'>Trivias</a>
+</li>
+<li>
+<a class='button' href='/about.html'>Acerca de</a>
+</li>
+<li>
+<a class='button' href='/contacto.html'>Contacto</a>
+</li>
+<li>
+<a class='button' href='/agradecimientos.html'>Gracias</a>
+</li>
+</ul>
+</div>
+<a class='logo' href='/'>
+<h2>
+oaxaca.
+<span>rb</span>
+</h2>
+<span>La comunidad Ruby de Oaxaca</span>
+</a>
+</div>
+
+</div>
+<div id='header'></div>
+<!-- Main Page Content and Sidebar -->
+<div class='row' id='content'>
+<div class='large-9 columns' role='content'>
+<article>
+<h3>
+<a href="/posts/react-js-una-guia-para-desarrolladores.html">Plática: React.js - Una guía para desarrolladores Rails</a>
+</h3>
+<h6 class='datos'>Escrito el  9 de Enero de 2016</h6>
+<hr>
+<div class='text-justify'>
+
+<div data-alert="" class="alert-box info radius">
+  <i class="fi-info size-14"></i>
+  &nbsp;
+  <span>
+    Este artículo es una traducción; la versión original se puede leer en <a href="https://www.airpair.com/reactjs/posts/reactjs-a-guide-for-rails-developers" target="_blank">Airpair</a>.
+  </span>
+</div>
+
+<p><img src="/images/2016/0109/react_rails/cover.png" alt="" /></p>
+
+<h3 id="introduccin-a-reactjs">Introducción a React.js</h3>
+
+<p>React.js es el nuevo chico popular de la cuadra de los “Frameworks Javascript”, y resalta por su simplicidad. Donde otros frameworks implementan un framework MVC completo, podríamos decir que React sólo implementa la V (de hecho, algunos reemplazan la V de su framework con React). Las aplicaciones React son construidas sobre dos principios importantes: Componentes y Estados. Los compomentes se pueden formar de otros componentes más pequeños, empotrados o personalizados; el Estado {dirige} lo que los chicos en Facebook llaman one-way reactive data flow, que significa que nuestro UI reaccionará a cada cambio de estado.</p>
+
+<p>Una de las cosas buenas sobre React es que no requiere dependencias adicionales, por lo que puede trabajar prácticamente con cualquier otra biblioteca de JavaScript. Aprovechando esta característica, vamos a incluirlo en nuestro stack de Rails para construir una aplicación enfocada a frontend, o, como se podría decir, Rails con esteroides.</p>
+
+<h3 id="una-aplicacin-de-seguimiento-de-gastos">Una aplicación de seguimiento de gastos</h3>
+
+<p>Para esta guía, vamos a construir una pequeña aplicación desde cero para hacer un seguimiento de nuestros gastos; cada registro consistirá en una fecha, un título y una cantidad. Un registro se tratará como crédito si su cantidad es mayor que cero, en caso contrario se tratará como débito. Aquí una maqueta del proyecto:</p>
+
+<p><img src="/images/2016/0109/react_rails/mockup.png" alt="" /></p>
+
+<p>Resumiendo, la aplicación se comportará como sigue:</p>
+
+<ul>
+  <li>Cuando el usuario cree un nuevo registro a través del formulario, éste se añadirá a la tabla de registros</li>
+  <li>El usuario podrá editar {en línea} cualquier registro existente</li>
+  <li>Al hacer clic en cualquier botón “Borrar” se eliminará el registro asociado de la tabla</li>
+  <li>Al agregar, editar o eliminar un registro existente, se actualizarán las cantidades en la parte superior de la página</li>
+</ul>
+
+<h3 id="inicializando-nuestro-proyecto-reactjs-en-rails">Inicializando nuestro proyecto React.js en Rails</h3>
+
+<p>Primero lo primero: tenemos que crear nuestro nuevo proyecto Rails; le llamaremos <code>Accounts</code>:</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code>rails new accounts&#x000A;</code></pre></div>
+<p>Para la interfaz de usuario de este proyecto, vamos a usar Twitter Bootstrap. El proceso de instalación está fuera del alcance de este post, pero se puede instalar la gema oficial de <code>bootstrap-sass</code> siguiendo las instrucciones desde el <a href="https://github.com/twbs/bootstrap-sass">repositorio oficial de GitHub</a>.</p>
+
+<p>Una vez que hayamos creado nuestro proyecto, se procede a incluir React. Para este post decidí incluirlo mediante la gema oficial <a href="https://github.com/reactjs/react-rails">react-rails</a> porque vamos a aprovechar algunas características interesantes de la gema, pero hay otras formas, como <a href="https://rails-assets.org/">Rails assests</a> o incluso descargar el paquete desde la <a href="https://facebook.github.io/react/">página oficial</a> y pegarlo en nuestra carpeta <code>javascripts</code>.</p>
+
+<p>Si has desarrollado aplicaciones Rails antes, sabes lo fácil que es instalar una gema: Añade <code>rails-react</code> a tu Gemfile.</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code>rails new accounts&#x000A;</code></pre></div>
+<p>Entonces, hay que decirle (amablemente) a Rails que instale las nuevas gemas:</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code>bundle install&#x000A;</code></pre></div>
+<p><code>react-rails</code> viene con un script de instalación, lo que creará un archivo <code>components.js</code> y un directorio <code>componentes</code> bajo <code>app/assests/javascripts</code> donde vivirán nuestros componentes React.</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code>rails g react:install&#x000A;</code></pre></div>
+<p>Si ves el archivo <code>application.js</code> después de ejecutar el instalador, te darás cuenta de que hay tres nuevas líneas:</p>
+
+<div class="highlight"><pre class="highlight javascript"><code><span class="c1">//= require react</span>&#x000A;<span class="c1">//= require react_ujs</span>&#x000A;<span class="c1">//= require components</span>&#x000A;</code></pre></div>
+<p>Básicamente, incluye la biblioteca de <em>React</em>, el archivo manifiesto <code>componentes</code> y un archivo que luce familiar terminado en <em>ujs</em>. Como ya habrás adivinado por el nombre del archivo, react-rails incluye un driver JavaScript no instrusivo que nos ayudará a montar nuestros componentes React y también se encargará de eventos Turbolinks.</p>
+
+<h3 id="creacin-del-recurso">Creación del recurso</h3>
+
+<p>Vamos a construir un recurso <code>Record</code>, que incluirá una fecha, un título y una cantidad. En lugar de utilizar el generador de <code>scaffold</code>, vamos a utilizar el generador de <code>resource</code>, ya que no vamos a utilizar todos los archivos y métodos creados por el scaffold. Otra opción podría ser ejecutar el <code>scaffold</code> y luego eliminar los archivos/métodos no utilizados, pero nuestro proyecto podría quedar muy revuelto después de esto. Dentro de tu proyecto, ejecuta el siguiente comando:</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code>rails g resource Record title date:date amount:float&#x000A;</code></pre></div>
+<p>Después de un poco de magia, terminamos con un nuevo modelo <code>Record</code>, con su controlador y rutas. Sólo tenemos que crear nuestra base de datos y ejecutar migraciones pendientes.</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code>rake db:create db:migrate&#x000A;</code></pre></div>
+<p>Como agrergado, puedes crear un par de registros desde la consola de Rails:</p>
+
+<div class="highlight"><pre class="highlight ruby"><code><span class="no">Record</span><span class="p">.</span><span class="nf">create</span> <span class="ss">title: </span><span class="s1">'Record 1'</span><span class="p">,</span> <span class="ss">date: </span><span class="no">Date</span><span class="p">.</span><span class="nf">today</span><span class="p">,</span> <span class="ss">amount: </span><span class="mi">500</span>&#x000A;<span class="no">Record</span><span class="p">.</span><span class="nf">create</span> <span class="ss">title: </span><span class="s1">'Record 2'</span><span class="p">,</span> <span class="ss">date: </span><span class="no">Date</span><span class="p">.</span><span class="nf">today</span><span class="p">,</span> <span class="ss">amount: </span><span class="o">-</span><span class="mi">100</span>&#x000A;</code></pre></div>
+<p>No se olvide de iniciar el servidor con <code>rails server</code>.</p>
+
+<p>¡Listo! Estamos listos para escribir algo de código.</p>
+
+<h3 id="anidando-componentes-listado-de-registros-records">Anidando componentes: Listado de registros {records}</h3>
+
+<p>Para nuestra primera tarea, tenemos que <em>renderear</em> todos los registro existentes dentro de una tabla. Primero, tenemos que crear una acción <code>index</code> dentro de nuestro <code>RecordsController</code>:</p>
+
+<div class="highlight"><pre class="highlight ruby"><code><span class="c1"># app/controllers/records_controller.rb</span>&#x000A;&#x000A;<span class="k">class</span> <span class="nc">RecordsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>&#x000A;  <span class="k">def</span> <span class="nf">index</span>&#x000A;    <span class="vi">@records</span> <span class="o">=</span> <span class="no">Record</span><span class="p">.</span><span class="nf">all</span>&#x000A;  <span class="k">end</span>&#x000A;<span class="k">end</span>&#x000A;</code></pre></div>
+<p>Después, tenemos que crear un nuevo archivo <code>index.html.erb</code> en <code>apps/views/records/</code>, este archivo servirá como un puente entre nuestra aplicación Rails y nuestros componentes React. Para lograr esto, vamos a utilizar el método <em>helper</em>, <code>react_component</code>, que recibe el nombre del componente React que queramos <em>renderear</em>, junto con los datos que queremos pasar.</p>
+
+<div class="highlight"><pre class="highlight erb"><code><span class="c">&lt;%# app/views/records/index.html.erb %&gt;</span>&#x000A;&#x000A;<span class="cp">&lt;%=</span> <span class="n">react_component</span> <span class="s1">'Records'</span><span class="p">,</span> <span class="p">{</span> <span class="ss">data: </span><span class="vi">@records</span> <span class="p">}</span> <span class="cp">%&gt;</span>&#x000A;</code></pre></div>
+<p>Vale la pena mencionar que este <em>helper</em> es proporcionado por la gema <code>rails-react</code>, si decides utilizar otro tipo de integración con React, este <em>helper</em> no estará disponible.</p>
+
+<p>Ahora puede navegar hasta <code>localhost:3000/records</code>. Obviamente, esto todavía no va a funcionar, debido a la falta de un componente React <code>Records</code>, pero si vemos el HTML generado dentro de la ventana del navegador, podemos ver algo como el siguiente código</p>
+
+<div class="highlight"><pre class="highlight html"><code><span class="nt">&lt;div</span> <span class="na">data-react-class=</span><span class="s">"Records"</span> <span class="na">data-react-props=</span><span class="s">"{...}"</span><span class="nt">&gt;</span>&#x000A;<span class="nt">&lt;/div&gt;</span>&#x000A;</code></pre></div>
+<p>Con este markado HTML presente, <code>react_ujs</code> detectará que queremos <em>renderear</em> un componente React y creará una instancia del mismo, incluyendo las propiedades que enviamos a través del método <code>react_component</code>, en nuestro caso, el contenido de <code>@records</code>.</p>
+
+<p>El momento para crear nuestro primer componente React ha llegado, dentro del directorio <code>javascripts/components</code>, crea un nuevo archivo llamado <code>records.js.coffee</code>, este archivo contendrá nuestro componente <code>Records</code>.</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/records.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Records</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">div</span>&#x000A;      <span class="na">className</span><span class="o">:</span> <span class="s">'records'</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">h2</span>&#x000A;        <span class="na">className</span><span class="o">:</span> <span class="s">'title'</span>&#x000A;        <span class="s">'Records&#x000A;</span></code></pre></div>
+<p>Cada componente requiere un método <code>render</code>, que será el encargado de <em>renderear</em> el propio componente. El método <code>render</code> debe devolver una instancia de <code>ReactComponent</code>, de esta manera, cuando React ejecuta un <em>re-render</em>, se comportará de forma óptima (ya que React detecta la existencia de nuevos nodos construyendo un DOM virtual en la memoria). En el fragmento anterior creamos una instancia de <code>h2</code>, un <code>ReactComponent</code> ya incluido en React.</p>
+
+<p>NOTA: Otra forma de crear una instancia <code>ReactComponents</code> dentro del método <code>render</code> es a través de la sintaxis <code>JSX</code>. El siguiente fragmento es equivalente al anterior:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;  <span class="o">`&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s">"records"</span><span class="o">&gt;</span>&#x000A;    <span class="o">&lt;</span><span class="nx">h2</span> <span class="nx">className</span><span class="o">=</span><span class="s">"title"</span><span class="o">&gt;</span> <span class="nx">Records</span> <span class="o">&lt;/</span><span class="nx">h2</span><span class="o">&gt;</span>&#x000A;  <span class="o">&lt;/</span><span class="nx">div</span><span class="o">&gt;`</span>&#x000A;</code></pre></div>
+<p>Personalmente, cuando trabajo con CoffeeScript, prefiero usar la sintaxis <code>React.DOM</code> sobre <code>JSX</code> porque el código se estructura jerárquicamente por sí sólo, como en HAML. Por otro lado, si estás tratando de integrar React en una aplicación existente construida con erb, tienes la opción de reutilizar el código <em>erb</em> existente y convertirlo en <em>JSX</em>.</p>
+
+<p>Ahora puedes refrescar tu navegador.</p>
+
+<p><img src="/images/2016/0109/react_rails/listing-records-1.png" alt="" /></p>
+
+<p>¡Perfecto! Hemos <em>rendereado</em> nuestro primer componente React. Ahora, es tiempo de mostrar nuestros registros.</p>
+
+<p>Además del método <code>render</code>, los componentes React hacen uso de <code>properties</code> para comunicarse con otros componentes y <code>states</code> para detectar si se requiere o no <em>re-renderear</em>. Necesitamos inicializar el estado y las propiedades de nuestro componente con los valores deseados:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/records.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Records</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="na">getInitialState</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="na">records</span><span class="o">:</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">data</span>&#x000A;  <span class="na">getDefaultProps</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="na">records</span><span class="o">:</span> <span class="p">[]</span>&#x000A;  <span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="p">...</span>&#x000A;</code></pre></div>
+<p>El método <code>getDefaultProps</code> inicializa las propiedades de nuestros componentes en caso de que olvidemos enviar los datos al instanciarlos, y el método <code>getInitialState</code> genera el estado inicial de nuestro componente. Ahora tenemos que mostrar los registros provistos realmente por nuestra vista Rails.</p>
+
+<p>Parece que vamos a necesitar un método <em>helper</em> para formatear cadenas de cantidad. Podemos implementar un sencillo formateador de cadenas y hacerlo accesible para todos nuestros archivos <code>coffeescript</code>. Crea un nuevo archivo <code>utils.js.coffee</code> en <code>javascripts/</code> con el siguiente contenido:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/utils.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">amountFormat</span> <span class="o">=</span> <span class="p">(</span><span class="nx">amount</span><span class="p">)</span> <span class="o">-&gt;</span>&#x000A;  <span class="s">'$ '</span> <span class="o">+</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">amount</span><span class="p">).</span><span class="na">toLocaleString</span><span class="p">()</span>&#x000A;</code></pre></div>
+<p>Tenemos que crear un nuevo componente <code>Record</code> para mostrar cada registro individual. Crea un nuevo archivo <code>record.js.coffee</code> bajo el directorio <code>javascripts/components</code> e inserta el siguiente contenido:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/record.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Record</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">tr</span> <span class="no">null</span><span class="p">,</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">date</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">title</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span> <span class="nx">amountFormat</span><span class="p">(</span><span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">amount</span><span class="p">)</span>&#x000A;</code></pre></div>
+<p>El componente <code>Record</code> mostrará una fila que contiene la información de cada atributo del registro. No te preocupes por esos valores <code>null</code>s en las llamadas de <code>React.DOM.*</code>, significan que no estamos enviando atributos a los componentes. Ahora actualiza el método <code>render</code> dentro del componente <code>Records</code> con el siguiente código:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/records.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Records</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">div</span>&#x000A;      <span class="na">className</span><span class="o">:</span> <span class="s">'records'</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">h2</span>&#x000A;        <span class="na">className</span><span class="o">:</span> <span class="s">'title'</span>&#x000A;        <span class="s">'Records'</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">table</span>&#x000A;        <span class="na">className</span><span class="o">:</span> <span class="s">'table table-bordered'</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">thead</span> <span class="no">null</span><span class="p">,</span>&#x000A;          <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">tr</span> <span class="no">null</span><span class="p">,</span>&#x000A;            <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">th</span> <span class="no">null</span><span class="p">,</span> <span class="s">'Date'</span>&#x000A;            <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">th</span> <span class="no">null</span><span class="p">,</span> <span class="s">'Title'</span>&#x000A;            <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">th</span> <span class="no">null</span><span class="p">,</span> <span class="s">'Amount'</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">tbody</span> <span class="no">null</span><span class="p">,</span>&#x000A;          <span class="k">for</span> <span class="nx">record</span> <span class="o">in</span> <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">records</span>&#x000A;            <span class="nx">React</span><span class="p">.</span><span class="na">createElement</span> <span class="nx">Record</span><span class="p">,</span> <span class="na">key</span><span class="o">:</span> <span class="nx">record</span><span class="p">.</span><span class="na">id</span><span class="p">,</span> <span class="na">record</span><span class="o">:</span> <span class="nx">record</span>&#x000A;</code></pre></div>
+<p>¿Viste qué pasó? Hemos creado una tabla con una fila como encabezado, y en el cuerpo de la tabla creamos un elemento <code>Record</code> por cada registro existente. En otras palabras, estamos anidando compomentes React ya existentes y personalizados. Bien, ¿cierto?</p>
+
+<p>Cuando trabajamos con contenido dinámico (en este caso, registros), necesitamos proporcionar una propiedad <code>key</code> a los elementos generados dinámicamente para que React no tenga problemas al refrescar nuestra UI, es por eso que enviamos <code>key: record.id</code> junto con el propio registro al crear elementos <code>Record</code>. Si no hacemos esto, recibiremos un mensaje de advertencia en la consola JS del navegador (y probablemente algunos dolores de cabeza en un futuro cercano).</p>
+
+<p><img src="/images/2016/0109/react_rails/listing-records-2.png" alt="" /></p>
+
+<p>Puedes echar un vistazo al código resultante de esta sección <a href="https://github.com/fervisa/accounts-react-rails/tree/bf1d80cf3d23a9a5e4aa48c86368262b7a7bd809">aquí</a>, o sólo los cambios introducidos por esta sección <a href="https://github.com/fervisa/accounts-react-rails/commit/bf1d80cf3d23a9a5e4aa48c86368262b7a7bd809">aquí</a>.</p>
+
+<h3 id="comunicacin-padre-hijo-creacin-de-registros">Comunicación padre-hijo: Creación de registros</h3>
+
+<p>Ahora que estamos mostrando todos los registros existentes, sería bueno incluir un formulario para crear nuevos registros. Agrerguemos esta nueva característica a nuestra aplicación React/Rails.</p>
+
+<p>Primero, tenemos que añadir el método de <code>create</code> a nuestros controlador Rails (no te olvides de utilizar <em>strong_params</em> ):</p>
+
+<div class="highlight"><pre class="highlight ruby"><code><span class="c1"># app/controllers/records_controller.rb</span>&#x000A;&#x000A;<span class="k">class</span> <span class="nc">RecordsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>&#x000A;  <span class="o">...</span>&#x000A;&#x000A;  <span class="k">def</span> <span class="nf">create</span>&#x000A;    <span class="vi">@record</span> <span class="o">=</span> <span class="no">Record</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">record_params</span><span class="p">)</span>&#x000A;&#x000A;    <span class="k">if</span> <span class="vi">@record</span><span class="p">.</span><span class="nf">save</span>&#x000A;      <span class="n">render</span> <span class="ss">json: </span><span class="vi">@record</span>&#x000A;    <span class="k">else</span>&#x000A;      <span class="n">render</span> <span class="ss">json: </span><span class="vi">@record</span><span class="p">.</span><span class="nf">errors</span><span class="p">,</span> <span class="ss">status: :unprocessable_entity</span>&#x000A;    <span class="k">end</span>&#x000A;  <span class="k">end</span>&#x000A;&#x000A;  <span class="kp">private</span>&#x000A;&#x000A;    <span class="k">def</span> <span class="nf">record_params</span>&#x000A;      <span class="n">params</span><span class="p">.</span><span class="nf">require</span><span class="p">(</span><span class="ss">:record</span><span class="p">).</span><span class="nf">permit</span><span class="p">(</span><span class="ss">:title</span><span class="p">,</span> <span class="ss">:amount</span><span class="p">,</span> <span class="ss">:date</span><span class="p">)</span>&#x000A;    <span class="k">end</span>&#x000A;<span class="k">end</span>&#x000A;</code></pre></div>
+<p>Luego, tenemos que construir un componente React para manejar la creación de nuevos registros. El componente tendrá su propio estado para almacenar la fecha, título y la cantidad. Crear un nuevo archivo <code>record_form.js.coffee</code> en <code>javascripts/components</code> con el siguiente código:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/record_form.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">RecordForm</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="na">getInitialState</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="na">title</span><span class="o">:</span> <span class="s">''</span>&#x000A;    <span class="na">date</span><span class="o">:</span> <span class="s">''</span>&#x000A;    <span class="na">amount</span><span class="o">:</span> <span class="s">''</span>&#x000A;  <span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">form</span>&#x000A;      <span class="na">className</span><span class="o">:</span> <span class="s">'form-inline'</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">div</span>&#x000A;        <span class="na">className</span><span class="o">:</span> <span class="s">'form-group'</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">input</span>&#x000A;          <span class="na">type</span><span class="o">:</span> <span class="s">'text'</span>&#x000A;          <span class="na">className</span><span class="o">:</span> <span class="s">'form-control'</span>&#x000A;          <span class="na">placeholder</span><span class="o">:</span> <span class="s">'Date'</span>&#x000A;          <span class="na">name</span><span class="o">:</span> <span class="s">'date'</span>&#x000A;          <span class="na">value</span><span class="o">:</span> <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">date</span>&#x000A;          <span class="na">onChange</span><span class="o">:</span> <span class="vi">@</span><span class="na">handleChange</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">div</span>&#x000A;        <span class="na">className</span><span class="o">:</span> <span class="s">'form-group'</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">input</span>&#x000A;          <span class="na">type</span><span class="o">:</span> <span class="s">'text'</span>&#x000A;          <span class="na">className</span><span class="o">:</span> <span class="s">'form-control'</span>&#x000A;          <span class="na">placeholder</span><span class="o">:</span> <span class="s">'Title'</span>&#x000A;          <span class="na">name</span><span class="o">:</span> <span class="s">'title'</span>&#x000A;          <span class="na">value</span><span class="o">:</span> <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">title</span>&#x000A;          <span class="na">onChange</span><span class="o">:</span> <span class="vi">@</span><span class="na">handleChange</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">div</span>&#x000A;        <span class="na">className</span><span class="o">:</span> <span class="s">'form-group'</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">input</span>&#x000A;          <span class="na">type</span><span class="o">:</span> <span class="s">'number'</span>&#x000A;          <span class="na">className</span><span class="o">:</span> <span class="s">'form-control'</span>&#x000A;          <span class="na">placeholder</span><span class="o">:</span> <span class="s">'Amount'</span>&#x000A;          <span class="na">name</span><span class="o">:</span> <span class="s">'amount'</span>&#x000A;          <span class="na">value</span><span class="o">:</span> <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">amount</span>&#x000A;          <span class="na">onChange</span><span class="o">:</span> <span class="vi">@</span><span class="na">handleChange</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">button</span>&#x000A;        <span class="na">type</span><span class="o">:</span> <span class="s">'submit'</span>&#x000A;        <span class="na">className</span><span class="o">:</span> <span class="s">'btn btn-primary'</span>&#x000A;        <span class="na">disabled</span><span class="o">:</span> <span class="o">!</span><span class="vi">@</span><span class="na">valid</span><span class="p">()</span>&#x000A;        <span class="s">'Create record'</span>&#x000A;</code></pre></div>
+<p>Nada pretencioso, sólo un sencillo formulario Bootstrap <em>in line</em>. Observa cómo estamos definiendo el atributo <code>value</code> para <em>setear</em> el valor de entrada y el atributo <code>onChange</code> para agregar un método que será llamado cada que se presione una tecla; el método <code>handleChange</code> utilizará el atributo <code>nombre</code> para detectar qué entrada disparó el evento y actualizar su valor relacionado en el estado <code>state</code>:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/record_form.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">RecordForm</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">handleChange</span><span class="o">:</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">name</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="na">target</span><span class="p">.</span><span class="na">name</span>&#x000A;    <span class="vi">@</span><span class="na">setState</span> <span class="s">"</span><span class="si">#{</span> <span class="nx">name</span> <span class="si">}</span><span class="s">"</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="na">target</span><span class="p">.</span><span class="na">value</span>&#x000A;  <span class="p">...</span>&#x000A;</code></pre></div>
+<p>Sólo estamos usando interpolación de cadenas para definir dinámicamente las llaves de nuestro objeto, equivalente a <code>@setState title: e.target.value</code> cuando <code>name</code> es igual a <em>title</em>. Pero, ¿por qué tenemos que utilizar <code>@setState</code>? ¿Por qué no podemos simplemente <em>setear</em> el valor deseado de <code>@state</code> como solemos hacer en objetos normales en JS? Porque <code>@setState</code> realizará 2 acciones:</p>
+
+<ol>
+  <li>Actualizar el estado del componente</li>
+  <li>Agendar una verificación/repintado de la UI basado en el nuevo estado</li>
+</ol>
+
+<p>Es muy importante tener en cuenta esta información cada vez que utilizamos <code>state</code> dentro de nuestros componentes.</p>
+
+<p>Veamos el botón de <em>enviar</em>, justo al final del método <code>render</code>:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="vi">@</span><span class="na">RecordForm</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="p">...</span>&#x000A;    <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">form</span>&#x000A;      <span class="p">...</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">button</span>&#x000A;        <span class="na">type</span><span class="o">:</span> <span class="s">'submit'</span>&#x000A;        <span class="na">className</span><span class="o">:</span> <span class="s">'btn btn-primary'</span>&#x000A;        <span class="na">disabled</span><span class="o">:</span> <span class="o">!</span><span class="vi">@</span><span class="na">valid</span><span class="p">()</span>&#x000A;        <span class="s">'Create record'</span>&#x000A;</code></pre></div>
+<p>Definimos un atributo <code>disabled</code> con el valor de <code>!valid()</code>, lo que significa que vamos a implementar un método <code>valid</code> para evaluar si los datos ingrersados por el usuario son correctos.</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/record_form.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">RecordForm</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">valid</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">title</span> <span class="o">&amp;&amp;</span> <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">date</span> <span class="o">&amp;&amp;</span> <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">amount</span>&#x000A;</code></pre></div>
+<p>Por simplicidad sólo vamos a validar cadenas vacías para atributos dentro del <code>state</code>. De esta manera, cada vez que el estado se actualice, el botón “Crear registro” se activará/desactivará dependiendo de la validez de los datos.</p>
+
+<p><img src="/images/2016/0109/react_rails/creating-records-1.png" alt="" />
+<img src="/images/2016/0109/react_rails/creating-records-2.png" alt="" /></p>
+
+<p>Ahora que tenemos nuestro controlador y formulario en su lugar, es momento de <em>submitear</em> nuestro nuevo registro al servidor. Tenemos que manejar el evento <code>submit</code> del formulario. Para lograr esto, tenemos que añadir un atributo <code>onSubmit</code> a nuestro formulario y un nuevo método <code>handleSubmit</code> (de la misma forma que manejamos los eventos <code>onChange</code> antes):</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/record_form.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">RecordForm</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">handleSubmit</span><span class="o">:</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">e</span><span class="p">.</span><span class="na">preventDefault</span><span class="p">()</span>&#x000A;    <span class="nx">$</span><span class="p">.</span><span class="na">post</span> <span class="s">''</span><span class="p">,</span> <span class="p">{</span> <span class="na">record</span><span class="o">:</span> <span class="vi">@</span><span class="na">state</span> <span class="p">},</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="o">=&gt;</span>&#x000A;      <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">handleNewRecord</span> <span class="nx">data</span>&#x000A;      <span class="vi">@</span><span class="na">setState</span> <span class="vi">@</span><span class="na">getInitialState</span><span class="p">()</span>&#x000A;    <span class="p">,</span> <span class="s">'JSON'</span>&#x000A;&#x000A;  <span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">form</span>&#x000A;      <span class="na">className</span><span class="o">:</span> <span class="s">'form-inline'</span>&#x000A;      <span class="na">onSubmit</span><span class="o">:</span> <span class="vi">@</span><span class="na">handleSubmit</span>&#x000A;    <span class="p">...</span>&#x000A;</code></pre></div>
+<p>Revisemos el nuevo método línea por línea:</p>
+
+<ol>
+  <li>Evitar el submit HTTP del formulario</li>
+  <li>Hacer POST de la nueva información de <code>record</code> al URL actual</li>
+  <li>Callback de éxito</li>
+</ol>
+
+<p>El <em>callback</em> <code>success</code> es la clave de este proceso. Después de crear el nuevo registro exitosamente, <em>alguien</em> será notificado sobre esta acción y <code>state</code> se restaurará a su valor inicial. ¿Recuerdas cuando mencioné que los componentes se comunican con otros componentes a través de propiedades (<code>@props</code>)? Bueno, es esto. Nuestro componente actual envía datos al componente padre a través de <code>@props.handleNewRecord</code> para notificar de la existencia de un nuevo registro.</p>
+
+<p>Como ya habrás adivinado, donde quiera que creemos nuestro elemento <code>RecordForm</code>, tenemos que pasarle una propiedad <code>handleNewRecord</code> con la referencia de un método, algo así como <code>React.createElement RecordForm, handleNewRecord:addRecord</code>. Bueno, el componente padre <code>Records</code> es el “donde quiera”. Dado que tiene un estado con todos los registros existentes, necesitamos actualizar su estado con el registro recién creado.</p>
+
+<p>Añade el nuevo método <code>addRecord</code> dentro <code>records.js.coffee</code> y crea el nuevo elemento <code>RecordForm</code>, justo después <code>h2</code> (dentro del método <code>render</code>).</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/records.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Records</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">addRecord</span><span class="o">:</span> <span class="p">(</span><span class="nx">record</span><span class="p">)</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">records</span> <span class="o">=</span> <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">records</span><span class="p">.</span><span class="na">slice</span><span class="p">()</span>&#x000A;    <span class="nx">records</span><span class="p">.</span><span class="na">push</span> <span class="nx">record</span>&#x000A;    <span class="vi">@</span><span class="na">setState</span> <span class="na">records</span><span class="o">:</span> <span class="nx">records</span>&#x000A;  <span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">div</span>&#x000A;      <span class="na">className</span><span class="o">:</span> <span class="s">'records'</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">h2</span>&#x000A;        <span class="na">className</span><span class="o">:</span> <span class="s">'title'</span>&#x000A;        <span class="s">'Records'</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">createElement</span> <span class="nx">RecordForm</span><span class="p">,</span> <span class="na">handleNewRecord</span><span class="o">:</span> <span class="vi">@</span><span class="na">addRecord</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">hr</span> <span class="no">null</span>&#x000A;    <span class="p">...</span>&#x000A;</code></pre></div>
+<p>Refresca tu navegador, rellena el formulario con un nuevo registro, haz clic en “Create record”… Sin suspenso esta vez, se añadió el registro casi de inmediato y el formulario se limpia después del <em>submit</em>. Refrezca de nuevo sólo para asegurarte que el servidor ha almacenado la nueva información.</p>
+
+<p><img src="/images/2016/0109/react_rails/creating-records-3.png" alt="" /></p>
+
+<p>Si has utilizado otros frameworks JS junto con Rails (por ejemplo, AngularJS) para construir cosas similares, es posible que hayas tenido problemas porque sus peticiones POST no incluyen el token CSRF que Rails necesita, así que, ¿por qué no tuvimos el mismo problema? Fácil, porque estamos usando <code>jQuery</code> para interactuar con nuestro backend y el driver <code>jquery_ujs</code> de rails incluye automáticamente el token <code>CSRF</code> en cada petición AJAX por nosotros. ¡Bien!</p>
+
+<p>Puedes revisar el código resultante de esta sección <a href="https://github.com/fervisa/accounts-react-rails/tree/f4708e19f8be929471bc0c8c2bda93f36b9a7f23">aquí</a>, o sólo los cambios introducidos por esta sección <a href="https://github.com/fervisa/accounts-react-rails/commit/f4708e19f8be929471bc0c8c2bda93f36b9a7f23">aquí</a>.</p>
+
+<h3 id="componentes-reutilizables-indicadores-de-cantidad">Componentes reutilizables: Indicadores de Cantidad</h3>
+
+<p>¿Qué sería de una aplicación sin algunos (bonitos) indicadores? Añadamos algunas recuadros en la parte superior de la ventana con un poco de información útil. Nuestro objetivo de esta sección es mostrar tres valores: cantidad total de crédito, cantidad total de débito y el balance. Esto parece un trabajo para tres componentes, ¿o tal vez sólo uno con propiedades?</p>
+
+<p>Podemos construir un nuevo componente <code>AmountBox</code> que recibirá tres propiedades: <code>amount</code>, <code>text</code> y <code>type</code>. Crea un nuevo archivo llamado <code>amount_box.js.coffee</code> en <code>javascripts/componentes/</code> y pega el siguiente código:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/amount_box.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">AmountBox</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">div</span>&#x000A;      <span class="na">className</span><span class="o">:</span> <span class="s">'col-md-4'</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">div</span>&#x000A;        <span class="na">className</span><span class="o">:</span> <span class="s">"panel panel-</span><span class="si">#{</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">type</span> <span class="si">}</span><span class="s">"</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">div</span>&#x000A;          <span class="na">className</span><span class="o">:</span> <span class="s">'panel-heading'</span>&#x000A;          <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">text</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">div</span>&#x000A;          <span class="na">className</span><span class="o">:</span> <span class="s">'panel-body'</span>&#x000A;          <span class="nx">amountFormat</span><span class="p">(</span><span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">amount</span><span class="p">)</span>&#x000A;</code></pre></div>
+<p>Estamos usando elemento de panel de Bootstrap para mostrar la información en forma de bloques, y <em>seteamos</em> el color mediante la propiedad <code>type</code>. También hemos incluido un método muy simple para formatear la cantidad llamado <code>amountFormat</code> que lee la propiedad <code>amount</code> y la muestra en formato de moneda.</p>
+
+<p>Para tener una solución completa, necesitamos crear este elemento (tres veces) dentro de nuestro componente principal, mandando las propiedades requeridas dependiendo de los datos que queremos mostrar. Construyamos primero los métodos para calcular. Abre el componente <code>Records</code> y añade los siguientes métodos:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/records.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Records</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">credits</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">credits</span> <span class="o">=</span> <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">records</span><span class="p">.</span><span class="na">filter</span> <span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nx">val</span><span class="p">.</span><span class="na">amount</span> <span class="o">&gt;=</span> <span class="mi">0</span>&#x000A;    <span class="nx">credits</span><span class="p">.</span><span class="na">reduce</span> <span class="p">((</span><span class="nx">prev</span><span class="p">,</span> <span class="nx">curr</span><span class="p">)</span> <span class="o">-&gt;</span>&#x000A;      <span class="nx">prev</span> <span class="o">+</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">curr</span><span class="p">.</span><span class="na">amount</span><span class="p">)</span>&#x000A;    <span class="p">),</span> <span class="mi">0</span>&#x000A;  <span class="na">debits</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">debits</span> <span class="o">=</span> <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">records</span><span class="p">.</span><span class="na">filter</span> <span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nx">val</span><span class="p">.</span><span class="na">amount</span> <span class="o">&lt;</span> <span class="mi">0</span>&#x000A;    <span class="nx">debits</span><span class="p">.</span><span class="na">reduce</span> <span class="p">((</span><span class="nx">prev</span><span class="p">,</span> <span class="nx">curr</span><span class="p">)</span> <span class="o">-&gt;</span>&#x000A;      <span class="nx">prev</span> <span class="o">+</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">curr</span><span class="p">.</span><span class="na">amount</span><span class="p">)</span>&#x000A;    <span class="p">),</span> <span class="mi">0</span>&#x000A;  <span class="na">balance</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="vi">@</span><span class="na">debits</span><span class="p">()</span> <span class="o">+</span> <span class="vi">@</span><span class="na">credits</span><span class="p">()</span>&#x000A;  <span class="p">...</span>&#x000A;</code></pre></div>
+<p><code>credits</code> suma todos los registros con una cantidad mayor a 0, <code>debits</code> suma todos los registros con una cantidad menor que 0 y balance no necesita explicación. Ahora que tenemos los métodos para hacer cálculos en su lugar, sólo tenemos que crear los elementos <code>AmountBox</code> dentro del método <code>render</code> (justo arriba del componente <code>RecordForm</code>):</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/records.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Records</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">div</span>&#x000A;      <span class="na">className</span><span class="o">:</span> <span class="s">'records'</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">h2</span>&#x000A;        <span class="na">className</span><span class="o">:</span> <span class="s">'title'</span>&#x000A;        <span class="s">'Records'</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">div</span>&#x000A;        <span class="na">className</span><span class="o">:</span> <span class="s">'row'</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">createElement</span> <span class="nx">AmountBox</span><span class="p">,</span> <span class="na">type</span><span class="o">:</span> <span class="s">'success'</span><span class="p">,</span> <span class="na">amount</span><span class="o">:</span> <span class="vi">@</span><span class="na">credits</span><span class="p">(),</span> <span class="na">text</span><span class="o">:</span> <span class="s">'Credit'</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">createElement</span> <span class="nx">AmountBox</span><span class="p">,</span> <span class="na">type</span><span class="o">:</span> <span class="s">'danger'</span><span class="p">,</span> <span class="na">amount</span><span class="o">:</span> <span class="vi">@</span><span class="na">debits</span><span class="p">(),</span> <span class="na">text</span><span class="o">:</span> <span class="s">'Debit'</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">createElement</span> <span class="nx">AmountBox</span><span class="p">,</span> <span class="na">type</span><span class="o">:</span> <span class="s">'info'</span><span class="p">,</span> <span class="na">amount</span><span class="o">:</span> <span class="vi">@</span><span class="na">balance</span><span class="p">(),</span> <span class="na">text</span><span class="o">:</span> <span class="s">'Balance'</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">createElement</span> <span class="nx">RecordForm</span><span class="p">,</span> <span class="na">handleNewRecord</span><span class="o">:</span> <span class="vi">@</span><span class="na">addRecord</span>&#x000A;  <span class="p">...</span>&#x000A;</code></pre></div>
+<p>¡Hemos terminado con esta funcionalidad! Refresca el navegador, deberías ver tres recuadros que muestran las cantidades que hemos calculado anteriormente. ¡Pero espera! ¡Hay más! Crea un nuevo registro y ve la magia…</p>
+
+<p><img src="/images/2016/0109/react_rails/indicators.png" alt="" /></p>
+
+<p>Puedes ver el código resultante de esta sección <a href="https://github.com/fervisa/accounts-react-rails/tree/8d6f0a4fb62f2a9abd5d34d502461388863302cb">aquí</a>, o sólo los cambios introducidos por esta sección <a href="https://github.com/fervisa/accounts-react-rails/commit/8d6f0a4fb62f2a9abd5d34d502461388863302cb">aquí</a>.</p>
+
+<h3 id="setstatereplacestate-eliminacin-de-registros"><code>setState</code>/<code>replaceState</code>: Eliminación de registros</h3>
+
+<p>La siguiente funcionalidad en nuestra lista es poder eliminar registros. Necesitamos una nueva columna <code>Actions</code> en nuestra tabla de registros, esta columna tendrá un botón “Delete” para cada registro, con una UI bastante estándar. Al igual que en el ejemplo anterior, tenemos que crear el método <code>destroy</code> en nuestro controlador Rails:</p>
+
+<div class="highlight"><pre class="highlight ruby"><code><span class="c1"># app/controllers/records_controller.rb</span>&#x000A;&#x000A;<span class="k">class</span> <span class="nc">RecordsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>&#x000A;  <span class="o">...</span>&#x000A;&#x000A;  <span class="k">def</span> <span class="nf">destroy</span>&#x000A;    <span class="vi">@record</span> <span class="o">=</span> <span class="no">Record</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:id</span><span class="p">])</span>&#x000A;    <span class="vi">@record</span><span class="p">.</span><span class="nf">destroy</span>&#x000A;    <span class="n">head</span> <span class="ss">:no_content</span>&#x000A;  <span class="k">end</span>&#x000A;&#x000A;  <span class="o">...</span>&#x000A;<span class="k">end</span>&#x000A;</code></pre></div>
+<p>Ese es todo el código del lado del servidor que necesitaremos para esta funcionalidad. Ahora, abre tu componente React <code>Records</code> y añade la columna <em>Actions</em> en la posición más a la derecha de la cabecera de la tabla:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/records.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Records</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="p">...</span>&#x000A;    <span class="c1"># almost at the bottom of the render method</span>&#x000A;    <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">table</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">thead</span> <span class="no">null</span><span class="p">,</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">tr</span> <span class="no">null</span><span class="p">,</span>&#x000A;          <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">th</span> <span class="no">null</span><span class="p">,</span> <span class="s">'Date'</span>&#x000A;          <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">th</span> <span class="no">null</span><span class="p">,</span> <span class="s">'Title'</span>&#x000A;          <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">th</span> <span class="no">null</span><span class="p">,</span> <span class="s">'Amount'</span>&#x000A;          <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">th</span> <span class="no">null</span><span class="p">,</span> <span class="s">'Actions'</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">tbody</span> <span class="no">null</span><span class="p">,</span>&#x000A;        <span class="k">for</span> <span class="nx">record</span> <span class="o">in</span> <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">records</span>&#x000A;          <span class="nx">React</span><span class="p">.</span><span class="na">createElement</span> <span class="nx">Record</span><span class="p">,</span> <span class="na">key</span><span class="o">:</span> <span class="nx">record</span><span class="p">.</span><span class="na">id</span><span class="p">,</span> <span class="na">record</span><span class="o">:</span> <span class="nx">record</span>&#x000A;</code></pre></div>
+<p>Y, por último, abre el componente <code>Record</code> y añade una columna adicional con un link a <em>Delete</em>:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/record.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Record</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">tr</span> <span class="no">null</span><span class="p">,</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">date</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">title</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span> <span class="nx">amountFormat</span><span class="p">(</span><span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">amount</span><span class="p">)</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">a</span>&#x000A;          <span class="na">className</span><span class="o">:</span> <span class="s">'btn btn-danger'</span>&#x000A;          <span class="s">'Delete'</span>&#x000A;</code></pre></div>
+<p>Guarda el archivo, refreca tu navegador y … ¡Tenemos un botón inútil sin eventos asociados a él!</p>
+
+<p><img src="/images/2016/0109/react_rails/deleting-records-1.png" alt="" /></p>
+
+<p>Añadamos funcionalidad. Como hemos aprendido de nuestro componente <code>RecordForm</code>, el camino a seguir es:</p>
+
+<ol>
+  <li>Detectar un evento dentro del componente <code>Record</code> hijo (onClick)</li>
+  <li>Realizar una acción (enviar una solicitud <em>DELETE</em> al servidor en este caso)</li>
+  <li>Notificar al componente padre <code>Records</code> acerca de esta acción (envío/recepción de un método a través de <em>props</em>)</li>
+  <li>Actualizar el estado del componente <code>Record</code></li>
+</ol>
+
+<p>Para implementar el paso 1, podemos agregar un manejador para <code>onClick</code> a <code>Registro</code> de la misma manera que añadimos un manejador para <code>onSubmit</code> a <code>RecordForm</code> para crear nuevos registros. Afortunadamente para nosotros, React implementa la mayoría de los eventos comunes de navegadores de una forma normalizada, por lo que no tenemos que preocuparnos por la compatibilidad entre navegadores (puedes vera la lista de eventos completos <a href="http://facebook.github.io/react/docs/events.html#supported-events">aquí</a>).</p>
+
+<p>Re-abre el componente <code>Record</code>, añade un nuevo método <code>handleDelete</code> y un atributo <code>onClick</code> a nuestro botón “inútil”, como se ve a continuación:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/record.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Record</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="na">handleDelete</span><span class="o">:</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">e</span><span class="p">.</span><span class="na">preventDefault</span><span class="p">()</span>&#x000A;    <span class="c1"># yeah... jQuery doesn't have a $.delete shortcut method</span>&#x000A;    <span class="nx">$</span><span class="p">.</span><span class="na">ajax</span>&#x000A;      <span class="na">method</span><span class="o">:</span> <span class="s">'DELETE'</span>&#x000A;      <span class="na">url</span><span class="o">:</span> <span class="s">"/records/</span><span class="si">#{</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">id</span> <span class="si">}</span><span class="s">"</span>&#x000A;      <span class="na">dataType</span><span class="o">:</span> <span class="s">'JSON'</span>&#x000A;      <span class="na">success</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span>&#x000A;        <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">handleDeleteRecord</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span>&#x000A;  <span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">tr</span> <span class="no">null</span><span class="p">,</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">date</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">title</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span> <span class="nx">amountFormat</span><span class="p">(</span><span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">amount</span><span class="p">)</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">a</span>&#x000A;          <span class="na">className</span><span class="o">:</span> <span class="s">'btn btn-danger'</span>&#x000A;          <span class="na">onClick</span><span class="o">:</span> <span class="vi">@</span><span class="na">handleDelete</span>&#x000A;          <span class="s">'Delete'</span>&#x000A;</code></pre></div>
+<p>Cuando el botón de borrado recibe el clic, <code>handleDelete</code> envía una petición AJAX al servidor para borrar el registro en el <em>backend</em> y, después de esto, se notifica al componente padre de esta acción a través del manejador <code>handleDeleteRecord</code> disponible mediante <em>props</em>. Esto significa que tenemos que ajustar la creación de elementos <code>Record</code> en el componente padre para incluir la propiedad extra <code>handleDeleteRecord</code>, y propiamente implementar el método en el padre:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/records.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Records</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">deleteRecord</span><span class="o">:</span> <span class="p">(</span><span class="nx">record</span><span class="p">)</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">records</span> <span class="o">=</span> <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">records</span><span class="p">.</span><span class="na">slice</span><span class="p">()</span>&#x000A;    <span class="nx">index</span> <span class="o">=</span> <span class="nx">records</span><span class="p">.</span><span class="na">indexOf</span> <span class="nx">record</span>&#x000A;    <span class="nx">records</span><span class="p">.</span><span class="na">splice</span> <span class="nx">index</span><span class="p">,</span> <span class="mi">1</span>&#x000A;    <span class="vi">@</span><span class="na">replaceState</span> <span class="na">records</span><span class="o">:</span> <span class="nx">records</span>&#x000A;  <span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="p">...</span>&#x000A;    <span class="c1"># almost at the bottom of the render method</span>&#x000A;    <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">table</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">thead</span> <span class="no">null</span><span class="p">,</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">tr</span> <span class="no">null</span><span class="p">,</span>&#x000A;          <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">th</span> <span class="no">null</span><span class="p">,</span> <span class="s">'Date'</span>&#x000A;          <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">th</span> <span class="no">null</span><span class="p">,</span> <span class="s">'Title'</span>&#x000A;          <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">th</span> <span class="no">null</span><span class="p">,</span> <span class="s">'Amount'</span>&#x000A;          <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">th</span> <span class="no">null</span><span class="p">,</span> <span class="s">'Actions'</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">tbody</span> <span class="no">null</span><span class="p">,</span>&#x000A;        <span class="k">for</span> <span class="nx">record</span> <span class="o">in</span> <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">records</span>&#x000A;          <span class="nx">React</span><span class="p">.</span><span class="na">createElement</span> <span class="nx">Record</span><span class="p">,</span> <span class="na">key</span><span class="o">:</span> <span class="nx">record</span><span class="p">.</span><span class="na">id</span><span class="p">,</span> <span class="na">record</span><span class="o">:</span> <span class="nx">record</span><span class="p">,</span> <span class="na">handleDeleteRecord</span><span class="o">:</span> <span class="vi">@</span><span class="na">deleteRecord</span>&#x000A;</code></pre></div>
+<p>Básicamente, nuestro método <code>deleteRecord</code> copia el estado del componente <code>records</code> actual, realiza una búsqueda del registro que desea borrar, lo elimina de la colección y actualiza el estado del componente, operaciones estándar de JavaScript.</p>
+
+<p>Hemos introducido una nueva forma de interactuar con el <em>estado</em>, <code>replaceState</code>; la principal diferencia entre <code>setstate</code> y <code>replaceState</code> es que el primero sólo actualizará un atributo del objeto <em>state</em>, el segundo sobreescribe completamente el estado actual del componente con cualquier nuevo objeto que le enviemos.</p>
+
+<p>Después de la actualización de esta última pieza de código, refrescamos la ventana del navegador y tratamos de eliminar un registro. Deben de suceder un par de cosas:</p>
+
+<ol>
+  <li>Los registros deben desaparecer de la tabla y …</li>
+  <li>Los indicadores deben actualizar las cantidades de inmediato, no se requiere ningún código adicional</li>
+</ol>
+
+<p><img src="/images/2016/0109/react_rails/deleting-records-2.png" alt="" /></p>
+
+<p>Casi terminamos con nuestra aplicación, pero antes implementar nuestra última funcionalidad, podemos aplicar un pequeño refactor y, al mismo tiempo, introducir una nueva funcionaldad de React.</p>
+
+<p>Puedes ver el código resultante de esta sección <a href="https://github.com/fervisa/accounts-react-rails/tree/1a4dc646e53fecebc821c709347aae774e9ef170">aquí</a>, o sólo los cambios introducidos por esta sección <a href="https://github.com/fervisa/accounts-react-rails/commit/1a4dc646e53fecebc821c709347aae774e9ef170">aquí</a>.</p>
+
+<h1 id="refactor-helpers-de-estado">Refactor: <em>Helpers</em> de estado</h1>
+
+<p>Hasta aquí, tenemos un par de métodos donde el estado se actualiza sin dificultad dado que nuestros datos no son precisamente “complejos”, pero imagina una aplicación más compleja con un estado JSON multi-nivel. Puedes imaginarte realizando copias profundas y malabares con tus datos de estado. React incluye algunos bonitos <em>helpers</em> para el estado que ayudan con parte del trabajo pesado, sin importar qué tan profundo es el estado, estos <em>helpers</em> te permitirán manipularlo con más libertad utilizando un lenguaje de consulta de tipo <em>MongoDB</em> (o al menos eso es de lo que dice la <a href="https://facebook.github.io/react/docs/update.html">documentación de React</a>).</p>
+
+<p>Antes de utilizar estos <em>helpers</em>, primero tenemos que configurar nuestra aplicación Rails para incluirlos. Abre el archivo de configuración <code>appication.rb</code> de tu proyecto y añade <code>config.react.addons = true</code> en la parte inferior del bloque <code>Aplicación</code>:</p>
+
+<div class="highlight"><pre class="highlight ruby"><code><span class="c1"># config/application.rb</span>&#x000A;&#x000A;<span class="o">...</span>&#x000A;<span class="k">module</span> <span class="nn">Accounts</span>&#x000A;  <span class="k">class</span> <span class="nc">Application</span> <span class="o">&lt;</span> <span class="no">Rails</span><span class="o">::</span><span class="no">Application</span>&#x000A;    <span class="o">...</span>&#x000A;    <span class="n">config</span><span class="p">.</span><span class="nf">react</span><span class="p">.</span><span class="nf">addons</span> <span class="o">=</span> <span class="kp">true</span>&#x000A;  <span class="k">end</span>&#x000A;<span class="k">end</span>&#x000A;</code></pre></div>
+<p>Para que los cambios surtan efecto, reinicia el servidor de Rails. Repito, <em>reinicia el servidor de Rails</em>. Ahora tenemos acceso a los <em>helpers</em> de estado mediante <code>React.addons.update</code>, que procesarán nuestro objeto de estado (o cualquier otro objeto que enviemos a él) y aplicará los comandos proporcionados. Los dos comandos que usaremos son <code>$push</code> y <code>$splice</code> (tomo prestada la explicación de estos comandos de la <a href="https://facebook.github.io/react/docs/update.html#available-commands">documentación oficial de React</a>):</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code>* `{$push: array}` `push()` all the items in array on the target.&#x000A;* `{$splice: array of arrays}` for each item in `arrays` call `splice()` on the target with the parameters provided by the item.&#x000A;</code></pre></div>
+<p>Estamos a punto de simplificar <code>addRecord</code> y <code>deleteRecord</code> del componente <code>Record</code> usando estos <em>helpers</em>, como sigue:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/records.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Records</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">addRecord</span><span class="o">:</span> <span class="p">(</span><span class="nx">record</span><span class="p">)</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">records</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">addons</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">records</span><span class="p">,</span> <span class="p">{</span> <span class="na">$push</span><span class="o">:</span> <span class="p">[</span><span class="nx">record</span><span class="p">]</span> <span class="p">})</span>&#x000A;    <span class="vi">@</span><span class="na">setState</span> <span class="na">records</span><span class="o">:</span> <span class="nx">records</span>&#x000A;  <span class="na">deleteRecord</span><span class="o">:</span> <span class="p">(</span><span class="nx">record</span><span class="p">)</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">index</span> <span class="o">=</span> <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">records</span><span class="p">.</span><span class="na">indexOf</span> <span class="nx">record</span>&#x000A;    <span class="nx">records</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">addons</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">records</span><span class="p">,</span> <span class="p">{</span> <span class="na">$splice</span><span class="o">:</span> <span class="p">[[</span><span class="nx">index</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span> <span class="p">})</span>&#x000A;    <span class="vi">@</span><span class="na">replaceState</span> <span class="na">records</span><span class="o">:</span> <span class="nx">records</span>&#x000A;</code></pre></div>
+<p>Más corto, más elegante y con los mismos resultados. Puedes refrescar el navegador y asegurarte que nada se rompió.</p>
+
+<p>Puedes ver el código resultante de esta sección <a href="https://github.com/fervisa/accounts-react-rails/tree/d19127f40ae2f795a30b7de6470cde95d3734eee">aquí</a>, o sólo los cambios introducidos por esta sección <a href="https://github.com/fervisa/accounts-react-rails/commit/d19127f40ae2f795a30b7de6470cde95d3734eee">aquí</a>.</p>
+
+<h1 id="flujo-reactivo-de-datos-edicin-de-registros">Flujo reactivo de datos: Edición de registros</h1>
+
+<p>Para la funcionalidad final, añadiremos un botón extra de edición, al lado del botón Borrar en nuestra tabla de registros. Cuando se haga clic en este botón Editar, se cambiará toda la fila de un estado de sólo lectura a un estado editable, mostrando un formulario en línea en el que el usuario pueda actualizar el contenido del registro. Después de enviar el contenido actualizado o cancelar la acción, la fila del registro volverá a su estado inicial de sólo lectura.</p>
+
+<p>Como ya habrán adivinado por el párrafo anterior, tenemos que manejar datos mutables para alternar el estado de cada registro dentro de nuestro componente <code>Record</code>. Este es un caso de uso de lo que React llama <em>flujo reactivo de datos</em>. Añadamos una bandera de edición y un método <code>handleToggle</code> a <code>record.js.coffee</code>:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/record.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Record</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="na">getInitialState</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="na">edit</span><span class="o">:</span> <span class="no">false</span>&#x000A;  <span class="na">handleToggle</span><span class="o">:</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">e</span><span class="p">.</span><span class="na">preventDefault</span><span class="p">()</span>&#x000A;    <span class="vi">@</span><span class="na">setState</span> <span class="na">edit</span><span class="o">:</span> <span class="o">!</span><span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">edit</span>&#x000A;  <span class="p">...</span>&#x000A;</code></pre></div>
+<p>La bandera <code>edit</code> tendrá un valor por defecto de <code>false</code> y <code>handleToggle</code> cambiará <code>edit</code> de falso a verdadero y viceversa, sólo tenemos que disparar <code>handleToggle</code> a partir de un evento <code>onClick</code> del usuario.</p>
+
+<p>Ahora, tenemos que manejar dos versiones de filas (de formulario y de sólo lectura) y mostrarlas de forma condicional dependiendo de <code>edit</code>. Por suerte para nosotros, siempre y cuando nuestro método <code>render</code> devuelva un elemento React, podemos llevar a cabo cualquier acción en él; podemos definir un par de métodos auxiliares <code>recordRow</code> y <code>recordForm</code> y llamarlos condicionalmente dentro de <code>render</code> en función del contenido de <code>@state.edit</code>.</p>
+
+<p>Ya tenemos una primera versión de <code>recordRow</code>, es nuestro método <code>render</code> actual. Pasemos el contenido de <code>render</code> a nuestro nuevo método <code>recordRow</code> y añadamos algo de código adicional:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/record.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Record</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">recordRow</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">tr</span> <span class="no">null</span><span class="p">,</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">date</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">title</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span> <span class="nx">amountFormat</span><span class="p">(</span><span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">amount</span><span class="p">)</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">a</span>&#x000A;          <span class="na">className</span><span class="o">:</span> <span class="s">'btn btn-default'</span>&#x000A;          <span class="na">onClick</span><span class="o">:</span> <span class="vi">@</span><span class="na">handleToggle</span>&#x000A;          <span class="s">'Edit'</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">a</span>&#x000A;          <span class="na">className</span><span class="o">:</span> <span class="s">'btn btn-danger'</span>&#x000A;          <span class="na">onClick</span><span class="o">:</span> <span class="vi">@</span><span class="na">handleDelete</span>&#x000A;          <span class="s">'Delete'</span>&#x000A;  <span class="p">...</span>&#x000A;</code></pre></div>
+<p>Sólo agregamos un elemento <code>React.DOM.a</code> adicional que escucha eventos <code>onClick</code> para llamar a <code>handleToggle</code>.</p>
+
+<p>Continuemos, la implementación de <code>recordForm</code> tendría una estructura similar, pero con <em>inputs</em> de entrada en cada celda. Utilicemos un nuevo atributo <code>ref</code> para hacer accesibles nuestras entradas. Ya que este componente no maneja un estado, este nuevo atributo permitirá que nuestro componente lea los datos provistos por el usuario por medio de <code>@refs</code>:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/record.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Record</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">recordForm</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">tr</span> <span class="no">null</span><span class="p">,</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">input</span>&#x000A;          <span class="na">className</span><span class="o">:</span> <span class="s">'form-control'</span>&#x000A;          <span class="na">type</span><span class="o">:</span> <span class="s">'text'</span>&#x000A;          <span class="na">defaultValue</span><span class="o">:</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">date</span>&#x000A;          <span class="na">ref</span><span class="o">:</span> <span class="s">'date'</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">input</span>&#x000A;          <span class="na">className</span><span class="o">:</span> <span class="s">'form-control'</span>&#x000A;          <span class="na">type</span><span class="o">:</span> <span class="s">'text'</span>&#x000A;          <span class="na">defaultValue</span><span class="o">:</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">title</span>&#x000A;          <span class="na">ref</span><span class="o">:</span> <span class="s">'title'</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">input</span>&#x000A;          <span class="na">className</span><span class="o">:</span> <span class="s">'form-control'</span>&#x000A;          <span class="na">type</span><span class="o">:</span> <span class="s">'number'</span>&#x000A;          <span class="na">defaultValue</span><span class="o">:</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">amount</span>&#x000A;          <span class="na">ref</span><span class="o">:</span> <span class="s">'amount'</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">td</span> <span class="no">null</span><span class="p">,</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">a</span>&#x000A;          <span class="na">className</span><span class="o">:</span> <span class="s">'btn btn-default'</span>&#x000A;          <span class="na">onClick</span><span class="o">:</span> <span class="vi">@</span><span class="na">handleEdit</span>&#x000A;          <span class="s">'Update'</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">a</span>&#x000A;          <span class="na">className</span><span class="o">:</span> <span class="s">'btn btn-danger'</span>&#x000A;          <span class="na">onClick</span><span class="o">:</span> <span class="vi">@</span><span class="na">handleToggle</span>&#x000A;          <span class="s">'Cancel'</span>&#x000A;  <span class="p">...</span>&#x000A;</code></pre></div>
+<p>No tengas miedo, este método puede parecer grande, pero es sólo nuestra sintaxis tipo HAML. Nota que llamamos a <code>@handleEdit</code> cuando el usuario hace clic en el botón “Update”. Utilicemos un flujo similar a la implementación para eliminar registros.</p>
+
+<p>¿Notas algo diferente en cómo se están creando <code>React.DOM.inputs</code>? Estamos utilizando <code>defaultValue</code> en lugar de <code>value</code> para asignar los valores de entrada iniciales, esto es porque <em>el usar <code>value</code> sin <code>onChange</code> acabará creando entradas de sólo lectura</em>.</p>
+
+<p>Por último, el método <code>render</code> se reduce al siguiente código:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/record.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Record</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="k">if</span> <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">edit</span>&#x000A;      <span class="vi">@</span><span class="na">recordForm</span><span class="p">()</span>&#x000A;    <span class="k">else</span>&#x000A;      <span class="vi">@</span><span class="na">recordRow</span><span class="p">()</span>&#x000A;</code></pre></div>
+<p>Puedes refescar tu navegador para jugar con el nuevo comportamiento, pero no presentará ningún cambio todavía ya que no hemos implementado la funcionalidad real.</p>
+
+<p><img src="/images/2016/0109/react_rails/editing-records-1.png" alt="" />
+<img src="/images/2016/0109/react_rails/editing-records-2.png" alt="" /></p>
+
+<p>Para manejar las actualizaciones de registros, tenemos que añadir el método <code>update</code> a nuestro controlador Rails:</p>
+
+<div class="highlight"><pre class="highlight ruby"><code><span class="c1"># app/controllers/records_controller.rb</span>&#x000A;&#x000A;<span class="k">class</span> <span class="nc">RecordsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>&#x000A;  <span class="o">...</span>&#x000A;  <span class="k">def</span> <span class="nf">update</span>&#x000A;    <span class="vi">@record</span> <span class="o">=</span> <span class="no">Record</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:id</span><span class="p">])</span>&#x000A;    <span class="k">if</span> <span class="vi">@record</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">record_params</span><span class="p">)</span>&#x000A;      <span class="n">render</span> <span class="ss">json: </span><span class="vi">@record</span>&#x000A;    <span class="k">else</span>&#x000A;      <span class="n">render</span> <span class="ss">json: </span><span class="vi">@record</span><span class="p">.</span><span class="nf">errors</span><span class="p">,</span> <span class="ss">status: :unprocessable_entity</span>&#x000A;    <span class="k">end</span>&#x000A;  <span class="k">end</span>&#x000A;  <span class="o">...</span>&#x000A;<span class="k">end</span>&#x000A;</code></pre></div>
+<p>De regreso a nuestro componente <code>Record</code>, tenemos que implementar el método <code>handleEdit</code> que enviará una petición <em>AJAX</em> al servidor con la información actualizada de <code>record</code>, después notificará al componente padre enviando la versión actualizada del registro a través del método <code>handleEditRecord</code>, este método se recibirá a través de <code>@props</code>, de la misma manera que lo hicimos antes, al eliminar de registros:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/record.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Record</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">handleEdit</span><span class="o">:</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">e</span><span class="p">.</span><span class="na">preventDefault</span><span class="p">()</span>&#x000A;    <span class="nx">data</span> <span class="o">=</span>&#x000A;      <span class="na">title</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="na">findDOMNode</span><span class="p">(</span><span class="vi">@</span><span class="na">refs</span><span class="p">.</span><span class="na">title</span><span class="p">).</span><span class="na">value</span>&#x000A;      <span class="na">date</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="na">findDOMNode</span><span class="p">(</span><span class="vi">@</span><span class="na">refs</span><span class="p">.</span><span class="na">date</span><span class="p">).</span><span class="na">value</span>&#x000A;      <span class="na">amount</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="na">findDOMNode</span><span class="p">(</span><span class="vi">@</span><span class="na">refs</span><span class="p">.</span><span class="na">amount</span><span class="p">).</span><span class="na">value</span>&#x000A;    <span class="c1"># jQuery doesn't have a $.put shortcut method either</span>&#x000A;    <span class="nx">$</span><span class="p">.</span><span class="na">ajax</span>&#x000A;      <span class="na">method</span><span class="o">:</span> <span class="s">'PUT'</span>&#x000A;      <span class="na">url</span><span class="o">:</span> <span class="s">"/records/</span><span class="si">#{</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">.</span><span class="na">id</span> <span class="si">}</span><span class="s">"</span>&#x000A;      <span class="na">dataType</span><span class="o">:</span> <span class="s">'JSON'</span>&#x000A;      <span class="na">data</span><span class="o">:</span>&#x000A;        <span class="na">record</span><span class="o">:</span> <span class="nx">data</span>&#x000A;      <span class="na">success</span><span class="o">:</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="o">=&gt;</span>&#x000A;        <span class="vi">@</span><span class="na">setState</span> <span class="na">edit</span><span class="o">:</span> <span class="no">false</span>&#x000A;        <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">handleEditRecord</span> <span class="vi">@</span><span class="na">props</span><span class="p">.</span><span class="na">record</span><span class="p">,</span> <span class="nx">data</span>&#x000A;  <span class="p">...</span>&#x000A;</code></pre></div>
+<p>Para simplificar, no vamos a validar los datos del usuario, sólo los leeremos por medio de <code>React.findDOMNode(@refs.fieldName).value</code> y los enviaremos tal cual al backend. Actualizar el estado para cambiar al modo de edición en <code>success</code> no es obligatorio, pero el usuario nos lo agradecerá.</p>
+
+<p>Por último, pero no menos importante, sólo tenemos que actualizar el estado del componente <code>Records</code> para sobrescribir el registro anterior con la nueva versión del registro hijo y dejar que React realice su magia. La implementación podría verse así:</p>
+
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="c1"># app/assets/javascripts/components/records.js.coffee</span>&#x000A;&#x000A;<span class="vi">@</span><span class="na">Records</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">createClass</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">updateRecord</span><span class="o">:</span> <span class="p">(</span><span class="nx">record</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="o">-&gt;</span>&#x000A;    <span class="nx">index</span> <span class="o">=</span> <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">records</span><span class="p">.</span><span class="na">indexOf</span> <span class="nx">record</span>&#x000A;    <span class="nx">records</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="na">addons</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">records</span><span class="p">,</span> <span class="p">{</span> <span class="na">$splice</span><span class="o">:</span> <span class="p">[[</span><span class="nx">index</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">data</span><span class="p">]]</span> <span class="p">})</span>&#x000A;    <span class="vi">@</span><span class="na">replaceState</span> <span class="na">records</span><span class="o">:</span> <span class="nx">records</span>&#x000A;  <span class="p">...</span>&#x000A;  <span class="na">render</span><span class="o">:</span> <span class="o">-&gt;</span>&#x000A;    <span class="p">...</span>&#x000A;    <span class="c1"># almost at the bottom of the render method</span>&#x000A;    <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">table</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">thead</span> <span class="no">null</span><span class="p">,</span>&#x000A;        <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">tr</span> <span class="no">null</span><span class="p">,</span>&#x000A;          <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">th</span> <span class="no">null</span><span class="p">,</span> <span class="s">'Date'</span>&#x000A;          <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">th</span> <span class="no">null</span><span class="p">,</span> <span class="s">'Title'</span>&#x000A;          <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">th</span> <span class="no">null</span><span class="p">,</span> <span class="s">'Amount'</span>&#x000A;          <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">th</span> <span class="no">null</span><span class="p">,</span> <span class="s">'Actions'</span>&#x000A;      <span class="nx">React</span><span class="p">.</span><span class="na">DOM</span><span class="p">.</span><span class="na">tbody</span> <span class="no">null</span><span class="p">,</span>&#x000A;        <span class="k">for</span> <span class="nx">record</span> <span class="o">in</span> <span class="vi">@</span><span class="na">state</span><span class="p">.</span><span class="na">records</span>&#x000A;          <span class="nx">React</span><span class="p">.</span><span class="na">createElement</span> <span class="nx">Record</span><span class="p">,</span> <span class="na">key</span><span class="o">:</span> <span class="nx">record</span><span class="p">.</span><span class="na">id</span><span class="p">,</span> <span class="na">record</span><span class="o">:</span> <span class="nx">record</span><span class="p">,</span> <span class="na">handleDeleteRecord</span><span class="o">:</span> <span class="vi">@</span><span class="na">deleteRecord</span><span class="p">,</span> <span class="na">handleEditRecord</span><span class="o">:</span> <span class="vi">@</span><span class="na">updateRecord</span>&#x000A;</code></pre></div>
+<p>Como hemos aprendido en la sección anterior, usar <code>React.addons.update</code> para cambiar nuestro estado podría resultar en métodos más concretos. El enlace final entre <code>Records</code> y <code>Record</code> es el método <code>updateRecord</code> enviado a través de la propiedad <code>handleEditRecord</code>.</p>
+
+<p>Refresca el navegador por última vez y trata de actualizar algunos registros existentes, observa cómo las recuadros de cantidad en la parte superior de la página mantienen un seguimiento de cada cambio en los registros.</p>
+
+<p><img src="/images/2016/0109/react_rails/editing-records-3.png" alt="" /></p>
+
+<p>¡Hemos terminado! Sonríe, ¡acabamos de construir una pequeña aplicación Rails + React desde cero!</p>
+
+<p>Puedes ver el código resultante de esta sección <a href="https://github.com/fervisa/accounts-react-rails/tree/1a62dd0e48b31aa55659e0035e754cee1776aa61">aquí</a>, o sólo los cambios introducidos por esta sección <a href="https://github.com/fervisa/accounts-react-rails/commit/1a62dd0e48b31aa55659e0035e754cee1776aa61">aquí</a>.</p>
+
+<h1 id="comentarios-finales-reactjs---simplicidad-y-flexibilidad">Comentarios finales: React.js - simplicidad y flexibilidad</h1>
+
+<p>Hemos examinado algunas de las funcionalidades de React y hemos aprendido que apenas si introduce nuevos conceptos. He escuchado comentarios de gente diciendo X o Y <em>framewrork</em> JavaScript tiene una curva de aprendizaje empinada debido a todos los nuevos conceptos que introduce, pero no es el caso React, que implementa conceptos básicos de JavaScript, como manejadores de eventos y <em>bindings</em>, por lo que es fácil de adoptar y aprender. Una vez más, uno de sus puntos fuertes es su sencillez.</p>
+
+<p>También aprendimos cómo integrarlo en el pipeline de Rails y lo bien que se entiende con CoffeeScript, jQuery, Turbolinks, y el resto de la orquesta Rails. Pero esta no es la única forma de lograr los resultados deseados. Por ejemplo, si no usas Turbolinks (por lo tanto, no es necesario <code>react_ujs</code>) puedes utilizar <a href="https://rails-assets.org/">Rails Assets</a> en lugar de la gema <code>react-rails</code>; podrías utilizar <a href="https://github.com/rails/jbuilder">JBuilder</a> para construir respuestas <em>JSON</em> más complejas en lugar de la prestación de los objetos <em>JSON</em>, y cosas por el estilo, y seguir obteniendo los mismos maravillosos resultados.</p>
+
+<p>React definitivamente aumentará tus habilidades de frontend, lo que la hace una gran biblioteca para tener entre tus herramientas Rails.</p>
+
+</div>
+<div class='row'>
+<div class='small-12 medium-4 large-4 small-centered columns blog-social'>
+<ul class='inline-list'>
+<li>
+<a class='socialite twitter-share' data-count='vertical' data-text='Plática: React.js - Una guía para desarrolladores Rails' data-url='http://oaxacarb.org/posts/react-js-una-guia-para-desarrolladores.html' href='http://twitter.com/share' rel='nofollow' target='_blank'>
+<span class='vhidden'>Share on Twitter</span>
+</a>
+</li>
+<li>
+<a class='socialite googleplus-one' data-href='http://oaxacarb.org/posts/react-js-una-guia-para-desarrolladores.html' data-size='tall' href='https://plus.google.com/share?url=http://oaxacarb.org/posts/react-js-una-guia-para-desarrolladores.html' rel='nofollow' target='_blank'>
+<span class='vhidden'>Share on Google+</span>
+</a>
+</li>
+<li>
+<a class='socialite facebook-like' data-href='http://oaxacarb.org/posts/react-js-una-guia-para-desarrolladores.html' data-layout='box_count' data-send='false' data-show-faces='false' data-width='60' href='http://www.facebook.com/sharer.php?u=http://oaxacarb.org/posts/react-js-una-guia-para-desarrolladores.html&amp;t=Pl%C3%A1tica:%20React.js%20-%20Una%20gu%C3%ADa%20para%20desarrolladores%20Rails' rel='nofollow' target='_blank'>
+<span class='vhidden'>Share on Facebook</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div id='disqus_thread'></div>
+<script type='text/javascript'>
+//<![CDATA[
+                  var disqus_shortname = 'oaxacarb';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href='http://disqus.com/?ref_noscript'>comments powered by Disqus.</a></noscript>
+<a href='http://disqus.com' class='dsq-brlink'>comments powered by <span class='logo-disqus'>Disqus</span></a>
+
+</article>
+</div>
+<aside class='large-3 columns'>
+<!--
+<div class='row collapse postfix-round search'>
+<div class='small-10 columns'>
+<input placeholder='Buscar en el blog' type='text'>
+</div>
+<div class='small-2 columns'>
+<button class='button postfix' type='submit'>
+<i class='fi-magnifying-glass'></i>
+</button>
+</div>
+</div>
+-->
+<ul class='related-links'>
+<li class='eventbrite'>
+<a href='http://www.eventbrite.com/o/oaxacarb-6130967443' target='_blank'>
+<img src="/images/eventbrite-black.png" alt="Eventbrite black" />
+<span>Próximos eventos</span>
+</a>
+</li>
+<li>
+<a href='https://oaxacarb.herokuapp.com' target='_blank'>
+<img src="/images/slack-black.png" alt="Slack black" />
+<span>Únete a la comunidad</span>
+</a>
+</li>
+</ul>
+<hr>
+<h5>Etiquetas</h5>
+<ul class='etiquetas'>
+<li>
+<a href="/tags/evento.html">evento</a>
+</li>
+<li>
+<a href="/tags/empleo.html">empleo</a>
+</li>
+<li>
+<a href="/tags/vuejs.html">vuejs</a>
+</li>
+<li>
+<a href="/tags/javascript.html">javascript</a>
+</li>
+<li>
+<a href="/tags/evento.html">Evento</a>
+</li>
+<li>
+<a href="/tags/php.html">PHP</a>
+</li>
+<li>
+<a href="/tags/drupal.html">Drupal</a>
+</li>
+<li>
+<a href="/tags/lullabot.html">Lullabot</a>
+</li>
+<li>
+<a href="/tags/code-retreat.html">code retreat</a>
+</li>
+<li>
+<a href="/tags/comunidad.html">comunidad</a>
+</li>
+<li>
+<a href="/tags/platica.html">platica</a>
+</li>
+<li>
+<a href="/tags/elm.html">elm</a>
+</li>
+<li>
+<a href="/tags/trivia.html">trivia</a>
+</li>
+<li>
+<a href="/tags/vim.html">vim</a>
+</li>
+<li>
+<a href="/tags/rails.html">rails</a>
+</li>
+<li>
+<a href="/tags/react.html">react</a>
+</li>
+<li>
+<a href="/tags/frontend.html">frontend</a>
+</li>
+<li>
+<a href="/tags/ruby.html">ruby</a>
+</li>
+<li>
+<a href="/tags/rspec.html">rspec</a>
+</li>
+<li>
+<a href="/tags/minitest.html">minitest</a>
+</li>
+<li>
+<a href="/tags/kata.html">kata</a>
+</li>
+<li>
+<a href="/tags/gracias.html">gracias</a>
+</li>
+<li>
+<a href="/tags/dojo.html">dojo</a>
+</li>
+<li>
+<a href="/tags/recursos.html">recursos</a>
+</li>
+<li>
+<a href="/tags/ebook.html">ebook</a>
+</li>
+<li>
+<a href="/tags/middleman.html">middleman</a>
+</li>
+<li>
+<a href="/tags/github.html">github</a>
+</li>
+<li>
+<a href="/tags/rvm.html">rvm</a>
+</li>
+</ul>
+<!--
+<div class='panel'>
+<h5>¡Importante!</h5>
+<p>
+¿Te interesa acudir al próximo Coding Dojo?
+<strong>
+<a href="https://mega.co.nz/#!VU0GhRgB!Vhl0Vjc_xqZILoc1WKyMY4f4RbeAZQBCaZBOtSUhKl4">Descarga esta nueva máquina virtual</a>
+</strong>
+con todo lo necesario para que puedas integrarte a las sesiones de trabajo.
+</p>
+<p>
+Instala con la última versión de
+<a href="https://www.virtualbox.org/">VirtualBox</a>
+</p>
+<p>
+<i>Actualizada: 30/04/2014</i>
+</p>
+</div>
+-->
+<!--
+<div class='panel'>
+<h5>Eventos próximos</h5>
+<p>
+Obtén la información de nuestros próximos eventos antes que nadie:
+<a href="https://www.eventbrite.com/rss/user_list_events/91036845119">RSS de Eventos</a>
+</p>
+</div>
+-->
+</aside>
+<!-- End Sidebar -->
+
+</div>
+<!-- Footer -->
+<footer class='row'>
+<div class='large-12 columns'>
+<hr>
+<div class='row'>
+<div class='large-6 columns'>
+<p>
+Supported by
+<a href="http://logicalbricks.com" target="_blank">LogicalBricks</a>
+</p>
+</div>
+<div class='large-6 columns'>
+<ul class='inline-list right'>
+<li>
+<a href='/'>Posts</a>
+</li>
+<li>
+<a href='#'>Eventos</a>
+</li>
+<li>
+<a href='/about.html'>Acerca de</a>
+</li>
+<li>
+<a href='/contacto.html'>Contacto</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+  $(document).foundation();
+  
+  var doc = document.documentElement;
+  doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+
+</footer>
+</body>
+</html>
